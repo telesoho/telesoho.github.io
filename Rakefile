@@ -1,3 +1,5 @@
+# Coding: utf-8
+Encoding.default_external = Encoding::UTF_8
 # adapted from  http://github.com/appden/appden.github.com/blob/master/Rakefile
 require 'rubygems'
 require 'packr'
@@ -6,12 +8,12 @@ require 'rake/clean'
 desc 'Build site with Jekyll'
 task :build => [:clean, :minify] do
   # compile site
-  jekyll  
+  jekyll('build')
 end
  
-desc 'Start server with --auto'
+desc 'Start server with --watch'
 task :server => [:clean, :minify]  do
-  jekyll('--server --auto')
+  jekyll('serve --watch')
 end
 
 desc 'Build and deploy'
