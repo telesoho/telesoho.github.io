@@ -1,5 +1,5 @@
 title: Michael Monteleone
-url: http://michaelmonteleone.net
+url: http://telesoho.github.io
 description: 'Personal site of Michael Monteleone, software developer and designer from New Orleans'
 keywords:
  - Michael Monteleone
@@ -29,7 +29,7 @@ stylesheets:
  - /assets/themes/default/css/screen.css?52480=52480
  - /assets/themes/default/css/print.css
 scripts:
- - http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js    
+ - //ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js    
  - /assets/themes/default/js/site.min.js?131513?131513
 colors:
     highlights:
