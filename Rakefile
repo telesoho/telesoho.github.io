@@ -13,7 +13,7 @@ end
  
 desc 'Start server with --watch'
 task :server => [:clean, :minify]  do
-  jekyll('serve --watch')
+  jekyll('serve --watch --incremental')
 end
 
 desc 'Build and deploy'
