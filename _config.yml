@@ -48,3 +48,5 @@ exclude:
  - Rakefile
  - README.markdown
  - .git
+
+theme: jekyll-theme-cayman
