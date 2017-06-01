@@ -1,11 +1,11 @@
 ---
-title: Hello, World.
+title: 你好, 世界.
 tags:  []
 layout: post
 description: 
 ---
 
-When I was younger, I considered myself a musician.  As a real musician, I owned a collection of instruments, amplifiers, and cables.  As a real musician, I wrote songs, played with groups, and tossed around words like "gig" *without* irony.  I was so pretentious that I feared not being able to continue writing simply from running out of notes.  "There can only be so many combinations of chords and rhythms, right?"  But I grew older, played less, and listened more.  And I became aware of how little I really knew.  *"Musician?"*  Now just an embarrassing self-title.  
+当我还小的时候，我认为自己会是一个音乐家，When I was younger, I considered myself a musician.  As a real musician, I owned a collection of instruments, amplifiers, and cables.  As a real musician, I wrote songs, played with groups, and tossed around words like "gig" *without* irony.  I was so pretentious that I feared not being able to continue writing simply from running out of notes.  "There can only be so many combinations of chords and rhythms, right?"  But I grew older, played less, and listened more.  And I became aware of how little I really knew.  *"Musician?"*  Now just an embarrassing self-title.  
 
 In Wikipedia's overview of the [Dunning-Kruger effect](http://en.wikipedia.org/wiki/Dunning–Kruger_effect), Bertrand Russel is quoted:
 

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ site.title }}</title>        
+    </head>
+    <body>
+        <nav id="main_nav">
+            <ul>
+                {% for test in site.tests %}
+                <li>{{ test.name }}. {{ test.title}}</li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </body>
+</html>

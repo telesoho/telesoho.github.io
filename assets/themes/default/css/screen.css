@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 theme:
     black: '#272822'
     dark: '#49483E'
@@ -199,7 +199,7 @@ nav#main_nav {
             display: inline;
             }
 {% for section in site.sections %}
-            nav#main_nav ul li a.{{ section }},
+            nav#main_nav ul li a.{{ section.name }},
 {% endfor %}
             nav#main_nav ul li a {
                 border-bottom: 0px;
@@ -217,17 +217,17 @@ nav#main_nav {
 				font-weight: normal;
                 }
 {% for section in site.sections %}
-            nav#main_nav ul li a.{{ section }}:hover,
-            .{{ section }} nav#main_nav ul li a.{{ section }},
-            .{{ section }} nav#main_nav ul li a.{{ section }}:hover,
-            .open nav#main_nav ul li a.{{ section }}:hover {
+            nav#main_nav ul li a.{{ section.name }}:hover,
+            .{{ section.name }} nav#main_nav ul li a.{{ section.name }},
+            .{{ section.name }} nav#main_nav ul li a.{{ section.name }}:hover,
+            .open nav#main_nav ul li a.{{ section.name }}:hover {
                 background-color: {{ site.colors.mono.dark }};
                 color: {{ site.colors.mono.light }};					
                 }
 {% endfor %}
 
 {% for section in site.sections %}
-            .open nav#main_nav ul li a.{{ section }},
+            .open nav#main_nav ul li a.{{ section.name }},
 {% endfor %}
             .open nav#main_nav ul li a.stub {
                 background-color: transparent;

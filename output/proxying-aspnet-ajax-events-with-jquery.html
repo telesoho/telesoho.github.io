@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Proxying ASP.NET AJAX events with jQuery</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/_posts.html">_posts</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/proxying-aspnet-ajax-events-with-jquery.html" rel="bookmark"
+           title="Permalink to Proxying ASP.NET AJAX events with jQuery">Proxying ASP.NET AJAX events with jQuery</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-07-09T00:00:00+00:00">
+                Published: 金 09 7月 2010
+        </abbr>
+
+<p>In <a href="/category/_posts.html">_posts</a>.</p>
+<p>tags: <a href="/tag/.html">[]</a> </p>
+</footer><!-- /.post-info -->      <p><a href="http://www.asp.net/mvc">MVC</a> is great, but ASP.NET <em>remains</em>.  Web Forms walk <em>amongst us</em>.  Not alive, <em>not dead</em>.  (Not even <a href="http://blogs.msdn.com/b/adonet/archive/2008/10/29/update-on-linq-to-sql-and-linq-to-entities-roadmap.aspx">LINQ to SQL-Dead</a>.)  William Faulkner, <em>who never maintained a legacy ASP.NET codebase</em>, gets it right:</p>
+<blockquote>
+<p>The past is never dead. It's not even past.</p>
+</blockquote>
+<p>But as code has grown, so have tools for its manipulation.  jQuery excels here.  It's <em>great</em> for bulk-shoveling client-side mass.  </p>
+<p><em>Here we'll see an example of this by proxying ASP.NET AJAX's client-side events as native jQuery events using jQuery's Special Event API and some fancy JavaScript meta-programming.</em></p>
+<h2>Scenario</h2>
+<p>So, you're faced with an <a href="http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx">UpdatePanel</a> and need to post-process its results.  Maybe you want to reveal the UpdatePanel's response through an animation.  Sure, you could use the ASP.NET AJAX Control Toolkit, but maybe you're already using jQuery, having learned that the toolkit's server-side savings tend to cost you on the client, or maybe you want to do something deeper like re-wiring the response's particular content with other client-side logic.</p>
+<p>Ideally, you could get by with jQuery <a href="http://api.jquery.com/delegate/">event delegation</a>, but maybe it's just out of practical bounds in your scenario.  So, it's back to tying directly into ASP.NET AJAX's client side code.  </p>
+<p>Here's how you could do it by the book:</p>
+<p _="%" endhighlight>{% highlight javascript %}
+// add an event handler to fire when the UpdatePanel is done
+Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function(sender, args) {
+    // and then process DOM content which is there as a result of the update
+    $('div.someclass').show('slow');
+});</p>
+<p>But you're using jQuery, and the impedance mismatch and explicit dependence on the AJAX toolkit is less than pleasant.  Paraphrasing <a href="http://blog.wekeroad.com/">Rob</a>, "impedance mismatch is death by a thousand cuts."  You'd probably prefer:</p>
+<p _="%" endhighlight>{% highlight javascript %}
+$(document).bind('atlasEndRequest', function(){
+    $('div.someclass').show('slow');  <br>
+});</p>
+<h2>Solution</h2>
+<p>That's easy to allow for with the aid of jQuery Special Events.  Many people tend to equate jQuery plugins with with extending the <code>jQuery.fn</code> object, but fewer are familiar with extending jQuery's events via the Special Events API.  Though <a href="http://benalman.com/news/2010/03/jquery-special-events/">much</a> <a href="http://brandonaaron.net/blog/2009/03/26/special-events">has</a> <a href="http://brandonaaron.net/blog/2009/06/4/jquery-edge-new-special-event-hooks">been</a> <a href="http://brandonaaron.net/blog/2010/02/25/special-events-the-changes-in-1-4-2">written</a> about the Special Events API, I've found it easiest to understand as simply a mechanism for executing code <em>upon the actual binding or unbinding</em> of a given event.  </p>
+<p>So, <code>$(document).bind('atlasEndRequest', function(){...})</code> is not only binding a callback to a custom event, it's also setting up background logic to properly <em>raise</em> the <em>atlasEndRequest</em> custom event when necessary.</p>
+<p _="%" endhighlight>{% highlight javascript %}
+jQuery.event.special.atlasEndRequest = {
+    // following happens the first time 'atlasUpdateEvent' is bound on a selection
+    setup: function () { 
+        // have the PageRequestManager raise a jQuery-native event named
+        // 'atlasEndRequest' in its callback
+        Sys.WebForms.PageRequestManager.getInstance()
+            .add_endRequest(function(s, args) {
+                jQuery(document).trigger('atlasEndRequest', { sender: s, args: args });
+            });
+    }
+};</p>
+<p>This will work as-is.  But special events can also have code run upon the last unbind of an event from a selection with <code>teardown</code>, or (new in 1.4) upon <em>each</em> bind and unbind of an event from a selection with <code>add</code> and <code>remove</code>.  And the <a href="http://msdn.microsoft.com/en-us/library/bb311028.aspx">PageRequestManager</a> gives us <a href="http://msdn.microsoft.com/en-us/library/bb384136.aspx">more possibly-useful events</a> (initializeRequest, beginRequest, endRequest, pageLoading, pageLoaded) we might want to proxy as well.  So, with a little bit of fancy meta-programming, we can support all of them, along with proper unbinding.</p>
+<p>{% highlight javascript %}
+(function ($) {
+    // list of all events this will wrap
+    var events = 'initializeRequest beginRequest endRequest pageLoading pageLoaded';
+    $.each(events.split(' '), function (i, name) {
+        // make a new camel-cased public 'atlas*' name for the event
+        var mappedName = 'atlas'+name.substring(0, 1).toUpperCase()+name.substring(1),
+            // build a callback for PageRequestManager's event
+            handler = function (sender, args) {
+                $(document).trigger(mappedName, { sender: sender, args: args });
+            };</p>
+<div class="highlight"><pre><span></span>    <span class="o">//</span> <span class="nt">Whenever</span> <span class="nt">the</span> <span class="nt">atlas</span><span class="o">*</span> <span class="nt">event</span> <span class="nt">is</span> <span class="nt">first</span> <span class="nt">bound</span> <span class="nt">or</span> <span class="nt">last</span> <span class="nt">unbound</span><span class="o">,</span>
+    <span class="o">//</span> <span class="nt">set</span> <span class="nt">up</span> <span class="nt">the</span> <span class="nt">callback</span> <span class="nt">with</span> <span class="nt">the</span> <span class="nt">PageRequestManager</span><span class="s1">&#39;s version of the event</span>
+<span class="s1">    $.event.special</span><span class="cp">[</span><span class="nx">mappedName</span><span class="cp">]</span><span class="s1"> = {</span>
+<span class="s1">        setup: function () { requestManage(&#39;</span><span class="nt">add_</span><span class="s1">&#39; + name, handler); },</span>
+<span class="s1">        teardown: function () { requestManage(&#39;</span><span class="nt">remove_</span><span class="s1">&#39; + name, handler); }</span>
+<span class="s1">    };</span>
+
+<span class="s1">    // also build a shortcut jquery plugin method for the event</span>
+<span class="s1">    $.fn</span><span class="cp">[</span><span class="nx">mappedName</span><span class="cp">]</span><span class="s1"> = function (fn) {</span>
+<span class="s1">        return fn ? this.bind(mappedName, fn) : this.trigger(mappedName);</span>
+<span class="s1">    };</span>
+<span class="s1">});</span>
+
+<span class="s1">/**</span>
+<span class="s1"> * Calls a given event-handling setup method on the PageRequestManager</span>
+<span class="s1"> * if there currently is one.  Rewrites self to save performance on subsequent</span>
+<span class="s1"> * calls.</span>
+<span class="s1"> * @param {String} method The name of the method to call on the PageRequestManager</span>
+<span class="s1"> * @param {Function} handler callback to pass as arg to the method</span>
+<span class="s1"> */</span>
+<span class="s1">var requestManage = function (method, handler) {</span>
+<span class="s1">    var prm = &#39;</span><span class="nt">Sys</span><span class="s1">&#39; in window &amp;&amp; &#39;</span><span class="nt">WebForms</span><span class="s1">&#39; in window.Sys &amp;&amp;</span>
+<span class="s1">            &#39;</span><span class="nt">PageRequestManager</span><span class="err">&#39;</span> <span class="nt">in</span> <span class="nt">window</span><span class="p">.</span><span class="nc">Sys</span><span class="p">.</span><span class="nc">WebForms</span> <span class="o">?</span>
+            <span class="nt">Sys</span><span class="p">.</span><span class="nc">WebForms</span><span class="p">.</span><span class="nc">PageRequestManager</span><span class="p">.</span><span class="nc">getInstance</span><span class="o">()</span> <span class="o">:</span> <span class="nt">null</span><span class="o">,</span>
+       <span class="nt">bind</span> <span class="o">=</span> <span class="nt">function</span> <span class="o">(</span><span class="nt">method</span><span class="o">,</span> <span class="nt">handler</span><span class="o">)</span> <span class="p">{</span>
+            <span class="err">if</span> <span class="err">(prm</span> <span class="err">!==</span> <span class="err">null)</span> <span class="err">{</span>
+                <span class="err">prm</span><span class="cp">[</span><span class="nx">method</span><span class="cp">]</span><span class="err">(handler)</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="err">}</span><span class="o">;</span>
+    <span class="o">//</span> <span class="nt">go</span> <span class="nt">ahead</span> <span class="nt">and</span> <span class="nt">bind</span> 
+    <span class="nt">bind</span><span class="o">(</span><span class="nt">method</span><span class="o">,</span> <span class="nt">handler</span><span class="o">);</span>
+    <span class="o">//</span> <span class="nt">reassign</span> <span class="nt">this</span> <span class="nt">function</span> <span class="nt">for</span> <span class="nt">subsequent</span> <span class="nt">calls</span><span class="o">,</span>
+    <span class="o">//</span> <span class="nt">to</span> <span class="nt">not</span> <span class="nt">unnecessarily</span> <span class="nt">rebuild</span> <span class="nt">bind</span> <span class="nt">and</span> <span class="nt">prm</span> <span class="nt">items</span>
+    <span class="o">//</span> <span class="nt">this</span> <span class="nt">creates</span> <span class="nt">a</span> <span class="nt">closure</span> <span class="nt">over</span> <span class="nt">the</span> <span class="nt">current</span> <span class="nt">prm</span> <span class="nt">and</span> <span class="nt">bind</span>
+    <span class="nt">requestManage</span> <span class="o">=</span> <span class="nt">function</span> <span class="o">(</span><span class="nt">method</span><span class="o">,</span> <span class="nt">handler</span><span class="o">)</span> <span class="p">{</span>
+        <span class="err">bind(method,</span> <span class="err">handler)</span><span class="p">;</span>
+    <span class="p">}</span><span class="o">;</span>
+<span class="err">}</span><span class="o">;</span>
+</pre></div>
+
+
+<p _="%" endhighlight>})(jQuery);</p>
+<p>A bit of code, but dig in.  You're smart.  And two extra credit points:</p>
+<p>It provides shortcut methods for binding and triggering the events, so </p>
+<p _="%" endhighlight>{% highlight javascript %}
+$('document').bind('atlasEndRequest', function(){ 
+    console.log('update complete!');
+});</p>
+<p><em>is aliased</em></p>
+<p _="%" endhighlight>{% highlight javascript %}
+$('document').atlasEndRequest(function(){
+    console.log('update complete!');  <br>
+});</p>
+<p>And it uses some fanciness with a self-reassigning-function to ensure that absence of the Sys.WebForms.PageRequestManager will not break the plugin, and getting its instance will only necessarily be called once.  It's a micro-optimization for sure, but still a fun example.</p>
+<p>If you are still interested in the <code>sender</code> and <code>args</code> parameters passed back from the PageRequestManager to its event handler, those are still exposed via the optional <code>data</code> parameter.</p>
+<p _="%" endhighlight>{% highlight javascript %}
+$('document').bind('atlasEndRequest', function(e, data){ 
+    console.log(data.args);
+    console.log(data.sender);
+});</p>
+<p>Even if you don't find this particularly useful or practical, hopefully it opens your mind to JavaScript's yoga-like flexibility.  <a href="http://rubyforge.org/pipermail/camping-list/2008-May/000719.html">_why</a>:</p>
+<blockquote>
+<p>Not all code needs to be a factory, some of it can just be origami.</p>
+</blockquote>
+<p>You can grab this plugin along with its small test suite from <a href="http://github.com/mmonteleone/jquery.updatepanel">GitHub</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

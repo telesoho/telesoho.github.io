@@ -1,6 +1,6 @@
-# http://michaelmonteleone.net
+# http://blog.telesoho.com
 
-This is the raw text source of my jekyll-based personal site, [http://michaelmonteleone.net](http://michaelmonteleone.net).  
+This is the raw text source of my jekyll-based personal site, [http://blog.telesoho.com](http://blog.telesoho.com).
 
 It can be "compiled" with the following Rake tasks
 
@@ -12,7 +12,7 @@ It can be "compiled" with the following Rake tasks
     rake clean    # Remove any temporary products.
     rake clobber  # Remove any generated file.
 
-All content is Copyright 2010 by Michael Monteleone.  
+All content is Copyright 2010 by Michael Monteleone.
 
 Content within `/_posts` and `/assets/themes` is released under [CC Attribution 3.0](http://creativecommons.org/licenses/by/3.0/us/)
 
@@ -20,7 +20,7 @@ Content not within `/_posts` and `/assets/themes` is released under terms of the
 
 The MIT License
 
-Copyright (c) 2010 Michael Monteleone, http://michaelmonteleone.net
+Copyright (c) 2017 telesoho, http://telesoho.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

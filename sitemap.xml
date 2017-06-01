@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -14,7 +14,7 @@ layout: nil
     </url>	
     {% for section in site.sections %}
     <url>
-        <loc>{{ site.url }}/{{ section }}/</loc>
+        <loc>{{ site.url }}/{{ section.name }}/</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
