@@ -8,11 +8,11 @@ comments: true
 
 This is a low blow, but it's been awhile since I fired up a fresh Internet Explorer instance within a fresh Windows Virtual Machine.  And, *lo...*
 
-![Internet Explorer 8 in Windows 7](/assets/images/lowblow-ie.png "Internet Explorer 8 in Windows 7")
+![Internet Explorer 8 in Windows 7](../assets/images/lowblow-ie.png "Internet Explorer 8 in Windows 7")
 
 Let's compare.
 
-![Safari 5 in OS X](/assets/images/lowblow-safari.png "Safari 5 in OS X")
+![Safari 5 in OS X](../assets/images/lowblow-safari.png "Safari 5 in OS X")
 
 I'm not comparing rendering engines &mdash; I deliberately erased the content to cancel that variable.  No, I'm comparing the *browsers*.
 
