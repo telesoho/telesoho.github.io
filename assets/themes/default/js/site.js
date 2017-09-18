@@ -11,12 +11,30 @@ jQuery(function ($) {
         acceleratesCssAnimations: /webkit(.*?)mobile/gim.test(window.navigator.userAgent),
         isTouchPanel: /webkit(.*?)mobile/gim.test(window.navigator.userAgent)
     };
+    
+    var isMobile = {
+        Windows: function () {
+            return /IEMobile/i.test(navigator.userAgent);
+        },
+        Android: function () {
+            return /Android/i.test(navigator.userAgent);
+        },
+        BlackBerry: function () {
+            return /BlackBerry/i.test(navigator.userAgent);
+        },
+        iOS: function () {
+            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+        }
+    };
 
     $.accelerateCss(browser.acceleratesCssAnimations);
 
     // if the screen isn't a touchpanel (iphone, ipad, etc)
     // then add in some fancy rollover effects for links
-    if (!browser.isTouchPanel) {
+    if (!browser.isTouchPanel && !isMobile.any()) {
         $('nav#main_nav').peek({
             unpeekedWrapperOffset: browser.acceleratesCssAnimations ? 0 : -5,
             speed: 250
