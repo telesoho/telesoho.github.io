@@ -5,6 +5,7 @@ keywords:
  - Wenhong.Tan
  - telesoho
  - tanbunko
+ - wotiger
 
 author:
     name: wotiger
@@ -26,7 +27,7 @@ sections:
  - name: about
    title: 关于
  - name: journal
-   title: 简历
+   title: 日志
 
 stylesheets:
  - /assets/themes/default/css/screen.css?52480=52480

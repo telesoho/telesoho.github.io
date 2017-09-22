@@ -66,12 +66,14 @@ jQuery(function ($) {
     });
 
     // bookmarks integration
+    // see http://pinboard.in/howto/#rss
     $('footer section.bookmarks.my nav').bookmarks({
-        user: 'namelessmike',
-        count: 5
+        user: 'recent',
+        count: 5,
+        service: 'http://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
     });
 
-    // twitter integration
+    // top 5 popular of pinboard
     $("footer section.bookmarks.popular nav").bookmarks({
         user: 'popular',
         count: 5,
@@ -95,7 +97,8 @@ jQuery(function ($) {
                     var list = $('<ul></ul>');
                     $.each(links, function (i, link) {
                         if (i < settings.count) {
-                            list.append('<li><a title="view this bookmark" href="' + link.u + '">' + link.d + '</a></li>');
+                            list.append('<li><a title="view this bookmark" href="' + link.u + '">' 
+                                + link.d + '</a></li>');
                         }
                     });
                     selection.append(list);
