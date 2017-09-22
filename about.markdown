@@ -1,10 +1,8 @@
 ---
-title: 关于
+title: About
 tags:  []
 layout: about
 ---
-
-## 作者
 
 谭文洪(Wotiger)，70后的老程序猿。
 
@@ -15,4 +13,4 @@ layout: about
 
 他最喜欢的用的开发工具是Visual Studio Code，本站的所有写代码和文章，都是用VSCODE完成的。
 
-*本博客是Wotiger发表个人观点的地方，如需转载请指明出处！*
+**_本博客是Wotiger发表个人观点的地方，如需转载请指明出处！_**
