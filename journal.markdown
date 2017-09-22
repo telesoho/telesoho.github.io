@@ -9,7 +9,7 @@ bodyclass: journal
 <ul class="archive">
 {% for post in site.posts %}
   <li>
-      <time>{{ post.date | date: "%A, %B %d, %Y" }}</time>
+      <time>{{ post.date | date: "%Y年%m月%d日 " }}</time>
       <a href="{{ post.url }}">{{ post.title }}</a>      
   </li>
 {% endfor %}
