@@ -24,11 +24,11 @@ author:
 sections:
  - name: projects
    title: 项目
- - name: about
-   title: 关于
  - name: journal
    title: 日志
-
+ - name: about
+   title: 关于
+ 
 stylesheets:
  - /assets/themes/default/css/screen.css?52480=52480
  - /assets/themes/default/css/print.css

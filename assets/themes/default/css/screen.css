@@ -31,7 +31,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	background: transparent;
     }
 body {
-	line-height: 1;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;    
     }
 ol, ul {
 	list-style: none;
