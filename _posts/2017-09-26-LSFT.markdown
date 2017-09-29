@@ -5,6 +5,7 @@ layout: post
 description: 
 comments: true
 published: false
+date: 2017-09-26 22:38:01 +0900
 ---
 
 Understanding LSTM Networks

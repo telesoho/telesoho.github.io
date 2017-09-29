@@ -5,6 +5,7 @@ layout: post
 description: 
 comments: true
 published: true
+date: 2017-09-23 22:38:01 +0900
 ---
 
 虽然我从小到大都一直在学习，但是对于如何学习进行认真的思考却从来没有过。

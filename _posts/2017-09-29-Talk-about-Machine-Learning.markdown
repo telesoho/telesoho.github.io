@@ -6,7 +6,7 @@ description: 关于我对人工智能的看法
 comments: true
 categories: Machine-Learning
 published: true
-date: 2017-09-29 21:09:47
+date: 2017-09-29 22:38:01 +0900
 ---
 
 ## 什么是人工智能
@@ -17,6 +17,6 @@ A computer program is said to learn from experience E with respect to some class
 
 下面是一些人工智能资源链接：
 
-[机器学习（Machine Learning）- 吴恩达 Andrew NG 教学视频](https://www.bilibili.com/video/av9912938/#page=1)
+[1. 机器学习（Machine Learning）- 吴恩达 Andrew NG 教学视频](https://www.bilibili.com/video/av9912938/#page=1)
 
-[台湾大学机器学习课程视频](http://speech.ee.ntu.edu.tw/~tlkagk/courses.html)
+[2. 台湾大学机器学习课程视频](http://speech.ee.ntu.edu.tw/~tlkagk/courses.html)
