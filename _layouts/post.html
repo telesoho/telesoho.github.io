@@ -5,9 +5,9 @@ bodyclass: journal
 <article>
     <header>
         <h1><a href="{{ page.url }}" rel="bookmark" title="link to this post">{{ page.title }}</a></h1>
-        <time datetime="{{ page.date | date: "%Y-%m-%d" }}" pubdate>Published {{ page.date | date: "%A, %B %d, %Y" }}</time>
+        <time datetime="{{ page.date | date: "%Y-%m-%d %r" }}" pubdate>Published {{ page.date | date: "%A %d %B %Y %r" }}</time>
     </header>
-    {{ content }}        
+    {{ content }}
 
     {% if page.previous.url %} 
     <p>

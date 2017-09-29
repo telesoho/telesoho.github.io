@@ -1,0 +1,12 @@
+---
+title: 关于日志
+tags:  []
+layout: post
+description: 
+comments: true
+published: false
+---
+
+保证睡眠，早睡早起，要养成的新习惯安排在早晨的时间做。
+
+新习惯开始不要太难，给自己太大压力
