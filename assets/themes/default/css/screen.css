@@ -84,6 +84,10 @@ table {
 	
 /* globals */
 
+p > img {
+    width: 100%;
+}
+
 /* highlight colors */
 .projects { color: {{ site.colors.highlights.blue }} }
 .about { color: {{ site.colors.highlights.green }} }
