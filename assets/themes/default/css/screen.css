@@ -84,7 +84,7 @@ table {
 	
 /* globals */
 
-p > img {
+article p img {
     width: 100%;
 }
 
