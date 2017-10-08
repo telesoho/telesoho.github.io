@@ -1,0 +1,36 @@
+---
+title: 一些产品的想法
+tags:  [Idea]
+layout: post
+description: 
+comments: true
+published: false
+date: 2017-10-03 20:41:01 +0900
+---
+
+## 增加Youtube智能粘贴功能
+
+把一个youtube视频链接粘贴到Markdown时，会自动解析出视频ID，并将嵌入式视频代码插入到Markdown中。
+
+比如下面的视频链接：
+
+https://www.youtube.com/watch?v=t8-FqWlC42A&list=FLTxztHCubvx2PCPBwyEyqkw&index=6&t=3s
+
+当它被粘贴到Markdown时，会变成：
+
+[![超乎想像的宇宙 1：無限空間 The Fabric of the Cosmos 1：What is Space](https://img.youtube.com/vi/t8-FqWlC42A/0.jpg)](https://www.youtube.com/watch?v=t8-FqWlC42A)
+
+## 吉他谱网站
+
+1. 用户使用文本形式提交吉他谱
+1. 程序把文本形式的吉他谱，转换为能显示和六线谱的和弦谱
+1. 歌词根据歌曲时间自动滚动，
+1. 可根据用户选择的曲调，自动调整和弦。
+    比如：歌曲原调是A调，用户想用C调来唱，于是用户选择曲调为C，程序自动把原A调的和弦，全部转换为C调的和弦。
+1. 程序会自动推荐适合弹唱的调（具体参考日本的[ufret](http://www.ufret.jp/)这个网站）。
+
+## 相关资源
+
+[jtab-用于生成吉他和弦的javascript库](http://jtab.tardate.com/index.htm#install)
+
+[一个日本的吉他谱网站](http://www.ufret.jp/song.php?data=31353)

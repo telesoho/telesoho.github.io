@@ -5,6 +5,7 @@ layout: post
 description: 
 comments: true
 published: true
+categories: 学习方法
 date: 2017-10-01 22:38:01 +0900
 ---
 
