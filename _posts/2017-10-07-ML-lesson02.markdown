@@ -9,7 +9,7 @@ categories: Machine-Learning
 date: 2017-10-07 17:38:01 +0900
 ---
 
-[![](../assets/images/ML-2017-10-08-09-39-08.png)](https://www.bilibili.com/video/av9912938/index_1.html#page=2)
+[![](/assets/images/ML-2017-10-08-09-39-08.png)](https://www.bilibili.com/video/av9912938/index_1.html#page=2)
 
 ## 机器学习是打开人工智能大门的钥匙
 
