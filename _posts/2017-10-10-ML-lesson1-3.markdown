@@ -1,0 +1,36 @@
+---
+title: 机器学习的定义 
+tags:  [机器学习, 有监督学习, 无监督学习]
+layout: post
+description: 
+comments: true
+published: true
+categories: Machine-Learning
+date: 2017-10-10 5:32:00 +0900
+---
+
+[![](../assets/images/ML03-2017-10-10-05-30-06.png)](https://www.bilibili.com/video/av9912938/index_2.html#page=3)
+
+## 机器学习的定义
+
+A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.
+
+                                  --by Tom M. Mitchell
+
+## 学习最重要的是掌握工具的用法
+
+学习最重要的是学会如何更好地使用工具，而不是仅仅知道有这个工具有什么用。视频中吴恩达用了木匠来做比喻，木匠最重要的是知道如何正确使用锤子或螺丝刀这些工具去做出东西，而不是仅仅知道这些工具能用来做什么。
+
+因此选择工具，然后深度研究如何使用这个工具，是一个很重要的问题。选择工具时，应该首先搞清楚这个框架的长处和短处是什么，它能解决什么样的问题。使用工具时，要知道如何调校工具，达到非常顺手的地步。
+
+这个道理可以应用到学吉他，学习新的框架上。
+
+## 机器学习分类
+
+* 有监督学习（Supervised learning）
+* 无监督学习（Unsupervised learning）
+
+## 参考资料
+
+[机器学习WIKI](https://en.wikipedia.org/wiki/Machine_learning)
+

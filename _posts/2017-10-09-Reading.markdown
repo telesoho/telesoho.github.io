@@ -1,0 +1,201 @@
+---
+title: 知能と技術的特異点
+tags:  [TODO]
+layout: post
+description: 
+comments: true
+published: false
+date: 2017-10-09 9:21:01 +0900
+---
+
+これは [人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)[アドベントカレンダー](http://d.hatena.ne.jp/keyword/%A5%A2%A5%C9%A5%D9%A5%F3%A5%C8%A5%AB%A5%EC%A5%F3%A5%C0%A1%BC) の1日目の記事です。
+
+### はじめに
+
+本[アドベントカレンダー](http://d.hatena.ne.jp/keyword/%A5%A2%A5%C9%A5%D9%A5%F3%A5%C8%A5%AB%A5%EC%A5%F3%A5%C0%A1%BC)は25日間をかけて、知能、あるいは[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)（あとで触れますが、正確には汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を指す）について、それを理解しまた実現する技術について、広く浅く解説と紹介をします。
+
+ここでいう[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、後述するように一般に考えられている[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)(Artificial Intelligence) ではなく、汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD) (Artificial General Intelligence, AGI) であり、一言で表すなら、「人と同じような知性をもった機械」を考えます。ただし、以降は特に断りのない限り(こだわりのないかぎり）、AGIの意味で単にAIといいます。AIとAGIの違いについては、以前の記事
+[人工知能は Deep Learning によって成されるのか？ - Sideswipe](http://kazoo04.hatenablog.com/entry/2015/10/09/120000) を御覧ください。こちらは今回のシリーズで扱う内容の概要としてもお使いいただけます。
+
+### 知能とはなにか
+
+知能は、一般に、<ruby>抽象的思考<rt>ちゅうしょうてきしこう</rt></ruby>、理解、自己の認識、他者とのコミュニケーション、学習、計画、記憶、創造と問題解決ができること、などによって定義されます。
+
+### [人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)とはなにか
+
+[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、その字面のとおり、知能（を持つなにか）を人の手で作ろうという試みです。
+ここでの[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、"真の"[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD) （強いAI ≒ AGI）であることに注意してください。逆に言えば、弱いAIは既に十分に実用化されています。
+たとえば、
+
+* チェスをする
+* 顔認識をする
+* [線形代数](http://d.hatena.ne.jp/keyword/%C0%FE%B7%C1%C2%E5%BF%F4)や[微分](http://d.hatena.ne.jp/keyword/%C8%F9%CA%AC)[積分](http://d.hatena.ne.jp/keyword/%C0%D1%CA%AC)の複雑な計算をおこなう
+* クイズに答える
+* 文字や声を認識する
+
+などといったことは、すでにコンピュータ≒電子計算機（や階差機関）によってなされていますし、人間を超えたパフォーマンスを発揮しているものも多くあります。
+
+
+### [人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)の壁
+
+
+#### 5歳児にも勝てないチェスロボット？
+
+では、こうした数々の輝かしい実績があるのにもかかわらず、なぜ[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を取り扱うのでしょうか？  
+それは、既存のAIでは決定的にできていない、できない壁が存在するためです。
+
+チェスを例にしましょう。今のチェ[スプログ](http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%ED%A5%B0)ラムは極めて賢く、1997年には世界チャンピオンのガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)に[IBM](http://d.hatena.ne.jp/keyword/IBM)のディープブルーが勝利しており、人間はどんなに賢い人でもまず勝てません。ところが、チェスのコマを並べたり、持ち上げて移動させたりするのは極めて困難です。5歳の子供でも勝つことができるでしょう [*1](#f-5b66c070 "Daniel Wolpert の講演から引用")。
+
+最新のロボット工学では、確かに様々なことが出来るようになりました。たとえば[ASIMO](http://d.hatena.ne.jp/keyword/ASIMO)はお盆にお茶を入れて運び、人に渡すことができます。  
+このために多くの技術者が長い期間をかけてプログラミングを行いましたが、別のことをしようと思ったら（たとえば回収したコップを流しに入れるなど）また新しいプロジェクトが必要になります。
+
+ディープブルーも、チェスでは無類の強さを誇る一方で、将棋はまったくできませんし、他のいかなる問題もできません。人間ならあるひとつのタスクからほかにつながるような一般化ができますが、そのような能力は既存のAIにはありません。
+
+<span itemscope="" itemtype="http://schema.org/Photograph">![f:id:kazoo04:20151130200328p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130200328.png "f:id:kazoo04:20151130200328p:plain")</span>  
+<span style="font-size: 65%">[IBM](http://d.hatena.ne.jp/keyword/IBM)のチェスマシン Deep Blue[*2](#f-0b08ca11 "James the photographer - http://flickr.com/photos/22453761@N00/592436598/ (CC BY 2.0) ") と当時チェスの世界チャンピオンだったガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)(Гарри Кимович Каспаров, Garry Kimovich Kasparov) [*3](#f-fbbf3e77 "Copyright 2007, S.M.S.I., Inc. - Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php (CC BY-SA 3.0) ")</span>
+
+
+#### ネズミにも勝てない災害救助ロボット？
+
+もうひとつ例をあげましょう。  
+[DARPA](http://d.hatena.ne.jp/keyword/DARPA) Robotics Challenge は、二足歩行ロボットで災害救助（を想定した競技）を行う大会です。  
+ここでは、自動車を所定の場所まで運転し、降車し、ドアノブをあけたり、ドリルをもって穴を開けたり、[瓦礫](http://d.hatena.ne.jp/keyword/%B4%A4%E3%AA)の上を歩いたりしなければなりません。
+
+[![The 2015 DARPA Robotics Challenge Finals - YouTube](https://img.youtube.com/vi/8P9geWwi9e0/0.jpg)](https://www.youtube.com/watch?v=8P9geWwi9e0)
+
+このためには、極めて優れたエンジニアが長い期間をかけてプログラミングを行う必要があります。たとえば「ドアノブを開ける」というタスクについて考えましょう。  
+それには以下の様な手順でプログラムを書く必要があります。
+
+*   3Dスキャナー（レーダー）でドアノブがありそうな場所の三次元形状を推定する
+*   推定した形状をもとに、最もドアノブに似ている形状のものを探す
+*   ドアノブの向きを調べて、つかむために必要な手首の角度を計算する
+*   自身の位置とレーダーの情報を元に、肩からドアノブまでの位置関係を計算する
+*   以上の結果から、肩・肘・手首・指をどのように動かせばドアノブまで手を伸ばせるかを計算する
+*   モーターを駆動させる
+*   様々なノイズによって各関節の位置に誤差が出るので、それらを検知する
+*   誤差を打ち消すために必要な動きを計算して、[フィードバック制御](http://d.hatena.ne.jp/keyword/%A5%D5%A5%A3%A1%BC%A5%C9%A5%D0%A5%C3%A5%AF%C0%A9%B8%E6)する
+*   手になにがかぶつかったらそこで動きを止める
+*   レーダー情報を解析して、手にぶつかっているものが確かにドアノブだと判定したら、手を握る
+*   etc.
+
+ここまででようやく「ドアノブを握る」まで到達しました。もう書ききれませんがこれだけの処理を人が作りこんでいく（=プログラミングをする）必要があります。今回はドアノブがレバーのようなタイプでも、丸いタイプだったらまた修正が必要です。ボタンを押して開く自動ドアだったらまた修正が必要です。気が滅入りますね。
+
+[![A Celebration of Risk (a.k.a., Robots Take a Spill)](https://img.youtube.com/vi/7A_QPGcjrh0/0.jpg)](https://www.youtube.com/watch?v=7A_QPGcjrh0)
+<span style="font-size: 80%">失敗事例集。最先端の技術を結集しても簡単に転んでしまう。</span>  
+
+
+#### 今の[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)と我々はなにが違うのか
+
+先日、私の1歳半の息子がクリスマスツリーの飾りが落ちているのを見つけて拾い上げていました。わたしが「もとのところに戻しておいて」と言うと、彼は迷うこと無くクリスマスツリーがあるところにいって適当な枝に飾りをひっかけていました。これは今のロボット工学からすると驚異的な能力です。本来別のところにあるものが落ちていることを認識し、拾い上げ、私の発言から意図を推測し、手に持っているものがクリスマスツリーの一部であることからツリーがどこにあるか思い出し、移動し、適当な場所に設置するだなんて、現在はどんなに賢いロボットでもできません。そもそも障害物だらけの場所をあんなに滑らかに歩行することがまず無理です。
+
+「どうも今のロボットがとってるアプローチは、我々動物とは違うようだぞ？」と思っていただければそれで構いません。人間でなくても、たとえばネズミであっても段差を登っていって迷路を探索してボタンを押して餌をとる、なんてことはあっという間にできますし、一度学習したらちょっとくらい環境が変わってもなんなくこなせます。
+
+そもそも、「不安定な場所を歩いて行き、転倒してもすぐに立てる」レベルのロボットは、最近ようやく Boston Dynamics の Big Dog ができるようになりましたが、こんなものは人間はもちろん、昆虫ですらできるわけです。どうにも今のロボットと動物は、物事の処理の仕方が決定的に違いそうです。
+
+<span itemscope="" itemtype="http://schema.org/Photograph">![f:id:kazoo04:20151130203058p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130203058.png "f:id:kazoo04:20151130203058p:plain")</span>  
+<span style="font-size: 65%">現代科学を駆使した最高の技術を結集して作ったロボットも、生まれたばかりの赤ん坊にあっという間に追いぬかれてしまうのはなぜなのか？</span>
+
+従来の[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、ある目的に超特化してそれをうまくすることはできるのですが、動物の知能というものは非常に一般化されていて、どのような状況にも柔軟に対応できるということがわかります。
+
+
+### 汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)
+
+というわけで、今、世間で言われている[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は生き物にとって高度だと思われていること（[微分](http://d.hatena.ne.jp/keyword/%C8%F9%CA%AC)[積分](http://d.hatena.ne.jp/keyword/%C0%D1%CA%AC)の計算をする、チェスや将棋をする、etc.）に対しては高いパフォーマンスを発揮している一方で、生き物が簡単な問題（歩く、転がってきたボールを拾う、餌を探す、捕食者から逃げる、会話する、etc.）はまったく歯がたたないという、ある種の[パラドックス](http://d.hatena.ne.jp/keyword/%A5%D1%A5%E9%A5%C9%A5%C3%A5%AF%A5%B9)が発生しているわけです。
+
+そこで、従来の特化型の[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)とはまったく別のアプローチをとって、動物の知能を模倣しようとする潮流があります。それが汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)(AGI)と呼ばれるものです[*4](#f-3e1550ab "従来のAIを、古き良きAI(Good Old-Fashioned Artificial Intelligence, GOFAI)と呼ぶことがあるようですが、本稿では用いません")。
+
+どのようにしてAGIを実現するのかはまだあまりわかっておらず、当然AGIはこの世にまだ存在しないわけですが、わかりやすく言えば、映画に出てくる「[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)をもったロボット」を想像していただければわかりやすいでしょう。たとえば、[ドラえもん](http://d.hatena.ne.jp/keyword/%A5%C9%A5%E9%A4%A8%A4%E2%A4%F3)、[鉄腕アトム](http://d.hatena.ne.jp/keyword/%C5%B4%CF%D3%A5%A2%A5%C8%A5%E0)、[ターミネーター](http://d.hatena.ne.jp/keyword/%A5%BF%A1%BC%A5%DF%A5%CD%A1%BC%A5%BF%A1%BC)のT800, [2001年宇宙の旅](http://d.hatena.ne.jp/keyword/2001%C7%AF%B1%A7%C3%E8%A4%CE%CE%B9)の[HAL9000](http://d.hatena.ne.jp/keyword/HAL9000), [インターステラー](http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%BF%A1%BC%A5%B9%A5%C6%A5%E9%A1%BC)のTARSとCARS, [WALL・E](http://d.hatena.ne.jp/keyword/WALL%A1%A6E)のウォーリーなどなど…枚挙にいとまがありませんが、それだけ人々が[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)に対してさまざまな感情を抱いてきたことがわかります。
+
+こういった"本物の"[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を作るのが汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)であり、また本稿の主題でもあります。
+
+### 技術的[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)
+
+技術的[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)(Technological Singularity) はキャッチーなのでタイトルに入れましたが、特にこのテーマを主眼に置いて記事は書きません。  
+技術的[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)は、人間と同等以上のAGIが生まれたときに、そのAGIがさらに洗練されたAGIを自ら設計し、そうして生まれたAGIがさらに洗練されたAGIを設計し…というプロセスがひとたび始まると、知能が爆発的に上昇し、人間が置いて行かれるようになるある瞬間のことをいいます。  
+もっとも、技術的[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)が発生するための条件として、AGIが存在するわけですから、本シリーズは「技術的[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)を起こす方法」とみなしてもよいでしょう。
+
+<span itemscope="" itemtype="http://schema.org/Photograph">![f:id:kazoo04:20151130204802p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130204802.png "f:id:kazoo04:20151130204802p:plain")</span>  
+<span style="font-size: 65%">技術的[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)を説明した図(正確なものではなく、あくまでも[特異点](http://d.hatena.ne.jp/keyword/%C6%C3%B0%DB%C5%C0)が意味するところを想像してもらうためのイメージ)。[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)が次第に賢くなっていくといつか人間を超える瞬間があり、それ以降は[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)が加速的に賢くなる知能の爆発が起きる、といわれている。時間軸の「2015年」は便宜上設けたものであり、縦軸横軸ともに正確な意味はない。横軸の始まりの部分は、（人類誕生ではなく）生命が知性を獲得した瞬間、と考えていただきたい[*5](#f-3a55263e "人間(ホモ・サピエンス)は誕生以来ほとんど知能は変わっていないと思われる。このグラフの赤い線はかなり楽観的な傾きであって、実際は残念ながらほぼ平らである")。</span>  
+
+### 本シリーズの流れ
+
+AI(繰り返しますが、以降はAGIの意味で[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)あるいはAIと言います)の説明をしていくうえで、まずは「どうすれば[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)が作れるか？」を考えましょう。  
+大きく分けると、ふたつのアプローチがあります(詳しくは [人工知能は Deep Learning によって成されるのか？ - Sideswipe](http://kazoo04.hatenablog.com/entry/2015/10/09/120000) を御覧ください)。
+
+ひとつは、[トップダウン](http://d.hatena.ne.jp/keyword/%A5%C8%A5%C3%A5%D7%A5%C0%A5%A6%A5%F3)のアプローチです。つまり、数学の問題を解く、[音声認識](http://d.hatena.ne.jp/keyword/%B2%BB%C0%BC%C7%A7%BC%B1)をする、顔認識をする、チェスをする、会話をする、などといった知能がもたらす高度な振る舞いをひとつひとつ観察・模倣していって、網羅的に知能的な振る舞いを実現していく方法です。これに従うならば、人間ができることをひとつひとつ丁寧にプログラミングによって再現していくことで、いつか人間と見分けがつかないような振る舞いをするロボットが作れる、というわけです。
+
+もうひとつは、[ボトムアップ](http://d.hatena.ne.jp/keyword/%A5%DC%A5%C8%A5%E0%A5%A2%A5%C3%A5%D7)のアプローチです。脳は様々な部位から構成されており、またそれぞれの部位はさらに細かい神経の集まりによって構成されており、神経の集まりの中を見るとさまざまな神経細胞が複雑に繋がっており、さらには各神経細胞は化学的・電気的なふるまいによって動いています。これらを生理学的に調べていき、コンピュータ上に再現すれば、（十分にうまく再現できれば）知的な振る舞いをするプログラムが作れるはずです。
+
+前者はすでに様々な分野で成果を上げている一方で、後者は考えただけでも気が滅入りそうです。そのため注目を集めやすいのはやはり前者の[トップダウン](http://d.hatena.ne.jp/keyword/%A5%C8%A5%C3%A5%D7%A5%C0%A5%A6%A5%F3)的なものですが、モラベックの[パラドックス](http://d.hatena.ne.jp/keyword/%A5%D1%A5%E9%A5%C9%A5%C3%A5%AF%A5%B9)といって、高度な知性が必要な物は簡単なのに、昆虫や爬虫類でもできるような振る舞いは難しい（つまりチェスのAIはすぐできたが、森を歩きまわるロボットは極めて難しい）という問題もあるので、[ボトムアップ](http://d.hatena.ne.jp/keyword/%A5%DC%A5%C8%A5%E0%A5%A2%A5%C3%A5%D7)的なアプローチも必須だと考えられています。
+
+もちろん、その中間くらいの部分からのアプローチも有効でしょう。
+
+<span itemscope="" itemtype="http://schema.org/Photograph">![f:id:kazoo04:20151008201638p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151008/20151008201638.png "f:id:kazoo04:20151008201638p:plain")</span>
+
+<span style="font-size: 65%">[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を実現する2つのアプローチ。知能がなす高度な振る舞いの模倣から始める([トップダウン](http://d.hatena.ne.jp/keyword/%A5%C8%A5%C3%A5%D7%A5%C0%A5%A6%A5%F3))か、生き物が共通して持っている神経基盤を明らかにしていくか（[ボトムアップ](http://d.hatena.ne.jp/keyword/%A5%DC%A5%C8%A5%E0%A5%A2%A5%C3%A5%D7)）が考えられる。実際にはこの2つの協力・融合が必要になる。</span>
+
+そこで、本シリーズでは、まず[ボトムアップ](http://d.hatena.ne.jp/keyword/%A5%DC%A5%C8%A5%E0%A5%A2%A5%C3%A5%D7)で、つまり個々の神経細胞の振る舞いや、脳の各部位がどのような機能を持っているのかについて見ていきます。次に中間的なアプローチ、つまり心理学などによって動物の振る舞いから得られたデータを元に推測される脳の仕組みについてご紹介します。  
+最後に[トップダウン](http://d.hatena.ne.jp/keyword/%A5%C8%A5%C3%A5%D7%A5%C0%A5%A6%A5%F3)のアプローチによって、[機械学習](http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC)（みなさんがお好きなDeep Learningも！）やコンピュータによる脳の各機能のシミュレーションについて触れます。
+
+### 本シリーズで気をつけること
+
+#### 生理学に近づき過ぎない
+
+今回は、AGIという題材を扱うことから、当然脳の仕組みについて触れますが、適度な粒度で扱うことにし、細部については省略します。  
+これは、文量が多くなりすぎて25日ではとても扱いきれないという点もありますが、必要以上に細かいところを見てもAGIの実現という目的からは逸れてしまうと考えるからです。[プログラミング言語](http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%B0%A5%E9%A5%DF%A5%F3%A5%B0%B8%C0%B8%EC)を作るときに[トランジスタ](http://d.hatena.ne.jp/keyword/%A5%C8%A5%E9%A5%F3%A5%B8%A5%B9%A5%BF)の電子の流れを説明することがないように、グライダーを作るときに鳥の羽毛の構造を勉強することがないよう[*6](#f-a31f9a2f "言うまでもなく、空を飛ぶときに鳥の骨や羽を研究することは有用だが、今回はわかりやすい例えとしてご容赦いただきたい。動力飛行発明までに多くの人が「羽ばたく」ことに固執して失敗していったように、空を飛ぶために最小限必要なものは何か？を考えるのと同様、人工知能も実現するための最小限の理論があるはずで、そこからさらに発展させていくという意味では脳の非常に細かな機能や挙動にも注意を払っていく必要があるだろう")に、今回もあまりにも細かい部分、たとえば[ニューロン](http://d.hatena.ne.jp/keyword/%A5%CB%A5%E5%A1%BC%A5%ED%A5%F3)が発火するときのナトリウムイオンの挙動については触れません。
+
+
+#### （旧来の）[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)には触れない
+
+[Support Vector Machine](http://d.hatena.ne.jp/keyword/Support%20Vector%20Machine) （サポート[ベクタ](http://d.hatena.ne.jp/keyword/%A5%D9%A5%AF%A5%BF)マシン）や、Random Forest（ランダムフォレスト）、またDeep Learning（ディープラーニング）などの[機械学習](http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC)[アルゴリズム](http://d.hatena.ne.jp/keyword/%A5%A2%A5%EB%A5%B4%A5%EA%A5%BA%A5%E0)や、ゲームのAI、車の自動運転技術などには触れません[*7](#f-d37d5607 "Deep Learning とニューラルネットワークについては、若干触れる予定")。これは一般にAIと呼ばれる分野ですが、すでに述べたようにこれらは人間の知性をコンピュータに再現するという汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)とは異なる技術です。今よく言われているAIと、AGIがかなり違うものだということはここまで読んだみなさんならよくお分かりかと思いますが、本シリーズをすべて読んでも、チェスをするソフトウェアや、二足歩行ロボットが作れるわけではありません。
+
+#### [クオリア](http://d.hatena.ne.jp/keyword/%A5%AF%A5%AA%A5%EA%A5%A2)に触れない
+
+今回は[クオリア](http://d.hatena.ne.jp/keyword/%A5%AF%A5%AA%A5%EA%A5%A2)には触れません[*8](#f-a4ca90e0 "クオリアの説明をするとそれだけでかなりの文量が必要になるという理由と、客観的に観測する方法がわかっていないため、ここで論じても意味が薄い、という理由")。知りたい人はインターネットで検索してください。
+
+#### 機械論を前提にする
+
+ここでは、脳は完全に物理法則の範囲内で動作しており、意識や心も今はわかっていないだけでいつかは理論的に説明可能であるという前提で説明します[*9](#f-da507dff "機械論的唯物論、唯物論")。  
+つまり、「科学では絶対に説明不可能な存在（たとえば霊魂）が存在して、それが肉体に働きかけることで我々に意識や心が生まれ、身体を動かすのだ」という[二元論](http://d.hatena.ne.jp/keyword/%C6%F3%B8%B5%CF%C0)的な話はしません[*10](#f-2ab0cb12 "二元論を否定するわけではありませんが、「知性には霊的な存在が必ず必要である」と仮定すると、本シリーズの意味がなくなるため、機械論を前提にしないと以降の話が成り立たない")。
+
+
+#### イラストはなるべく自作
+
+わかりやすさのため、なるべく多くの挿絵を使っていく予定ですが、基本的に自作することにします。本シリーズでは、出典の明記がない場合、すべて著者の自作です。  
+一通り終わったら、加筆修正をしたのち[*11](#f-83c4914f "間違いがたくさんある前提")、適当なライセンス（おそらくPublic Domain）で公開して、スライドやウェブページで自由に使えるようにしようと考えているからです[*12](#f-af0ac371 "SVGの予定ですが、他の希望があればお願いします")。他の人がAGIを語るとき、挿絵としての選択肢が少しでも多くなればと思いこのような方針にしています。
+
+
+#### なるべく英語で併記する
+
+専門用語は、初出時には可能な限り英語表記も紹介します。これは、読者が脳科学に興味を持ったときにウェブページや論文の情報に触れやすくするためです。  
+日本語の文献だけだと英語表記がわからないため、論文を読むときに[逐次](http://d.hatena.ne.jp/keyword/%C3%E0%BC%A1)翻訳しなければならず、非常に大変です。そのような労力はみなさんがする必要はないと考えます。
+
+
+### 次回にむけて
+
+日本語のウェブページや書籍では、先の図の上から下まで[一気通貫](http://d.hatena.ne.jp/keyword/%B0%EC%B5%A4%C4%CC%B4%D3)で解説した物が少なく、また情報源が非常に古かったり、偏っていたりして、「[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を実現するために必要な情報」をまとめたものがないために執筆を決めました。  
+数学、[情報工学](http://d.hatena.ne.jp/keyword/%BE%F0%CA%F3%B9%A9%B3%D8)、脳科学、神経生理学、心理学を織り交ぜながら広く浅く解説・紹介をしていく予定なので、以後お楽しみに。
+
+[*1](#fn-5b66c070)<span class="footnote-delimiter">:</span><span class="footnote-text">Daniel Wolpert の講演から引用</span>
+
+[*2](#fn-0b08ca11)<span class="footnote-delimiter">:</span><span class="footnote-text">James the photographer - [http://flickr.com/photos/22453761@N00/592436598/](http://flickr.com/photos/22453761@N00/592436598/) (CC BY 2.0)</span>
+
+[*3](#fn-fbbf3e77)<span class="footnote-delimiter">:</span><span class="footnote-text">Copyright 2007, S.M.S.I., Inc. - Owen Williams, The Kasparov Agency. - [http://www.kasparovagent.com/photo_gallery.php](http://www.kasparovagent.com/photo_gallery.php) (CC BY-SA 3.0)</span>
+
+[*4](#fn-3e1550ab)<span class="footnote-delimiter">:</span><span class="footnote-text">従来のAIを、古き良きAI(Good Old-Fashioned Artificial Intelligence, GOFAI)と呼ぶことがあるようですが、本稿では用いません</span>
+
+[*5](#fn-3a55263e)<span class="footnote-delimiter">:</span><span class="footnote-text">人間([ホモ・サピエンス](http://d.hatena.ne.jp/keyword/%A5%DB%A5%E2%A1%A6%A5%B5%A5%D4%A5%A8%A5%F3%A5%B9))は誕生以来ほとんど知能は変わっていないと思われる。このグラフの赤い線はかなり楽観的な傾きであって、実際は残念ながらほぼ平らである</span>
+
+[*6](#fn-a31f9a2f)<span class="footnote-delimiter">:</span><span class="footnote-text">言うまでもなく、空を飛ぶときに鳥の骨や羽を研究することは有用だが、今回はわかりやすい例えとしてご容赦いただきたい。動力飛行発明までに多くの人が「羽ばたく」ことに固執して失敗していったように、空を飛ぶために最小限必要なものは何か？を考えるのと同様、[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)も実現するための最小限の理論があるはずで、そこからさらに発展させていくという意味では脳の非常に細かな機能や挙動にも注意を払っていく必要があるだろう</span>
+
+[*7](#fn-d37d5607)<span class="footnote-delimiter">:</span><span class="footnote-text">Deep Learning と[ニューラルネットワーク](http://d.hatena.ne.jp/keyword/%A5%CB%A5%E5%A1%BC%A5%E9%A5%EB%A5%CD%A5%C3%A5%C8%A5%EF%A1%BC%A5%AF)については、若干触れる予定</span>
+
+[*8](#fn-a4ca90e0)<span class="footnote-delimiter">:</span><span class="footnote-text">[クオリア](http://d.hatena.ne.jp/keyword/%A5%AF%A5%AA%A5%EA%A5%A2)の説明をするとそれだけでかなりの文量が必要になるという理由と、客観的に観測する方法がわかっていないため、ここで論じても意味が薄い、という理由</span>
+
+[*9](#fn-da507dff)<span class="footnote-delimiter">:</span><span class="footnote-text">機械論的[唯物論](http://d.hatena.ne.jp/keyword/%CD%A3%CA%AA%CF%C0)、[唯物論](http://d.hatena.ne.jp/keyword/%CD%A3%CA%AA%CF%C0)</span>
+
+[*10](#fn-2ab0cb12)<span class="footnote-delimiter">:</span><span class="footnote-text">[二元論](http://d.hatena.ne.jp/keyword/%C6%F3%B8%B5%CF%C0)を否定するわけではありませんが、「知性には霊的な存在が必ず必要である」と仮定すると、本シリーズの意味がなくなるため、機械論を前提にしないと以降の話が成り立たない</span>
+
+[*11](#fn-83c4914f)<span class="footnote-delimiter">:</span><span class="footnote-text">間違いがたくさんある前提</span>
+
+[*12](#fn-af0ac371)<span class="footnote-delimiter">:</span><span class="footnote-text">[SVG](http://d.hatena.ne.jp/keyword/SVG)の予定ですが、他の希望があればお願いします</span>
