@@ -9,7 +9,7 @@ categories: Machine-Learning
 date: 2017-10-10 5:32:00 +0900
 ---
 
-[![](../assets/images/ML03-2017-10-10-05-30-06.png)](https://www.bilibili.com/video/av9912938/index_2.html#page=3)
+[![](/assets/images/ML03-2017-10-10-05-30-06.png)](https://www.bilibili.com/video/av9912938/index_2.html#page=3)
 
 ## 机器学习的定义
 

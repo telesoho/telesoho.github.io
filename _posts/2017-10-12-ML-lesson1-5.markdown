@@ -1,0 +1,21 @@
+---
+title: 无监督学习 
+tags:  [机器学习, 有监督学习, 无监督学习]
+layout: post
+description: 
+comments: true
+published: true
+categories: Machine-Learning
+date: 2017-10-12 7:26:00 +0900
+---
+
+[![](/assets/images/ML1-5-2017-10-12-07-52-28.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=4)
+
+## 选择合适的框架
+
+一个开起来很复杂的机器学习应用，比如视频中识别出几个同时说话的人的声音的程序，如果用普通的Java或者Python来实现，需要写很多很多代码，但是，在Octave中，只用一句代码！使用octave能更快实现机器学习的想法，加快学习进度。
+
+以下是这一节课的问题：
+
+![](/assets/images/ML1-6-2017-10-12-07-55-06.png)
+

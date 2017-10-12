@@ -8,43 +8,42 @@ published: false
 date: 2017-10-09 9:21:01 +0900
 ---
 
-これは [人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)[アドベントカレンダー](http://d.hatena.ne.jp/keyword/%A5%A2%A5%C9%A5%D9%A5%F3%A5%C8%A5%AB%A5%EC%A5%F3%A5%C0%A1%BC) の1日目の記事です。
+これは 人工知能[アドベントカレンダー](http://d.hatena.ne.jp/keyword/%A5%A2%A5%C9%A5%D9%A5%F3%A5%C8%A5%AB%A5%EC%A5%F3%A5%C0%A1%BC) の1日目の記事です。
 
 ### はじめに
 
-本[アドベントカレンダー](http://d.hatena.ne.jp/keyword/%A5%A2%A5%C9%A5%D9%A5%F3%A5%C8%A5%AB%A5%EC%A5%F3%A5%C0%A1%BC)は25日間をかけて、知能、あるいは[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)（あとで触れますが、正確には汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を指す）について、それを理解しまた実現する技術について、広く浅く解説と紹介をします。
+本アドベントカレンダーは25日間をかけて、知能、あるいは人工知能（あとで触れますが、正確には汎用人工知能を指す）について、それを理解しまた実現する技術について、広く浅く解説と紹介をします。
 
-ここでいう[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、後述するように一般に考えられている[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)(Artificial Intelligence) ではなく、汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD) (Artificial General Intelligence, AGI) であり、一言で表すなら、「人と同じような知性をもった機械」を考えます。ただし、以降は特に断りのない限り(こだわりのないかぎり）、AGIの意味で単にAIといいます。AIとAGIの違いについては、以前の記事
+ここでいう[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、後述するように一般に考えられている[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)(Artificial Intelligence) ではなく、汎用[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD) (Artificial General Intelligence, AGI) であり、一言で表すなら、「人と同じような知性をもった機械」を考えます。ただし、以降は特に<ruby>断りのない限り<rt>こだわりのないかぎり</rt></ruby>、AGIの意味で単にAIといいます。AIとAGIの違いについては、以前の記事
 [人工知能は Deep Learning によって成されるのか？ - Sideswipe](http://kazoo04.hatenablog.com/entry/2015/10/09/120000) を御覧ください。こちらは今回のシリーズで扱う内容の概要としてもお使いいただけます。
 
 ### 知能とはなにか
 
 知能は、一般に、<ruby>抽象的思考<rt>ちゅうしょうてきしこう</rt></ruby>、理解、自己の認識、他者とのコミュニケーション、学習、計画、記憶、創造と問題解決ができること、などによって定義されます。
 
-### [人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)とはなにか
+### 人工知能とはなにか
 
-[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、その字面のとおり、知能（を持つなにか）を人の手で作ろうという試みです。
+人工知能は、その字面のとおり、知能（を持つなにか）を人の手で作ろうという試みです。
 ここでの[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、"真の"[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD) （強いAI ≒ AGI）であることに注意してください。逆に言えば、弱いAIは既に十分に実用化されています。
 たとえば、
 
 * チェスをする
 * 顔認識をする
-* [線形代数](http://d.hatena.ne.jp/keyword/%C0%FE%B7%C1%C2%E5%BF%F4)や[微分](http://d.hatena.ne.jp/keyword/%C8%F9%CA%AC)[積分](http://d.hatena.ne.jp/keyword/%C0%D1%CA%AC)の複雑な計算をおこなう
+* [線形代数](http://d.hatena.ne.jp/keyword/%C0%FE%B7%C1%C2%E5%BF%F4)や[<ruby>微分<rt>びぶん</rt><ruby>](http://d.hatena.ne.jp/keyword/%C8%F9%CA%AC)[<ruby>積分<rt>せきぶん</rt></ruby>](http://d.hatena.ne.jp/keyword/%C0%D1%CA%AC)の複雑な計算をおこなう
 * クイズに答える
 * 文字や声を認識する
 
-などといったことは、すでにコンピュータ≒電子計算機（や階差機関）によってなされていますし、人間を超えたパフォーマンスを発揮しているものも多くあります。
+などといったことは、すでにコンピュータ≒電子計算機（や<ruby>階差<rt>かいさ</rt></ruby>機関）によってなされていますし、人間を超えたパフォーマンスを発揮しているものも多くあります。
 
 
-### [人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)の壁
+### 人工知能の壁(カベ)
 
+#### 5歳児(さいじ)にも勝てないチェスロボット？
 
-#### 5歳児にも勝てないチェスロボット？
-
-では、こうした数々の輝かしい実績があるのにもかかわらず、なぜ[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を取り扱うのでしょうか？  
+では、こうした数々(かずかず)の輝(かがや)かしい実績があるのにもかかわらず、なぜ[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を取り扱うのでしょうか？  
 それは、既存のAIでは決定的にできていない、できない壁が存在するためです。
 
-チェスを例にしましょう。今のチェ[スプログ](http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%ED%A5%B0)ラムは極めて賢く、1997年には世界チャンピオンのガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)に[IBM](http://d.hatena.ne.jp/keyword/IBM)のディープブルーが勝利しており、人間はどんなに賢い人でもまず勝てません。ところが、チェスのコマを並べたり、持ち上げて移動させたりするのは極めて困難です。5歳の子供でも勝つことができるでしょう [*1](#f-5b66c070 "Daniel Wolpert の講演から引用")。
+チェスを例にしましょう。今のチェ[スプログ](http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%ED%A5%B0)ラムは極めて賢く(きわめてかしこく)、1997年には世界チャンピオンのガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)に[IBM](http://d.hatena.ne.jp/keyword/IBM)のディープブルーが勝利しており、人間はどんなに賢い人でもまず勝てません。ところが、チェスのコマを並べたり、持ち上げて移動させたりするのは極めて困難です。5歳の子供でも勝つことができるでしょう [*1](#f-5b66c070 "Daniel Wolpert の講演から引用")。
 
 最新のロボット工学では、確かに様々なことが出来るようになりました。たとえば[ASIMO](http://d.hatena.ne.jp/keyword/ASIMO)はお盆にお茶を入れて運び、人に渡すことができます。  
 このために多くの技術者が長い期間をかけてプログラミングを行いましたが、別のことをしようと思ったら（たとえば回収したコップを流しに入れるなど）また新しいプロジェクトが必要になります。

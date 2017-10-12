@@ -39,6 +39,19 @@ https://www.youtube.com/watch?v=t8-FqWlC42A&list=FLTxztHCubvx2PCPBwyEyqkw&index=
 <ruby>单词<rt>danchi</rt></ruby>
 ```
 
+### 清除选择文字的格式
+
+比如选择下面的一段文字
+
+```markdown
+[开源代码，把HTML转换为Markdown](https://github.com/domchristie/to-markdown)
+```
+
+执行清除格式后，变成
+
+```txt
+开源代码，把HTML转换为Markdown
+```
 
 ## 吉他谱网站
 

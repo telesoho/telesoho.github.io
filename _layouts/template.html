@@ -35,13 +35,7 @@
     {% endfor %}    
     <!--[if IE]>
     <script src="/assets/themes/default/js/html5.js"></script>
-    <![endif]-->    
-    {% for script in site.scripts %}
-    <script src="{{ script }}" type="text/javascript"></script>
-    {% endfor %}
-    {% for script in page.scripts %}
-    <script src="{{ script }}" type="text/javascript"></script>
-    {% endfor %}    
+    <![endif]-->
 </head>
 <body class="{{ page.bodyclass }}">
 <div id="wrapper">
@@ -101,4 +95,10 @@
 </div>
 </div>
 </body>
+{% for script in site.scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+{% for script in page.scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
 </html>
