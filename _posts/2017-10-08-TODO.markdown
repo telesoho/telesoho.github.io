@@ -6,6 +6,8 @@ description:
 comments: true
 published: true
 date: 2017-10-08 9:02:01 +0900
+mermaid: true
+mathjs: true
 ---
 
 - [ ] [机器学习的视频](https://www.bilibili.com/video/av9912938)，每个视频写个心得博客
@@ -29,15 +31,15 @@ f(x) = \int_{-\infty}^\infty
     \,d\xi
 $$
 
-<div class="mermaid">
+```mermaid
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-</div>
+```
 
-<div class="mermaid">
+```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
@@ -49,9 +51,9 @@ sequenceDiagram
     John-->>Alice: Great!
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
-</div>
+```
 
-<div class="mermaid">
+```mermaid
 gantt
 dateFormat  2017-10-22
 title 任务
@@ -61,4 +63,4 @@ Completed task            :done,    des1, 2014-01-06,2014-01-08
 Active task               :active,  des2, 2014-01-09, 3d
 Future task               :         des3, after des2, 5d
 Future task2               :         des4, after des3, 5d
-</div>
+```

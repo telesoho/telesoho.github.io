@@ -701,6 +701,7 @@ pre {
     
    .hll { background-color: {{ page.theme.dark }} }
     pre { background: {{ page.theme.black }}; color: {{ page.theme.white }} }
+    pre .language-mermaid { color: {{ page.theme.black }} }
     .c  { color: {{ page.theme.medium }} } 
    .err { color: #960050; background-color: #1e0010 } 
     .k  { color: {{ page.theme.blue }} } 

@@ -35,9 +35,7 @@ stylesheets:
 scripts:
  - //code.jquery.com/jquery-1.6.1.min.js
  - /assets/themes/default/js/site.js?234343
- - //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML
- - //unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
- 
+
 colors:
     highlights:
         blue: '#009ff7'
@@ -48,8 +46,6 @@ colors:
         medium: '#777777'
         light: '#FFFFFF'
     bg: '#EAF1F4'
-    
-
 
 # Where things are
 source:       .
