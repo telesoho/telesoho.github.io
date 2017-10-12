@@ -33,9 +33,9 @@ stylesheets:
  - /assets/themes/default/css/screen.css?52480=52480
  - /assets/themes/default/css/print.css
 scripts:
- - //code.jquery.com/jquery-1.6.1.js
+ - //code.jquery.com/jquery-1.6.1.min.js
  - /assets/themes/default/js/site.js?234343
- - //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
+ - //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML
  - //unpkg.com/mermaid@7.1.0/dist/mermaid.min.js
  
 colors:
