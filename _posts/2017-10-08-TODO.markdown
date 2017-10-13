@@ -7,7 +7,7 @@ comments: true
 published: true
 date: 2017-10-08 9:02:01 +0900
 mermaid: true
-mathjs: true
+mathjax: true
 ---
 
 - [ ] [机器学习的视频](https://www.bilibili.com/video/av9912938)，每个视频写个心得博客
@@ -19,17 +19,18 @@ mathjs: true
 
 $$\sqrt{\frac{n!}{k!(n-k)!}}$$
 
-$$a+abs(b)=c^2$$
+$$a+\sqrt{(b)^3}=c^2$$
 
-$$
-A_{m,n} = \begin{pmatrix}
+```math
+A_{m,n} 
+= \begin{pmatrix}
   ...
 \end{pmatrix}
 
 f(x) = \int_{-\infty}^\infty
     \hat f(\xi)\,e^{2 \pi i \xi x}
     \,d\xi
-$$
+```
 
 ```mermaid
 graph TD;

@@ -12,9 +12,7 @@ It can be "compiled" with the following Rake tasks
     rake clean    # Remove any temporary products.
     rake clobber  # Remove any generated file.
 
-All content is Copyright 2010 by Michael Monteleone.
-
-Content within `/_posts` and `/assets/themes` is released under [CC Attribution 3.0](http://creativecommons.org/licenses/by/3.0/us/)
+All content is Copyright 2017 by telesoho.com.
 
 Content not within `/_posts` and `/assets/themes` is released under terms of the MIT license.
 
