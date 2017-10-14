@@ -29,7 +29,7 @@ date: 2017-10-09 9:21:01 +0900
 
 * チェスをする
 * 顔認識をする
-* [線形代数](http://d.hatena.ne.jp/keyword/%C0%FE%B7%C1%C2%E5%BF%F4)や[<ruby>微分<rt>びぶん</rt><ruby>](http://d.hatena.ne.jp/keyword/%C8%F9%CA%AC)[<ruby>積分<rt>せきぶん</rt></ruby>](http://d.hatena.ne.jp/keyword/%C0%D1%CA%AC)の複雑な計算をおこなう
+* [線形代数](http://d.hatena.ne.jp/keyword/%C0%FE%B7%C1%C2%E5%BF%F4)や<ruby>[微分](http://d.hatena.ne.jp/keyword/%C8%F9%CA%AC)<rt>びぶん</rt></ruby><ruby>[積分](http://d.hatena.ne.jp/keyword/%C0%D1%CA%AC)<rt>せきぶん</rt></ruby>の複雑な計算をおこなう
 * クイズに答える
 * 文字や声を認識する
 
@@ -43,16 +43,15 @@ date: 2017-10-09 9:21:01 +0900
 では、こうした数々(かずかず)の輝(かがや)かしい実績があるのにもかかわらず、なぜ[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を取り扱うのでしょうか？  
 それは、既存のAIでは決定的にできていない、できない壁が存在するためです。
 
-チェスを例にしましょう。今のチェ[スプログ](http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%ED%A5%B0)ラムは極めて賢く(きわめてかしこく)、1997年には世界チャンピオンのガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)に[IBM](http://d.hatena.ne.jp/keyword/IBM)のディープブルーが勝利しており、人間はどんなに賢い人でもまず勝てません。ところが、チェスのコマを並べたり、持ち上げて移動させたりするのは極めて困難です。5歳の子供でも勝つことができるでしょう [*1](#f-5b66c070 "Daniel Wolpert の講演から引用")。
+チェスを例にしましょう。今のチェ[スプログ](http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%ED%A5%B0)ラムは<ruby>極めて賢く<rt>(きわめてかしこく)</rt></ruby>、1997年には世界チャンピオンのガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)に[IBM](http://d.hatena.ne.jp/keyword/IBM)のディープブルーが勝利しており、人間はどんなに賢い人でもまず勝てません。ところが、チェスのコマを並べたり、持ち上げて移動させたりするのは極めて困難です。5歳の子供でも勝つことができるでしょう <sup>[*1](#abc "Daniel Wolpert の講演から引用")</sup>
 
-最新のロボット工学では、確かに様々なことが出来るようになりました。たとえば[ASIMO](http://d.hatena.ne.jp/keyword/ASIMO)はお盆にお茶を入れて運び、人に渡すことができます。  
+最新のロボット工学では、確かに様々なことが出来るようになりました。たとえば[ASIMO](http://d.hatena.ne.jp/keyword/ASIMO)はお盆にお茶を入れて運び、人に渡すことができます。
 このために多くの技術者が長い期間をかけてプログラミングを行いましたが、別のことをしようと思ったら（たとえば回収したコップを流しに入れるなど）また新しいプロジェクトが必要になります。
 
 ディープブルーも、チェスでは無類の強さを誇る一方で、将棋はまったくできませんし、他のいかなる問題もできません。人間ならあるひとつのタスクからほかにつながるような一般化ができますが、そのような能力は既存のAIにはありません。
 
-<span itemscope="" itemtype="http://schema.org/Photograph">![f:id:kazoo04:20151130200328p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130200328.png "f:id:kazoo04:20151130200328p:plain")</span>  
-<span style="font-size: 65%">[IBM](http://d.hatena.ne.jp/keyword/IBM)のチェスマシン Deep Blue[*2](#f-0b08ca11 "James the photographer - http://flickr.com/photos/22453761@N00/592436598/ (CC BY 2.0) ") と当時チェスの世界チャンピオンだったガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)(Гарри Кимович Каспаров, Garry Kimovich Kasparov) [*3](#f-fbbf3e77 "Copyright 2007, S.M.S.I., Inc. - Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php (CC BY-SA 3.0) ")</span>
-
+![時チェスの世界チャンピオンだったガルリ・カスパロフ](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130200328.png "時チェスの世界チャンピオンだったガルリ・カスパロフ")
+*[IBM](http://d.hatena.ne.jp/keyword/IBM)のチェスマシン Deep Blue[*2](#f-0b08ca11 "James the photographer - http://flickr.com/photos/22453761@N00/592436598/ (CC BY 2.0) ") と当時チェスの世界チャンピオンだったガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)(Гарри Кимович Каспаров, Garry Kimovich Kasparov) [*3](#f-fbbf3e77 "Copyright 2007, S.M.S.I., Inc. - Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php (CC BY-SA 3.0) ")*
 
 #### ネズミにも勝てない災害救助ロボット？
 
@@ -65,23 +64,22 @@ date: 2017-10-09 9:21:01 +0900
 このためには、極めて優れたエンジニアが長い期間をかけてプログラミングを行う必要があります。たとえば「ドアノブを開ける」というタスクについて考えましょう。  
 それには以下の様な手順でプログラムを書く必要があります。
 
-*   3Dスキャナー（レーダー）でドアノブがありそうな場所の三次元形状を推定する
-*   推定した形状をもとに、最もドアノブに似ている形状のものを探す
-*   ドアノブの向きを調べて、つかむために必要な手首の角度を計算する
-*   自身の位置とレーダーの情報を元に、肩からドアノブまでの位置関係を計算する
-*   以上の結果から、肩・肘・手首・指をどのように動かせばドアノブまで手を伸ばせるかを計算する
-*   モーターを駆動させる
-*   様々なノイズによって各関節の位置に誤差が出るので、それらを検知する
-*   誤差を打ち消すために必要な動きを計算して、[フィードバック制御](http://d.hatena.ne.jp/keyword/%A5%D5%A5%A3%A1%BC%A5%C9%A5%D0%A5%C3%A5%AF%C0%A9%B8%E6)する
-*   手になにがかぶつかったらそこで動きを止める
-*   レーダー情報を解析して、手にぶつかっているものが確かにドアノブだと判定したら、手を握る
-*   etc.
+* 3Dスキャナー（レーダー）でドアノブがありそうな場所の三次元形状を推定する
+* 推定した形状をもとに、最もドアノブに似ている形状のものを探す
+* ドアノブの向きを調べて、つかむために必要な手首の角度を計算する
+* 自身の位置とレーダーの情報を元に、肩からドアノブまでの位置関係を計算する
+* 以上の結果から、肩・肘・手首・指をどのように動かせばドアノブまで手を伸ばせるかを計算する
+* モーターを駆動させる
+* 様々なノイズによって各関節の位置に誤差が出るので、それらを検知する
+* 誤差を打ち消すために必要な動きを計算して、[フィードバック制御](http://d.hatena.ne.jp/keyword/%A5%D5%A5%A3%A1%BC%A5%C9%A5%D0%A5%C3%A5%AF%C0%A9%B8%E6)する
+* 手になにがかぶつかったらそこで動きを止める
+* レーダー情報を解析して、手にぶつかっているものが確かにドアノブだと判定したら、手を握る
+* etc.
 
 ここまででようやく「ドアノブを握る」まで到達しました。もう書ききれませんがこれだけの処理を人が作りこんでいく（=プログラミングをする）必要があります。今回はドアノブがレバーのようなタイプでも、丸いタイプだったらまた修正が必要です。ボタンを押して開く自動ドアだったらまた修正が必要です。気が滅入りますね。
 
 [![A Celebration of Risk (a.k.a., Robots Take a Spill)](https://img.youtube.com/vi/7A_QPGcjrh0/0.jpg)](https://www.youtube.com/watch?v=7A_QPGcjrh0)
-<span style="font-size: 80%">失敗事例集。最先端の技術を結集しても簡単に転んでしまう。</span>  
-
+*失敗事例集。最先端の技術を結集しても簡単に転んでしまう。*
 
 #### 今の[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)と我々はなにが違うのか
 
@@ -91,8 +89,8 @@ date: 2017-10-09 9:21:01 +0900
 
 そもそも、「不安定な場所を歩いて行き、転倒してもすぐに立てる」レベルのロボットは、最近ようやく Boston Dynamics の Big Dog ができるようになりましたが、こんなものは人間はもちろん、昆虫ですらできるわけです。どうにも今のロボットと動物は、物事の処理の仕方が決定的に違いそうです。
 
-<span itemscope="" itemtype="http://schema.org/Photograph">![f:id:kazoo04:20151130203058p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130203058.png "f:id:kazoo04:20151130203058p:plain")</span>  
-<span style="font-size: 65%">現代科学を駆使した最高の技術を結集して作ったロボットも、生まれたばかりの赤ん坊にあっという間に追いぬかれてしまうのはなぜなのか？</span>
+![f:id:kazoo04:20151130203058p:plain](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130203058.png)
+*現代科学を駆使した最高の技術を結集して作ったロボットも、生まれたばかりの赤ん坊にあっという間に追いぬかれてしまうのはなぜなのか？*
 
 従来の[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)は、ある目的に超特化してそれをうまくすることはできるのですが、動物の知能というものは非常に一般化されていて、どのような状況にも柔軟に対応できるということがわかります。
 
@@ -175,9 +173,9 @@ AI(繰り返しますが、以降はAGIの意味で[人工知能](http://d.haten
 日本語のウェブページや書籍では、先の図の上から下まで[一気通貫](http://d.hatena.ne.jp/keyword/%B0%EC%B5%A4%C4%CC%B4%D3)で解説した物が少なく、また情報源が非常に古かったり、偏っていたりして、「[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)を実現するために必要な情報」をまとめたものがないために執筆を決めました。  
 数学、[情報工学](http://d.hatena.ne.jp/keyword/%BE%F0%CA%F3%B9%A9%B3%D8)、脳科学、神経生理学、心理学を織り交ぜながら広く浅く解説・紹介をしていく予定なので、以後お楽しみに。
 
-[*1](#fn-5b66c070)<span class="footnote-delimiter">:</span><span class="footnote-text">Daniel Wolpert の講演から引用</span>
+<a id="abc"></a>[*1](#abc):Daniel Wolpert の講演から引用
 
-[*2](#fn-0b08ca11)<span class="footnote-delimiter">:</span><span class="footnote-text">James the photographer - [http://flickr.com/photos/22453761@N00/592436598/](http://flickr.com/photos/22453761@N00/592436598/) (CC BY 2.0)</span>
+[*2](#fn-0b08ca11):[James the photographer -CC BY 2.0](http://flickr.com/photos/22453761@N00/592436598/)
 
 [*3](#fn-fbbf3e77)<span class="footnote-delimiter">:</span><span class="footnote-text">Copyright 2007, S.M.S.I., Inc. - Owen Williams, The Kasparov Agency. - [http://www.kasparovagent.com/photo_gallery.php](http://www.kasparovagent.com/photo_gallery.php) (CC BY-SA 3.0)</span>
 

@@ -760,3 +760,7 @@ pre {
     .vg { color: {{ page.theme.white }} } 
     .vi { color: {{ page.theme.white }} } 
     .il { color: {{ page.theme.purple }} }
+
+img + em {
+    font-size: 65%;
+}
