@@ -4,13 +4,13 @@ tags:  [Idea]
 layout: post
 description: 
 comments: true
-published: false
+published: true
 date: 2017-10-03 20:41:01 +0900
 ---
 
 ## Markdown Paste
 
-### 增加Youtube智能粘贴功能
+- [X] 增加Youtube智能粘贴功能
 
 把一个youtube视频链接粘贴到Markdown时，会自动解析出视频ID，并将嵌入式视频代码插入到Markdown中。
 
@@ -22,16 +22,16 @@ https://www.youtube.com/watch?v=t8-FqWlC42A&list=FLTxztHCubvx2PCPBwyEyqkw&index=
 
 [![超乎想像的宇宙 1：無限空間 The Fabric of the Cosmos 1：What is Space](https://img.youtube.com/vi/t8-FqWlC42A/0.jpg)](https://www.youtube.com/watch?v=t8-FqWlC42A)
 
-### 把HTML片段粘贴到Markdown时，自动转换为Markdown格式
+- [X] 把HTML片段粘贴到Markdown时，自动转换为Markdown格式
 
 1. 标题H1，H2，H3
 1. 图片链接转换
 1. 普通链接转换
 1. 代码部分转换
 
-[开源代码，把HTML转换为Markdown](https://github.com/domchristie/to-markdown)
+[参考代码，把HTML转换为Markdown](https://github.com/domchristie/to-markdown)
 
-### 加注音
+- [X] 加注音
 
 选择一个单词，按下ALT+CTRL+A，在选择的单词两边加上ruby标签，比如：<ruby>单词<rt>danchi</rt></ruby>
 
@@ -39,7 +39,7 @@ https://www.youtube.com/watch?v=t8-FqWlC42A&list=FLTxztHCubvx2PCPBwyEyqkw&index=
 <ruby>单词<rt>danchi</rt></ruby>
 ```
 
-### 清除选择文字的格式
+- [ ] 清除选择文字的格式
 
 比如选择下面的一段文字
 
