@@ -1,5 +1,5 @@
 /**
- * Copyright 2010 Michael Monteleone
+ * Copyright 2017 telesoho.com
  */
 // run plugins
 jQuery(function ($) {
