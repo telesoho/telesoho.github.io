@@ -10,7 +10,6 @@ date: 2017-10-02 22:38:01 +0900
 
 这里我收集了《超乎想象的宇宙》系列视频。第一次看这些视频的时候，我觉得不能理解，而且很荒诞。但是当我看完霍金写的两本关于宇宙的书《时间简史》和《果核中的宇宙》，再次看下面的视频的时候，发现视频中说讲的都是有科学根据的，并不是天方夜谭。
 
-
 ## 空间
 
 [超乎想像的宇宙 1：無限空間 The Fabric of the Cosmos 1：What is Space](https://www.youtube.com/watch?v=t8-FqWlC42A&list=FLTxztHCubvx2PCPBwyEyqkw&index=6&t=3s)

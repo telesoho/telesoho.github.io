@@ -10,7 +10,7 @@ date: 2017-10-13 19:33:01 +0900
 
 ## 愛因斯坦之夢
 
-[![The Elegant Universe 1/3 - Einstein's Dreams 優雅的宇宙 - 愛因斯坦之夢 ](https://img.youtube.com/vi/Ty80IrTTEuI/0.jpg)](https://www.youtube.com/watch?v=Ty80IrTTEuI)
+[![The Elegant Universe 1/3 - Einstein's Dreams 優雅的宇宙 - 愛因斯坦之夢](https://img.youtube.com/vi/Ty80IrTTEuI/0.jpg)](https://www.youtube.com/watch?v=Ty80IrTTEuI)
 
 ## 萬物之弦
 
