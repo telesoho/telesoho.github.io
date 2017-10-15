@@ -52,15 +52,15 @@ date: 2017-10-09 9:21:01 +0900
 ![時チェスの世界チャンピオンだったガルリ・カスパロフ](http://cdn-ak.f.st-hatena.com/images/fotolife/k/kazoo04/20151130/20151130200328.png "時チェスの世界チャンピオンだったガルリ・カスパロフ")
 *[IBM](http://d.hatena.ne.jp/keyword/IBM)のチェスマシン Deep Blue[*2](#f-0b08ca11 "James the photographer - http://flickr.com/photos/22453761@N00/592436598/ (CC BY 2.0) ") と当時チェスの世界チャンピオンだったガルリ・[カスパロフ](http://d.hatena.ne.jp/keyword/%A5%AB%A5%B9%A5%D1%A5%ED%A5%D5)(Гарри Кимович Каспаров, Garry Kimovich Kasparov) [*3](#f-fbbf3e77 "Copyright 2007, S.M.S.I., Inc. - Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php (CC BY-SA 3.0) ")*
 
-#### ネズミにも勝てない災害救助ロボット？
+#### ネズミにも勝てない<ruby>災害救助<rp>(</rp><rt>さいがいきゅじょ</rt><rp>)</rp></ruby>ロボット？
 
 もうひとつ例をあげましょう。
-[DARPA](http://d.hatena.ne.jp/keyword/DARPA) Robotics Challenge は、二足歩行ロボットで災害救助（を想定した競技）を行う大会です。
-ここでは、自動車を所定の場所まで運転し、降車し、ドアノブをあけたり、ドリルをもって穴を開けたり、[瓦礫](http://d.hatena.ne.jp/keyword/%B4%A4%E3%AA)の上を歩いたりしなければなりません。
+[DARPA](http://d.hatena.ne.jp/keyword/DARPA) Robotics Challenge は、<ruby>二足歩行<rp>(</rp><rt>にそくほこう</rt><rp>)</rp></ruby>ロボットで災害救助（を想定した<ruby>競技<rp>(</rp><rt>きょうぎ</rt><rp>)</rp></ruby>）を行う大会です。
+ここでは、自動車を所定の場所まで運転し、<ruby>降車<rp>(</rp><rt>こうしゃ</rt><rp>)</rp></ruby>し、ドアノブをあけたり、ドリルをもって穴を開けたり、<ruby>瓦礫<rp>(</rp><rt>がれき</rt><rp>)</rp></ruby>の上を歩いたりしなければなりません。
 
 [![The 2015 DARPA Robotics Challenge Finals - YouTube](https://img.youtube.com/vi/8P9geWwi9e0/0.jpg)](https://www.youtube.com/watch?v=8P9geWwi9e0)
 
-このためには、極めて優れたエンジニアが長い期間をかけてプログラミングを行う必要があります。たとえば「ドアノブを開ける」というタスクについて考えましょう。
+このためには、極めて<ruby>優れた<rp>(</rp><rt>すぐれた</rt><rp>)</rp></ruby>エンジニアが長い期間をかけてプログラミングを行う必要があります。たとえば「ドアノブを開ける」というタスクについて考えましょう。
 それには以下の様な手順でプログラムを書く必要があります。
 
 * 3Dスキャナー（レーダー）でドアノブがありそうな場所の三次元形状を推定する
