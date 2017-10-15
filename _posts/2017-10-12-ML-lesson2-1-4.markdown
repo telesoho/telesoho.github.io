@@ -52,7 +52,7 @@ $$
 
 ## 找到使得代价函数最小的预测函数
 
-[![Cost Function - Intuition I](../assets/images/ML-2-3-2017-10-15-12-28-16.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=8)
+[![Cost Function - Intuition I](/assets/images/ML-2-3-2017-10-15-12-28-16.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=8)
 
 现在，我们设定了预估函数模型
 
@@ -96,5 +96,4 @@ $$
 
 不同的演示代表不同的$$J(\theta_0, \theta_1)$$值，蓝色越深代表误差越小，红色越深代表误差越大。
 
-如果有人来计算并画出上面的图，工作量是很大的，作为人工智能训练师，只需要理解要做的事情，知道要达到什么目的就可以了，剩下的事就交给人工智能算法去帮我们自动找出误差最小的$$J(\theta_0, \theta_1)$$
-
+由人来计算并完成以上工作，工作量是很大的，人工智能训练师，只需要理解要做的事情，知道要达到什么目的就可以了，剩下的事就交给人工智能算法去帮我们自动找出误差最小的$$J(\theta_0, \theta_1)$$
