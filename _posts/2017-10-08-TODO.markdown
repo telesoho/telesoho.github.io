@@ -17,27 +17,26 @@ mathjax: true
 
 以下是测试数学公式和图形使用功能：
 
-$$\sqrt{\frac{n!}{k!(n-k)!}}$$
+$$\sqrt{\frac{n!}{k!(n-k)!}}$$完成$$a+\sqrt{(b)^3}=c^2$$
 
-$$a+\sqrt{(b)^3}=c^2$$
-
-```math
+$$
 A_{m,n} = \begin{pmatrix}
 f(x) = \int_{-\infty}^\infty
     \hat f(\xi)\,e^{2 \pi i \xi x}
     \,d\xi
 \end{pmatrix}
-```
+$$
 
 $$x < y$$
 
-```math
-\begin{array}{cc}
+$$
+\left|\begin{array}{cc}
   a & b & a\\
   c & c & a\\
   e & f & g
 \end{array}
-```
+\right|
+$$
 
 ```mermaid
 graph TD;

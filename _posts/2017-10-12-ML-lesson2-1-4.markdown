@@ -1,0 +1,100 @@
+---
+title: 线性回归模型
+tags:  [Model Represontation, 模型表示, 机器学习]
+layout: post
+description: 
+comments: true
+published: true
+mathjax: true
+categories: Machine-Learning
+date: 2017-10-15 10:15:00 +0900
+---
+
+[![模型表示](/assets/images/ML1-6-2017-10-15-10-13-08.png)](https://www.bilibili.com/video/av9912938/index_4.html#page6)
+
+## 数据集表示
+
+![](/assets/images/ML1-6-2017-10-15-10-20-07.png)
+
+这里我们规定了一些表示方法：
+
+* m:表示数据集大小
+* x's:表示输入变量或者特性
+* y's:表示输出变量或目标
+
+$$(x^{(i)}, y^{(i)})$$表示第i个训练数据
+
+## 预测函数表示
+
+![](/assets/images/ML1-6-2017-10-15-10-30-30.png)
+
+这里预测函数使用了hypothesis这个英文单词，虽然表达上不太好，但由于早期的机器学习使用了这个单词，所以一直沿用下来。
+
+## 代价函数
+
+[![代价函数](/assets/images/ML1-7-2017-10-15-11-02-06.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=7)
+
+线性模型假设预测函数是如下的线性函数：
+
+$$
+h_{\theta}(x)=\theta_0+\theta_1x
+$$
+
+$$\theta_0$$和$$\theta_1$$被称作模型参数，我们要做的就是如何选择这两个参数，使得$$h_\theta(x)$$接近训练集(x,y)。
+
+判断误差的方法有很多，常见的就是计算均方差方法，即：
+
+$$
+J(\theta_0, \theta_1) = \frac1{2m}\displaystyle\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2
+$$
+
+注意：视频中吴恩达把公式写错了。机器学习中把判断误差的函数称为代价函数(Cost Function)，在这个例子中我们的代价函数是$$J(\theta_0, \theta_1)$$
+
+## 找到使得代价函数最小的预测函数
+
+[![Cost Function - Intuition I](../assets/images/ML-2-3-2017-10-15-12-28-16.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=8)
+
+现在，我们设定了预估函数模型
+
+$$h_\theta(x)=\theta_0+\theta_1x$$
+
+模型有两个参数$$\theta_0,\theta_1$$，我们将这两个参数作为变量，代入代价函数$$J(\theta_0, \theta_1)$$会得到一个样本(x,y)集合的误差，我们的目标就是找到能让这个误差最小化的$$\theta_0, \theta_1$$
+
+$$
+\frac{minimize}{\theta_0, \theta_1}J(\theta_0, \theta_1)
+$$
+
+怎么找呢？
+
+### 直觉1
+
+先考虑$$J(\theta_0, \theta_1)$$中$$\theta_0=0$$的情况，这样公式可以简化为：
+
+$$
+J(\theta_1)=\theta_1x
+$$
+
+然后假设有如下样本集合m：
+
+(1, 1), (2, 2), (3, 3)
+
+对于不同的$$\theta1$$可以计算出$$J(\theta_1)$$，把它们表示在坐标上，就是一条弓形曲线，如下图所示。
+
+![只考虑一个参数的代价函数曲线](/assets/images/ML-2-3-2017-10-15-13-10-09.png)
+
+从图中可以看出，当$$\theta_1=1$$时，$$J(\theta_1)$$最小。
+
+### 直觉2
+
+现在我们考虑没有简化的$$J(\theta_0, \theta_1)$$，由于是两个参数，因此把$$J(\theta_0, \theta_1)$$表示在坐标上就是一个弓形曲面。
+
+[![考虑两个参数的代价函数曲面](/assets/images/ML-2-4-2017-10-15-13-29-11.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=9)
+
+这个三维曲面可以用轮廊图（等高线）来表示：
+
+![](/assets/images/ML-2-4-2017-10-15-13-38-14.png)
+
+不同的演示代表不同的$$J(\theta_0, \theta_1)$$值，蓝色越深代表误差越小，红色越深代表误差越大。
+
+如果有人来计算并画出上面的图，工作量是很大的，作为人工智能训练师，只需要理解要做的事情，知道要达到什么目的就可以了，剩下的事就交给人工智能算法去帮我们自动找出误差最小的$$J(\theta_0, \theta_1)$$
+

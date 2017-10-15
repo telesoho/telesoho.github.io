@@ -9,7 +9,7 @@ categories: Machine-Learning
 date: 2017-10-12 7:26:00 +0900
 ---
 
-[![](/assets/images/ML1-5-2017-10-12-07-52-28.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=4)
+[![](/assets/images/ML1-5-2017-10-12-07-52-28.png)](https://www.bilibili.com/video/av9912938/index_4.html#page5)
 
 ## 选择合适的框架
 
@@ -18,4 +18,3 @@ date: 2017-10-12 7:26:00 +0900
 以下是这一节课的问题：
 
 ![](/assets/images/ML1-6-2017-10-12-07-55-06.png)
-
