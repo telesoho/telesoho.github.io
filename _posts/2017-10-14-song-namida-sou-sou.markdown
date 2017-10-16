@@ -7,6 +7,7 @@ comments: true
 published: true
 date: 2017-10-13 19:33:01 +0900
 ---
+```song
 tab3
 D　 A　 G　 D　G　 D　 Em　 A
 D　 Am　 G　 D　Em　 A　 D
@@ -37,3 +38,4 @@ Em涙 Aそうそう
 D　 A　 G　 D
 G　 D　 Em　 A
 D
+```

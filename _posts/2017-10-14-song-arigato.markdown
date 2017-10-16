@@ -7,7 +7,7 @@ comments: true
 published: true
 date: 2017-10-14 19:31:01 +0900
 ---
-
+```song
 C なまぬる G い風に Am 吹かれな Em がら F 東京の C 空 Dm 眺めてた G ら
 C 遠くで暮 G らしてる Am あなたの Em 事を　ふ F と思い C 出す F 元気 Gsus4 です C か?
 G 夢 Am を追いか Em けて F 離れ Gsus4 た C 街
@@ -38,3 +38,4 @@ G 　 C 　 G 　 Am 　 Em7 　 F 　 C 　 F 　 Gsus4 　 C
 そん Dm な事を Gsus4 考え C る A7 
 今 Dm 心か Gsus4 らありがと C う
 Fm 　 C 　 Fm 　 C 　 G 　 Am 　 G 　 F 　 Fm 　 C 　 Csus4 　 C
+```
