@@ -80,7 +80,7 @@ date: 2017-10-09 9:21:01 +0900
 ここまででようやく「ドアノブを握る」まで到達しました。もう書ききれませんがこれだけの処理を人が作りこんでいく（=プログラミングをする）必要があります。今回はドアノブがレバーのようなタイプでも、丸いタイプだったらまた修正が必要です。ボタンを押して開く自動ドアだったらまた修正が必要です。気が<ruby>滅入り<rp>(</rp><rt>めいり</rt><rp>)</rp></ruby>ますね。
 
 [![A Celebration of Risk (a.k.a., Robots Take a Spill)](https://img.youtube.com/vi/7A_QPGcjrh0/0.jpg)](https://www.youtube.com/watch?v=7A_QPGcjrh0)
-*失敗事例集。最先端の技術を結集しても簡単に転んでしまう。*
+*失敗事例集。最先端の技術を<ruby>結集<rp>(</rp><rt>けっしゅう</rt><rp>)</rp></ruby>しても簡単に<ruby>転んで<rp>(</rp><rt>ころんで</rt><rp>)</rp></ruby>しまう。*
 
 #### 今の[人工知能](http://d.hatena.ne.jp/keyword/%BF%CD%B9%A9%C3%CE%C7%BD)と我々はなにが違うのか
 
