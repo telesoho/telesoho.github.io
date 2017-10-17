@@ -4,16 +4,16 @@ tags:  [TODO]
 layout: post
 description: 
 comments: true
-published: true
+published: false
 date: 2017-10-08 9:02:01 +0900
 mermaid: true
 mathjax: true
 ---
 
-- [ ] [机器学习的视频](https://www.bilibili.com/video/av9912938)，每个视频写个心得博客
+- [X] [机器学习的视频](https://www.bilibili.com/video/av9912938)，每个视频写个心得博客
 - [ ] 吉他谱显示网站
-- [ ] 阅读《影响力》一书
-- [ ] 本月学一首歌曲
+- [X] 阅读《影响力》一书
+- [X] 本月学一首歌曲
 
 以下是测试数学公式和图形使用功能：
 
