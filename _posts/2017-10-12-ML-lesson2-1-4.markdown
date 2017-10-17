@@ -125,7 +125,12 @@ repeat until conergence {
 
 那么是不是，必须要调整学习率呢？实际上，不需要。参考下图：
 
-[![](../assets/images/ML-2-6-2017-10-17-07-21-03.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=11)
+[![](/assets/images/ML-2-6-2017-10-17-07-21-03.png)](https://www.bilibili.com/video/av9912938/index_4.html#page=11)
 
 图上可以看出，即使学习率是固定的，梯度下降法会在接近低点时自动减小步长。
 
+### 线性函数的梯度下降
+
+[![线性函数梯度下降](../assets/images/ML-2-7-2017-10-18-07-11-46.png)](https://www.bilibili.com/video/av9912938/index_11.html#page=12)
+
+值得注意的是，线性函数是不存在局部最优解，只有全局最优解，所以只要我们使用的是线性模型那么梯度下降法找到的就是全局最优解。在机器学习中每次步进时都需要计算所有的训练集合，每一次计算成为Batch。
