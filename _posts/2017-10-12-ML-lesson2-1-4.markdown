@@ -102,13 +102,13 @@ $$
 
 在寻找最小的$$J(\theta_0, \theta_1)$$算法中，比较常用的就是梯度下降法。这个算法是随机选择一个起始点，计算出$$\theta_0, \theta_1$$的斜率，选择斜率最大的方向前进。
 
-[![梯度下降算法](../assets/images/ML-2-5-2017-10-16-07-45-24.png)](https://www.bilibili.com/video/av9912938/index_9.html#page=10)
+[![梯度下降算法](/assets/images/ML-2-5-2017-10-16-07-45-24.png)](https://www.bilibili.com/video/av9912938/index_9.html#page=10)
 
 repeat until conergence {
     $$\theta_j :=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1)$$ (for j=0 and j=1)
 }
 
-这里的$$\partical$$是学习率，也可以理解为步长，算法的这种表示方法比较有意思，简洁明了，十分适用于科学算法的描述， 梯度下降法有个特点就是，当你选择不同的起始点，可能会得到不同的局部最优解：
+这里的$$\alpha$$是学习率，也可以理解为步长，算法的这种表示方法比较有意思，简洁明了，十分适用于科学算法的描述， 梯度下降法有个特点就是，当你选择不同的起始点，可能会得到不同的局部最优解：
 
 [![](/assets/images/ML-2-5-2017-10-16-07-42-34.png)](https://www.bilibili.com/video/av9912938/index_9.html#page=10)
 
@@ -118,7 +118,7 @@ repeat until conergence {
 
 直观上来看梯度下降法可能会导致如下两个问题：
 
-![](../assets/images/ML-2-6-2017-10-17-07-24-19.png)
+![](/assets/images/ML-2-6-2017-10-17-07-24-19.png)
 
 * 学习率太小，导致需要计算很多次才能找到最低点
 * 学习率太大，导致跳过了最低点
