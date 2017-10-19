@@ -1,0 +1,74 @@
+---
+title: 矩阵运算
+tags:  [矩阵, 向量, 矩阵运算, 机器学习]
+layout: post
+description: 
+comments: true
+published: true
+mathjax: true
+categories: Machine-Learning
+date: 2017-10-19 07:36:00 +0900
+---
+
+## 矩阵与向量
+
+[![](/assets/images/ML-3-1-2017-10-19-07-42-13.png)](https://www.bilibili.com/video/av9912938/index_12.html#page=13)
+
+### 矩阵表示
+
+下面是一个$$\mathbb{R}^{3\times2}$$矩阵：
+
+$$
+\begin{pmatrix}
+23 & 23 \\
+21 & 23 \\
+2 & 32
+\end{pmatrix}
+$$
+
+### 向量表示
+
+向量是一个nx1的矩阵：
+$$
+\begin{pmatrix}
+23 \\ 21 \\ 2
+\end{pmatrix}
+$$
+
+数学上写为$$\mathbb{R}^3$$，
+
+通常用大写字母来表示矩阵或者向量(比如：X,Y,A)，而用小写字母来表示标量或数值，如x,y,a。
+
+### 矩阵相加
+
+只有同维矩阵才能相加：
+
+[![](/assets/images/ML-3-2-2017-10-19-19-50-01.png)](https://www.bilibili.com/video/av9912938/index_13.html#page=14)
+
+### 标量乘矩阵
+
+![](/assets/images/ML-3-2-2017-10-19-19-52-10.png)
+
+### 矩阵乘以标量
+
+[![](/assets/images/ML-3-3-2017-10-19-20-00-21.png)](https://www.bilibili.com/video/av9912938/index_13.html#page=15)
+
+$$
+\begin{pmatrix}
+1 & 2 & 1 & 5 \\
+0 & 3 & 0 & 4 \\
+-1 & -2 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 \\ 3 \\ 2 \\ 1
+\end{pmatrix}=
+\begin{pmatrix}
+14 \\ 13 \\ -7
+\end{pmatrix}
+$$
+
+### 矩阵相乘
+
+[![](/assets/images/ML-3-4-2017-10-19-20-06-12.png)](https://www.bilibili.com/video/av9912938/index_13.html#page=16)
+
+使用矩阵乘法，可以很快的得到不同参数在数据集上的计算结果。

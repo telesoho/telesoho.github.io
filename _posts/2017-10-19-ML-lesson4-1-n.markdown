@@ -1,0 +1,60 @@
+---
+title: 多特性
+tags:  [特征缩放, 归一化, 机器学习]
+layout: post
+description: 
+comments: true
+published: true
+mathjax: true
+categories: Machine-Learning
+date: 2017-10-19 20:52:00 +0900
+---
+
+## 多特性模型
+
+[![](/assets/images/ML-4-1-2017-10-19-20-52-46.png)](https://www.bilibili.com/video/av9912938/index_13.html#page=19)
+
+当有n个特征时，线性模型就变成了如下的形式：
+
+$$
+h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
+$$
+
+如果令$$x_0=1$$，上述公式可以写成：
+
+$$
+h_\theta(x)=\theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
+$$
+
+让：
+
+$$X=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$ 以及 $$\Theta=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$
+
+则n个特征的线性模型公式就可以简化写为：
+
+$$
+h_\theta(x)=\Theta^TX
+$$
+
+## 多特征梯度下降
+
+[![](/assets/images/ML-4-2-2017-10-20-07-48-07.png)](https://www.bilibili.com/video/av9912938/index_13.html#page=20)
+
+特征数量n>1时和n=1时，代价函数是一样的，因此可以使用特征数量为1时的处理方式去处理多特征的情况。
+
+## 特征缩放
+
+[![](/assets/images/ML-4-3-2017-10-20-07-37-23.png)](https://www.bilibili.com/video/av9912938/index_20.html#page=21)
+
+把所有特征变化范围变化为$$-1\leq x_i \leq 1$$（特征归一化），能让梯度下降算法更快的收敛，从而更快的找到最优解。
+
+## 学习率的选择
+
+[![](/assets/images/ML-4-4-2017-10-20-07-59-49.png)](https://www.bilibili.com/video/av9912938/index_20.html#page=22)
+
+选择学习率比较好的办法是观察收敛图，寻找能让收敛图是向下倾斜曲线的学习率。
+
+![](/assets/images/ML-4-4-2017-10-20-08-00-48.png)
+
+如果学习率太大会导致无法收敛，即Overfit。学习率只要足够小，都能保证收敛，但唯一的问题是需要过多的迭代计算。
+
