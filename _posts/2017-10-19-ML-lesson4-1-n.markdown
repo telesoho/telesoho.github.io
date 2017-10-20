@@ -24,7 +24,7 @@ $$h_\theta(x)=\theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n$$
 
 设：
 
-$$X=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$以及$$\Theta=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$
+$$X=\left(\begin{matrix}x_0\\x_1\\x_2\\...\\x_n\end{matrix}\right)\in\mathbb{R}^{n+1}$$以及$$\Theta=\left(\begin{matrix}x_0\\x_1\\x_2\\...\\x_n\end{matrix}\right)\in\mathbb{R}^{n+1}$$
 
 则n个特征的线性模型公式就可以简化写为：
 
