@@ -16,19 +16,15 @@ date: 2017-10-19 20:52:00 +0900
 
 当有n个特征时，线性模型就变成了如下的形式：
 
-$$
-h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
-$$
+$$h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n$$
 
 如果令$$x_0=1$$，上述公式可以写成：
 
-$$
-h_\theta(x)=\theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n
-$$
+$$h_\theta(x)=\theta_0x_0+\theta_1x_1+\theta_2x_2+...+\theta_nx_n$$
 
-让：
+设：
 
-$$X=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$ 以及 $$\Theta=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$
+$$X=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$以及$$\Theta=\begin{pmatrix}x_0\\x_1\\x_2\\...\\x_n\end{pmatrix}\in\mathbb{R}^{n+1}$$
 
 则n个特征的线性模型公式就可以简化写为：
 
