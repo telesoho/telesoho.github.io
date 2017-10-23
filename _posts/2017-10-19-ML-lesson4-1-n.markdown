@@ -68,3 +68,10 @@ $$
 
 ![变换特征](/assets/images/ML-4-5-2017-10-21-08-50-50.png)
 
+## Normal Equation
+
+[![](../assets/images/ML-4-6-2017-10-23-08-00-26.png)](https://www.bilibili.com/video/av9912938/index_23.html#page=24)
+
+除了使用梯度下降法选择最优解以外，还可以使用正规方程（Normal Equations）来求解。一般情况下特征数少的时候（一般在几百个或几千个！）使用正规方程是比较好的。当特征上万时，就应该使用梯度下降法来求解。
+
+[参考资料](http://www.cnblogs.com/elaron/archive/2013/05/20/3088894.html)
