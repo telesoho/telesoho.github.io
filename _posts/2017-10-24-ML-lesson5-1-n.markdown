@@ -1,0 +1,23 @@
+---
+title: Octave tutorial
+tags:  [Octave, tutorial]
+layout: post
+description: 
+comments: true
+published: true
+mathjax: false
+categories: Machine-Learning
+date: 2017-10-24 7:52:00 +0900
+---
+
+## Basic Operations
+
+## Moving Data Around
+
+## Computing on data
+
+## Plotting Data
+
+## Control statement
+
+## Vectorization
