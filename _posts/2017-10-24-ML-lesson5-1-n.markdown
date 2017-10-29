@@ -10,14 +10,29 @@ categories: Machine-Learning
 date: 2017-10-24 7:52:00 +0900
 ---
 
+
 ## Basic Operations
+
+[基本操作](https://www.bilibili.com/video/av9912938/index_24.html#page=27)
 
 ## Moving Data Around
 
+[数据操作](https://www.bilibili.com/video/av9912938/index_24.html#page=28)
+
 ## Computing on data
+
+[计算数据](https://www.bilibili.com/video/av9912938/index_24.html#page=29)
 
 ## Plotting Data
 
+[画数据](https://www.bilibili.com/video/av9912938/index_24.html#page=30)
+
 ## Control statement
 
+[控制语句](https://www.bilibili.com/video/av9912938/index_30.html#page=31)
+
 ## Vectorization
+
+[向量化](https://www.bilibili.com/video/av9912938/index_30.html#page=32)
+
+向量化思维很重要

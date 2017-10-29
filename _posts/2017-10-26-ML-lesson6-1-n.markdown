@@ -1,0 +1,27 @@
+---
+title: 分类问题
+tags:  [机器学习, 分类]
+layout: post
+description: 
+comments: true
+published: true
+mathjax: false
+categories: Machine-Learning
+date: 2017-10-26 7:12:00 +0900
+---
+
+## 逻辑回归
+
+[![](/assets/images/ML-6-1-2017-10-26-07-26-55.png)](https://www.bilibili.com/video/av9912938/index_32.html#page=33)
+
+线性回归的缺点：
+
+1. 新的训练数据可能会导致评估曲线发生变化，而导致分类错误
+1. 线性回归会产生的[0,1]以外的输出
+
+通常在分类问题上不使用线性回归函数模型。
+
+为了解决线性回归会产生的[0,1]以外的输出，通常使用Sigmoid函数（也称为Logistic函数）将输出现在在(0,1)范围内
+
+[![](/assets/images/ML-6-2-2017-10-27-07-47-30.png)](https://www.bilibili.com/video/av9912938/index_33.html#page=34)
+
