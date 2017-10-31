@@ -5,8 +5,8 @@ layout: post
 description: How to detect memory leak
 comments: true
 categories: Visual C++
-published: false
-date: 2017-09-29 22:38:01 +0900
+published: true
+date: 2017-10-31 22:38:01 +0900
 ---
 
 在Visual Studio C++环境中，有时候会报告运行的代码有内存泄漏的现象，但是却没有显示出内存泄漏的代码位置，比如：
