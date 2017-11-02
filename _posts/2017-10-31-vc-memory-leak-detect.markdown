@@ -31,7 +31,7 @@ Object dump complete.
 
 解决方案是，在程序开始的地方加入如下代码：
 
-```Cpp
+```cpp
 _CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 _CrtSetBreakAlloc(9554);
 _CrtSetBreakAlloc(9553);
