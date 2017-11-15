@@ -10,7 +10,7 @@ categories: Machine-Learning
 date: 2017-10-26 7:12:00 +0900
 ---
 
-## 逻辑回归
+## 6-1 逻辑回归
 
 [![](/assets/images/ML-6-1-2017-10-26-07-26-55.png)](https://www.bilibili.com/video/av9912938/index_32.html#page=33)
 
@@ -23,5 +23,65 @@ date: 2017-10-26 7:12:00 +0900
 
 为了解决线性回归会产生的[0,1]以外的输出，通常使用Sigmoid函数（也称为Logistic函数）将输出现在在(0,1)范围内
 
+## 6-2 假设函数的表示
+
 [![](/assets/images/ML-6-2-2017-10-27-07-47-30.png)](https://www.bilibili.com/video/av9912938/index_33.html#page=34)
 
+## 6-3 决策边界
+
+[Decision Boundary](https://www.bilibili.com/video/av9912938/index_33.html#page=35)
+
+## 6-4 Cost function
+
+TODO
+
+## 6-5 简单代价函数和梯度下降
+
+TODO
+
+## 6-6 高级优化
+
+通常情况下使用梯度下降法基本就可以解决问题了，但是还有其他的一些算法如：BFGS，L-BFGS，这些算法有两个好处：
+
+1. 不需要手动选择学习率
+1. 通常比梯度下降法要快
+
+缺点是比梯度下降法要复杂的多，因此不建议使用，除非你是数值计算的专家。
+
+这里我们需要学会的是使用Octave写出costFunction：
+
+[![](/assets/images/ML-6-6-2017-11-15-20-10-27.png)](https://www.bilibili.com/video/av9912938/index_35.html#page=38)
+
+```Octave
+function [jVal, gradient] = costFunction(theta)
+  jVal = (theta(1)-5)^2 + (theta(2)-5)^2;
+  gradient = zeros(2,1);
+  gradient(1) = 2*(theta(1)-5);
+  gradient(2) = 2*(theta(2)-5);
+```
+
+然后执行如下指令：
+
+```Octave
+>> options = optimset('GradObj', 'on', 'MaxIter', '100');
+>> initialTheta = zeros(2,1);
+>> [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options)
+optTheta =
+
+   5.0000
+   5.0000
+
+functionVal =   1.5777e-030
+exitFlag =  1
+>>
+```
+
+可以看到exitFlag=1表示函数结果收敛。
+
+## 6-7 一对多分类
+
+有一个输入，需要产生多个输出，如输入天气信息，判断是晴天、雨天还是阴天。
+
+[![](../assets/images/ML-6-7-2017-11-15-20-31-47.png)](https://www.bilibili.com/video/av9912938/index_38.html#page=39)
+
+我们可以多次使用二分法，第一次先算出晴天对其他天气的概率，第二次算出雨天对其他天气的概率，第三次算出阴天对其他天的概率，最后选择最大概率的那个。

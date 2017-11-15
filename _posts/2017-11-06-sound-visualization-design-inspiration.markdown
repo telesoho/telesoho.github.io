@@ -14,3 +14,5 @@ date: 2017-11-06 7:52:01 +0900
 <iframe src="https://player.vimeo.com/video/6284199" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
 太惊艳了！没想到有人和我的想法一样，而且已经实现出来了。
+
+另一个好玩的音乐可视化效果，[会跳舞的线条](http://rugs.grindselect.com/)，你只要随意的画几个线条，这些线条就会随着音乐跳舞！

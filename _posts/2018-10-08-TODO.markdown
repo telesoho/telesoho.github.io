@@ -62,8 +62,8 @@ sequenceDiagram
 
 ```mermaid
 gantt
-dateFormat  2017-10-22
-title 任务
+dateFormat  YYYY-MM-DD
+title 计划
 
 section 任务1
 Completed task            :done,    des1, 2014-01-06,2014-01-08
