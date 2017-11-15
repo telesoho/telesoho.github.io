@@ -82,6 +82,6 @@ exitFlag =  1
 
 有一个输入，需要产生多个输出，如输入天气信息，判断是晴天、雨天还是阴天。
 
-[![](../assets/images/ML-6-7-2017-11-15-20-31-47.png)](https://www.bilibili.com/video/av9912938/index_38.html#page=39)
+[![](/assets/images/ML-6-7-2017-11-15-20-31-47.png)](https://www.bilibili.com/video/av9912938/index_38.html#page=39)
 
 我们可以多次使用二分法，第一次先算出晴天对其他天气的概率，第二次算出雨天对其他天气的概率，第三次算出阴天对其他天的概率，最后选择最大概率的那个。
