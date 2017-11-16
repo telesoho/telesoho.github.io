@@ -39,6 +39,11 @@ section 准备阶段
 
 You can download data set from here [data set of Recognizing Sounds](https://medium.com/@awjuliani/hi-rajat-e0bf4b96dfeb).
 
+[How to set Window size vs data length for FFT](https://stackoverflow.com/questions/5570355/window-size-vs-data-length-for-fft)
+
+[Online FFT Caculate](https://sooeet.com/math/online-fft-calculator.php?cb=1)
+
+[matlab help about fft](http://jp.mathworks.com/help/matlab/ref/fft.html?s_tid=gn_loc_drop)
 
 https://github.com/ybayle/awesome-deep-learning-music
 
