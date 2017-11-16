@@ -107,7 +107,9 @@
 {% if page.mermaid %}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.0/mermaid.min.css"/>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.0/mermaid.min.js" type="text/javascript"></script>
-<script>mermaid.init({noteMargin: 10}, ".language-mermaid");</script>
+<script>mermaid.init({noteMargin: 10}, ".language-mermaid");
+$('pre:has(code.language-mermaid)').addClass('has_mermaid');
+</script>
 {% endif %}
 
 </html>
