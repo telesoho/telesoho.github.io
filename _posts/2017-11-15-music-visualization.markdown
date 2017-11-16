@@ -43,6 +43,8 @@ You can download data set from here [data set of Recognizing Sounds](https://med
 
 [Online FFT Caculate](https://sooeet.com/math/online-fft-calculator.php?cb=1)
 
+[matlab help about fft](http://jp.mathworks.com/help/matlab/ref/fft.html?s_tid=gn_loc_drop)
+
 https://github.com/ybayle/awesome-deep-learning-music
 
 
