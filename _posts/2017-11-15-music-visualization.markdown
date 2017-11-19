@@ -36,19 +36,19 @@ section 准备阶段
 时序频谱
 
 ```matlab
-## Guitar spectrogram
+% Guitar spectrogram
 [x, Fs] = audioread("instruments/guitar/3rd_fret.wav", [1, 44100*6]); # audio file
 x = x(:, 1);
-step = fix(5*Fs/1000);     # one spectral slice every 5 ms
-window = fix(250*Fs/1000);  # 40 ms data window
-fftn = 2^nextpow2(window); # next highest power of 2
+step = fix(5*Fs/1000);     % one spectral slice every 5 ms
+window = fix(250*Fs/1000);  %40 ms data window
+fftn = 2^nextpow2(window); % next highest power of 2
 [S, f, t] = specgram(x, fftn, Fs, window, window-step);
-S = abs(S(2:fftn*4000/Fs,:)); # magnitude in range 0<f<=4000 Hz.
-S = S/max(S(:));           # normalize magnitude so that max is 0 dB.
-S = max(S, 10^(-40/10));   # clip below -40 dB.
-S = min(S, 10^(-3/10));    # clip above -3 dB.
-imagesc (t, f, log(S));    # display in log scale
-set (gca, "ydir", "normal"); # put the 'y' direction in the correct direction
+S = abs(S(2:fftn*4000/Fs,:)); % magnitude in range 0<f<=4000 Hz.
+S = S/max(S(:));           %normalize magnitude so that max is 0 dB.
+S = max(S, 10^(-40/10));   % clip below -40 dB.
+S = min(S, 10^(-3/10));    % clip above -3 dB.
+imagesc (t, f, log(S));    % display in log scale
+set (gca, "ydir", "normal"); % put the 'y' direction in the correct direction
 ylabel 'Frequence (Hz)';
 xlabel 'Time (s)';
 ```
@@ -59,6 +59,10 @@ xlabel 'Time (s)';
 
 
 相关资料：
+
+[Pythonで音声信号処理](http://aidiary.hatenablog.com/entry/20110514/1305377659)
+
+[類似楽曲検索システムを作ろう](http://aidiary.hatenablog.com/entry/20121014/1350211413)
 
 [Deep Learning源代码收集](http://blog.csdn.net/zouxy09/article/details/11910527)
 
