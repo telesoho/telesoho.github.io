@@ -37,7 +37,7 @@ section 准备阶段
 
 ```matlab
 % Guitar spectrogram
-[x, Fs] = audioread("instruments/guitar/3rd_fret.wav", [1, 44100*6]); # audio file
+[x, Fs] = audioread('instruments/guitar/3rd_fret.wav', [1, 44100*6]); % audio file
 x = x(:, 1);
 step = fix(5*Fs/1000);     % one spectral slice every 5 ms
 window = fix(250*Fs/1000);  %40 ms data window
@@ -48,7 +48,7 @@ S = S/max(S(:));           %normalize magnitude so that max is 0 dB.
 S = max(S, 10^(-40/10));   % clip below -40 dB.
 S = min(S, 10^(-3/10));    % clip above -3 dB.
 imagesc (t, f, log(S));    % display in log scale
-set (gca, "ydir", "normal"); % put the 'y' direction in the correct direction
+set (gca, 'ydir', 'normal'); % put the 'y' direction in the correct direction
 ylabel 'Frequence (Hz)';
 xlabel 'Time (s)';
 ```
