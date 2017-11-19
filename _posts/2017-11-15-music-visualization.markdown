@@ -31,7 +31,40 @@ section 准备阶段
 
 ### 实现模型
 
+[梅爾倒頻譜(Mel-Frequency Spectrum)](https://zh.wikipedia.org/wiki/%E6%A2%85%E7%88%BE%E5%80%92%E9%A0%BB%E8%AD%9C)
+
+时序频谱
+
+```matlab
+## Guitar spectrogram
+[x, Fs] = audioread("instruments/guitar/3rd_fret.wav", [1, 44100*6]); # audio file
+x = x(:, 1);
+step = fix(5*Fs/1000);     # one spectral slice every 5 ms
+window = fix(250*Fs/1000);  # 40 ms data window
+fftn = 2^nextpow2(window); # next highest power of 2
+[S, f, t] = specgram(x, fftn, Fs, window, window-step);
+S = abs(S(2:fftn*4000/Fs,:)); # magnitude in range 0<f<=4000 Hz.
+S = S/max(S(:));           # normalize magnitude so that max is 0 dB.
+S = max(S, 10^(-40/10));   # clip below -40 dB.
+S = min(S, 10^(-3/10));    # clip above -3 dB.
+imagesc (t, f, log(S));    # display in log scale
+set (gca, "ydir", "normal"); # put the 'y' direction in the correct direction
+ylabel 'Frequence (Hz)';
+xlabel 'Time (s)';
+```
+
+运行结果：
+
+![](/assets/images/STFT-guitar-2017-11-19-18-39-55.png)
+
+
 相关资料：
+
+[Deep Learning源代码收集](http://blog.csdn.net/zouxy09/article/details/11910527)
+
+[STFT和声谱图，梅尔频谱（Mel Bank Features）与梅尔倒谱（MFCCs）](http://blog.csdn.net/qq_28006327/article/details/59129110)
+
+[Deep convolutional neural networks for predominant instrument recognition in polyphonic music](https://arxiv.org/pdf/1605.09507.pdf)
 
 [Recognizing Sounds (A Deep Learning Case Study)](https://medium.com/@awjuliani/recognizing-sounds-a-deep-learning-case-study-1bc37444d44d)
 
@@ -51,7 +84,7 @@ https://qiita.com/eve_yk/items/07bc094538f2d50841f4
 
 收集各种乐器独奏的音乐文件，作为训练数据，以乐器名作为文件夹标签数据。
 
-以0.25秒为取样长度，并转换为频谱，归一化后作为训练数据。
+以0.25秒为取样长度，并转换为幅度频谱，归一化后作为训练数据。
 
 ```matlab
 WinLen = 0.25;
