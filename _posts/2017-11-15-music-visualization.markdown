@@ -29,7 +29,25 @@ section 准备阶段
 
 ## 准备阶段
 
+### 相关论文
+
+1. [DEEP CONVOLUTIONAL NETWORKS ON THE PITCH SPIRAL FOR MUSICAL INSTRUMENT RECOGNITION](/assets/pdf/lostanlen_ismir2016.pdf)
+    [代码](https://github.com/lostanlen/ismir2016)
+1. [Event Localization in Music Auto-tagging](http://mac.citi.sinica.edu.tw/~yang/pub/liu16mm.pdf)
+    [代码](https://github.com/ciaua/clip2frame)
+    人声的识别比较准确，但是乐器识别有不少的问题。使用[youtube API](https://developers.google.com/youtube/v3/getting-started)读取youtube视频并解析，这个值得研究一下。他们还做了[演示网站](http://clip2frame.ciaua.com/)
+1. [A FULLY CONVOLUTIONAL DEEP AUDITORY MODEL FOR MUSICAL CHORD RECOGNITION](http://www.cp.jku.at/research/papers/Korzeniowski_MLSP_2016.pdf)
+    [相关代码](https://github.com/fdlm/chordrec)
+    一个识别和弦的论文，可以用于实现天灵硕火实现和弦识别的功能。
+
+### 相关工具
+
+1. [madmom](https://github.com/CPJKU/madmom)
+    一个用python实现的声乐信号处理库，竟然包含有[和弦识别](http://madmom.readthedocs.io/en/latest/modules/features/chords.html)功能！
+
+
 ### 实现模型
+
 
 [梅爾倒頻譜(Mel-Frequency Spectrum)](https://zh.wikipedia.org/wiki/%E6%A2%85%E7%88%BE%E5%80%92%E9%A0%BB%E8%AD%9C)
 
