@@ -21,11 +21,13 @@ mathjax: true
 
 
 1. 性能
+
 ![性能分析](https://julialang.org/images/benchmarks.svg)
 由于Julia采用了JIT技术，因此Julia性能接近C，但是它却具有R、Python以及Martlab的特性。接下来看看它的特性。
 
 2. 特性
     1. 支持数学符号和Unicode作为变量名
+
     比如：
     ```julia
     julia> π
@@ -35,6 +37,7 @@ mathjax: true
     https://docs.julialang.org/en/v0.6.0/manual/unicode-input/)。
 
     2. 数学运算和数学函数
+
     ```julia
     julia> 2π
     6.283185307179586
@@ -59,7 +62,6 @@ mathjax: true
 
     julia> log(e)
     1.0
-
     ```
     
     3. 向量定义及运算
@@ -97,6 +99,7 @@ mathjax: true
     可以说，Julia对数学符号以及运算支持非常友好。
 
     4. 直接调用C语言函数
+
     编写一段c代码
     ```c
     int test() 
@@ -128,6 +131,7 @@ mathjax: true
     目前中文社区才刚刚开始起步，人还非常少。虽然发布了1.0版本，但是很多支持库更新更不上，导致新版本发布的时候会莫名其妙的发生问题。
 
 5. 未来
+
     由于没有大公司投入，所以都是一些爱好者或者大学研究所在用，比较容易接触到里面的大牛人。也可以感受和学习一下一门新语言是如何成长起来的。目前代码量还不大，还可以研究其核心代码，帮助自己成长。
 
 
