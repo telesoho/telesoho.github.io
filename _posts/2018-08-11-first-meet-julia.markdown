@@ -22,8 +22,8 @@ mathjax: true
 
 1. 性能
 
-![性能分析](https://julialang.org/images/benchmarks.svg)
-由于Julia采用了JIT技术，因此Julia性能接近C，但是它却具有R、Python以及Martlab的特性。接下来看看它的特性。
+    ![性能分析](https://julialang.org/images/benchmarks.svg)
+    由于Julia采用了JIT技术，因此Julia性能接近C，但是它却具有R、Python以及Martlab的特性。接下来看看它的特性。
 
 1. 特性
 
