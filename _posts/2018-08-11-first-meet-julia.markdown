@@ -14,7 +14,7 @@ mathjax: true
 
 [官方微博](https://julialang.org/blog/2018/08/one-point-zero-zh_cn)
 
-0. 安装
+1. 安装
     1. 下载安装包
     1. 解压，由于使用了symlink，所以解压时不要使用7z这种解压工具，使用tag解压即可。
     1. 只需要把julia的执行文件路径添加到系统的path即可。
@@ -25,7 +25,8 @@ mathjax: true
 ![性能分析](https://julialang.org/images/benchmarks.svg)
 由于Julia采用了JIT技术，因此Julia性能接近C，但是它却具有R、Python以及Martlab的特性。接下来看看它的特性。
 
-2. 特性
+1. 特性
+
     1. 支持数学符号和Unicode作为变量名
 
     比如：
@@ -36,7 +37,7 @@ mathjax: true
     那么如何在julia中输入π呢？只需呀在julia编辑在输入```\pi```然后按Tab，π就会自动出现了。其他的符号输入具体参考[Julia支持的数学符号](
     https://docs.julialang.org/en/v0.6.0/manual/unicode-input/)。
 
-    2. 数学运算和数学函数
+    1. 数学运算和数学函数
 
     ```julia
     julia> 2π
@@ -64,7 +65,7 @@ mathjax: true
     1.0
     ```
     
-    3. 向量定义及运算
+    1. 向量定义及运算
 
     ```julia
     julia> A = [1 2 3; 4 5 6; 7 8 9]
@@ -98,7 +99,7 @@ mathjax: true
 
     可以说，Julia对数学符号以及运算支持非常友好。
 
-    4. 直接调用C语言函数
+    1. 直接调用C语言函数
 
     编写一段c代码
     ```c
@@ -118,7 +119,7 @@ mathjax: true
     ```
     一气呵成，不需要额外的支持库。
 
-3. 支持库
+1. 支持库
 
     1. 绘图
     目前Julia的绘图库Plots全部是用Julia写的，非常强大，可以参考[绘图事例](http://docs.juliaplots.org/latest/)
@@ -126,12 +127,10 @@ mathjax: true
     1. 机器学习
 
 
-4. 社区
+1. 社区
 
     目前中文社区才刚刚开始起步，人还非常少。虽然发布了1.0版本，但是很多支持库更新更不上，导致新版本发布的时候会莫名其妙的发生问题。
 
-5. 未来
+1. 未来
 
     由于没有大公司投入，所以都是一些爱好者或者大学研究所在用，比较容易接触到里面的大牛人。也可以感受和学习一下一门新语言是如何成长起来的。目前代码量还不大，还可以研究其核心代码，帮助自己成长。
-
-
