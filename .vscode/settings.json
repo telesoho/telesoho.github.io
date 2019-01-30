@@ -1,5 +1,5 @@
 {
-    "pasteImage.path": "${workspaceRoot}/assets/images/",
+    "MarkdownPaste.path": "${workspaceRoot}/assets/images/",
     "markdownlint.config": {
         "MD033":false,
         "MD002":false,
