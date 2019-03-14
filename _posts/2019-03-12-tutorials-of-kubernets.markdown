@@ -4,7 +4,7 @@ tags:  [kubernets, tutorial]
 layout: post
 description: 
 comments: true
-published: false
+published: true
 date: 2019-03-12 15:02:01 +0900
 mermaid: false
 mathjax: false
