@@ -4,7 +4,7 @@ tags:  [odoo, model]
 layout: post
 description: 
 comments: true
-published: false
+published: true
 date: 2019-05-22 9:02:01 +0900
 mermaid: true
 mathjax: true
