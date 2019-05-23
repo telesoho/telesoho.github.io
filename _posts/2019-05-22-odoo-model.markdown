@@ -180,7 +180,7 @@ odooはモデル拡張方法を３つ提供しています
 
     データベースを確認すると、新しいテーブルhello_baseが追加されました、ageフィルドがIntergerではなく、Float数になります、addressフィルドも追加されました。
 
-    ![](/assets/images/2019-05-22-odoo-model.markdown/2019-05-22-18-47-34.png)
+    ![](../assets/images/2019-05-22-odoo-model.markdown/2019-05-23-11-01-37.png)
 
 
 3. 代理継承(Delegation inheritance)
