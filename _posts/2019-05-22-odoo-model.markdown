@@ -13,10 +13,11 @@ mathjax: true
 この開発日記は自分でodooを再開発する時に、解決が難しい問題と効率良くやり方とかを記述しております。
 
 開発環境：
-OS:Ubuntu
+OS:ubuntu
+
 作業フォルダ説明：
 
-```sh
+```
 作業フォルダ
 ├── test.conf  # odoo配置ファイル
 ├── my_addons  # 開発モジュールの格納フォルダ
@@ -41,7 +42,7 @@ https://www.odoo.com/documentation/12.0/setup/install.html
 ます、データベースtest_odooを指定してodooを起動します。
 
 ```sh
-/odoo12/odoo-bin -d test_odoo
+$./odoo12/odoo-bin -d test_odoo
 ```
 
 odoo_testが存在しない場合は、odoo_testが自動作成されて、odooを起動します。
@@ -223,7 +224,7 @@ odooはモデル拡張方法を３つ提供しています
     ./odoo12/odoo-bin shell -c test.conf  -d test_odoo -i hello
     ```
 
-    上記コマンドにはshellパラメタを使いますので、odoo起動した後には、Pythonのコマンドシェルに入ります。
+    上記コマンドにはshellパラメタを使いますので、odoo起動した後に、Pythonのコマンドシェルに入ります。
 
     ```
     odoo: <module 'odoo' from '/home/telesoho/prjs/odoo/idcodoo/odoo12/odoo/__init__.py'>
@@ -236,7 +237,7 @@ odooはモデル拡張方法を３つ提供しています
     >>> 
     ```
 
-    下記のpythonコードを入力して、recordを作成しましょう。
+    コマンドシェルに下記のpythonコードを入力して、recordを作成します。
 
     ```python
     >>> record = env['hello.delegation.parent'].create({
@@ -256,6 +257,6 @@ odooはモデル拡張方法を３つ提供しています
     >>> record.write({'field_1': 4})
     ```
 
-    最後、データベースのテーブルで確認しましょう。
+    最後、作成したテーブルを確認しましょう。
     
     ![](/assets/images/2019-05-22-odoo-model.markdown/2019-05-22-20-14-33.png)
