@@ -1,16 +1,16 @@
 ---
-title: odoo再開発日記二
+title: odoo再開発日記三
 tags:  [odoo, action, view, odoo再開発]
 layout: post
 description: 
 comments: true
 published: true
-date: 2019-05-23 9:02:01 +0900
+date: 2019-05-27 19:02:01 +0900
 mermaid: true
 mathjax: true
 ---
 
-[前回の日記一](/2019/05/22/odoo-model/)
+[前回の日記二](/2019/05/23/odoo-action-and-view/)
 
 この開発日記は自分でodooを再開発する時に、解決が難しい問題と効率良くやり方とかを記述しております。
 
@@ -23,7 +23,7 @@ OS:ubuntu
 作業フォルダ
 ├── test.conf  # odoo配置ファイル
 ├── my_addons  # 開発モジュールの格納フォルダ
-│   ├── hello  # 前回作成したモジュール
+│   ├── product_sku_price  # sku価格を追加モジュール
 │   │   ├── controllers
 │   │   ├── demo
 │   │   ├── models
@@ -35,41 +35,42 @@ OS:ubuntu
 
 ### 目標：
 
-- [x] アクション作成
-- [x] メニュー作成
-- [x] ビィー作成
+- [ ] 既存画面の修正ルール
+- [ ] モデル継承
+- [ ] ビュー継承
 
-### アクション作成
+### 既存画面の修正ルール
 
-参考資料：[odooのアクション](https://www.odoo.com/documentation/12.0/reference/actions.html)
+odooはモデルを継承ではなく、ビューの継承も可能です。odooで既存画面を修正したい場合は、直接に既存ソースを触らず、新モージュルて既存画面のビューを継承して修正することができます。
 
-上記資料にodooのアクションが５つあります：
+今回の目標は下記画面でSale Price項目のしたに新しい項目Sku Priceを追加します：
 
-* Window Actions (ir.actions.act_window)
-* URL Actions (ir.actions.act_url)
-* Server Actions (ir.actions.server)
-* Report Actions (ir.actions.report)
-* Client Actions (ir.actions.client)
+![](/assets/images/2019-05-27-odoo-action-and-view.markdown/2019-05-27-20-02-43.png)
 
-この５つアクションが対応テーブルがあります：
+まず、新しいモジュールproduct_sku_priceをmy_addonsに下記のコマンドで追加します
 
-![](/assets/images/2019-05-23-odoo-action-and-view.markdown/2019-05-23-19-12-50.png)
+```sh
+$./odoo12/odoo-bin scaffold product_sku_price ./my_addons 
+```
 
-対応テーブルに新しいレコードを追加すれば、新しいアクションが定義されます。勿論データベースの管理ツールでテーブルを編集して、直接レコードを追加することができますが、メンテナンスが悪いです。このついて、odooはメンテナンス安い方法を提供しています。
 
-まず、一番簡単なアクションURLアクションを作って見ます。下記の様なxmlファイルを作成します、名前は何でもいいですが、ここはhello/views/actions.xmlとなります。
 
-```xml
-<!-- hello/views/actions.xml -->
-<odoo>
-    <data>
-        <record id="action_hello_url" model="ir.actions.act_url">
-            <field name="name">Hello url action</field>
-            <field name="url">http://www.google.com/</field>
-            <field name="target">new</field>
-        </record>
-    </data>
-</odoo>
+```python
+# -*- coding: utf-8 -*-
+{
+    # any module necessary for this one to work correctly
+    'depends': ['website_sale'],
+
+    # always loaded
+    'data': [
+        # 'security/ir.model.access.csv',
+        'views/product_views.xml',
+    ],
+    # only loaded in demonstration mode
+    'demo': [
+        'demo/demo.xml',
+    ],
+}
 ```
 
 上記xmlファイルの意味は、モデルir.actions.act_urlに新しいレコード:
