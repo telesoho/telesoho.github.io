@@ -16,33 +16,19 @@ datacamp: true
     <code data-type="sample-code">
         import numpy as np
         import matplotlib.pyplot as plt
-
-        x = np.arange(0, 5, 0.1);
+        x = np.arange(0, 5, 0.1)
         y = np.sin(x)
         plt.plot(x, y)
         plt.show()
     </code>
 
-    <code data-type="solution"></code>
-    <code data-type="sct"></code>
-    <div data-type="hint">Just press 'Run'.</div>
+    <code data-type="solution">
+        #这只是一个测试
+    </code>
+
+    <code data-type="sct">
+    </code>
+    <div data-type="hint">请点击'Run'.</div>
 </div>
 
-<div data-datacamp-exercise data-lang="python" data-height="auto">
-
-    ```{type='pre-exercise-code'}
-    ```
-
-    ```{python, type='sample-code'}
-        import numpy as np
-        import matplotlib.pyplot as plt
-
-        x = np.arange(0, 5, 0.1);
-        y = np.sin(x)
-        plt.plot(x, y)
-        plt.show()
-    ```
-    <div data-type="hint">Just press 'Run'.
-    </div>
-</div>
 
