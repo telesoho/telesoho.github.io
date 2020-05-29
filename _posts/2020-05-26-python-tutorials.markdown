@@ -1,11 +1,11 @@
 ---
-title: TODO
-tags: [TODO]
+title: Python入门
+tags: [Python入门]
 layout: post
 description:
 comments: true
 published: true
-date: 2020-26-08 9:02:01 +0900
+date: 2020-05-26 9:02:01 +0900
 mermaid: true
 mathjax: true
 datacamp: true
