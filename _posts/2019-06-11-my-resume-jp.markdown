@@ -41,7 +41,7 @@ Markdown, MS PowerPoint, MS Word,MS Excel
 
 ## 履歴
 
-1. 2016-現在　ソフトウェア・エンジニア　株式会社ユー・シー・エル
+1. 2006-現在　ソフトウェア・エンジニア　株式会社ユー・シー・エル
 1. 2001-2006 教師　GuangXi University of Finance And Economics
 1. 1995-2001 教師　Guangxi Vocational & Technical College
 

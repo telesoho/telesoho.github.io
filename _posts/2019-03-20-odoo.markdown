@@ -1,0 +1,91 @@
+---
+title: ODOO笔记
+tags:  [ODOO]
+layout: post
+description: 
+comments: true
+published: false
+date: 2019-03-20 9:02:01 +0900
+mermaid: true
+mathjax: true
+---
+
+任务列表:
+
+- [X] ODOO安装
+- [X] ODOO框架
+- [ ] ODOO二次开发
+- [ ] ODOO部署(kubernets)
+- [ ] 升级ODOO为企业版
+
+## ODOO安装
+
+1. 安装python3
+
+    ```sh
+    python3 --version
+    pip3 --version
+    virtualenv --version
+
+    sudo apt update
+    sudo apt install python3-dev python3-pip
+    sudo pip3 install -U virtualenv  # system-wide install
+
+    virtualenv --system-site-packages -p python3 ./venv
+
+    source ./venv/bin/activate  # sh, bash, ksh, or zsh
+
+    ```
+
+1. 安装依赖包
+
+    ```sh
+    sudo apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev
+    pip install -r requirements.txt
+    ```
+
+1. 安装数据库
+
+    ```sh
+    apt-get install postgresql -y #install postgresql
+    sudo -u postgres psql   #Use psql to connect postgresql by postgres user
+    ```
+
+1. 安装Less和nodejs
+
+    ```sh
+    sudo npm install -g rtlcss
+    ```
+
+1. 创建自定义Module
+
+    ```sh
+    ./odoo-bin scaffold first_app ../mymodules
+    ```
+
+1. 运行ODOO
+
+    ```sh
+    ./odoo-bin --addons-path=addons,../mymodules --db-filter=mydb$
+    ```
+
+    **注意**: [参数db-filter规则](https://www.kancloud.cn/hx78/odoo_10/416231)
+
+
+1. 创建数据库
+
+    服务器启动后就可以使用http://localhost:8069来访问odoo。
+    ![](/assets/images/2019-03-20-12-42-23.png)
+
+    注意:创建的数据库名称必须和启动odoo时数据库的名称一致:mydb
+
+
+1. 激活调试模式
+
+
+    ![](/assets/images/2019-03-20-18-47-35.png)
+
+
+## ODOO框架
+
+1. 
