@@ -113,6 +113,14 @@ $('pre:has(code.language-mermaid)').addClass('has_mermaid');
 {% endif %}
 {%if page.datacamp %}
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+<style>
+    .exercise {
+      margin: 50px;
+    }
+    [data-datacamp-exercise] {
+        visibility: hidden;
+      }
+</style>
 {% endif %}
 
 </html>
