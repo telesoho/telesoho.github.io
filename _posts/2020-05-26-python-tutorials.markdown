@@ -11,21 +11,31 @@ mathjax: false
 datacamp: true
 ---
 
-# Python的Datacamp测试
+## Python的Datacamp测试
 
-<div data-datacamp-exercise data-lang="python" data-height="auto">
-    <code data-type="pre-exercise-code"></code>
-    <code data-type="sample-code">
-        import numpy as np
-        import matplotlib.pyplot as plt
-        x = np.arange(0, 5, 0.1);
-        y = np.sin(x)
-        plt.plot(x, y)
-        plt.show()
+<div data-datacamp-exercise data-lang="r">
+    <code data-type="pre-exercise-code">
+        # This will get executed each time the exercise gets initialized
+        b = 6
     </code>
-    <code data-type="solution"></code>
-    <code data-type="sct"></code>
-    <div data-type="hint"></div>
+    <code data-type="sample-code">
+        # Create a variable a, equal to 5
+
+
+        # Print out a
+
+    </code>
+    <code data-type="solution">
+        # Create a variable a, equal to 5
+        a <- 5
+
+        # Print out a
+        print(a)
+    </code>
+    <code data-type="sct">
+        test_object("a")
+        test_function("print")
+        success_msg("Great job!")
+    </code>
+    <div data-type="hint">Use the assignment operator (<code><-</code>) to create the variable <code>a</code>.</div>
 </div>
-
-
