@@ -3,13 +3,15 @@ title: Python入门
 tags: [Python入门]
 layout: post
 description:
-comments: true
+comments: false
 published: true
 date: 2020-05-26 9:02:01 +0900
-mermaid: true
-mathjax: true
+mermaid: false
+mathjax: false
 datacamp: true
 ---
+
+# Python的Datacamp测试
 
 <div data-datacamp-exercise data-lang="python" data-height="auto">
     <code data-type="pre-exercise-code"></code>
@@ -21,12 +23,8 @@ datacamp: true
         plt.plot(x, y)
         plt.show()
     </code>
-
-    <code data-type="solution">
-    </code>
-
-    <code data-type="sct">
-    </code>
+    <code data-type="solution"></code>
+    <code data-type="sct"></code>
     <div data-type="hint"></div>
 </div>
 
