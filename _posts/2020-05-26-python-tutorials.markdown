@@ -11,6 +11,10 @@ mathjax: true
 datacamp: true
 ---
 
+<div class="exercise">
+<div class="title">
+    <h2>This is an python exercise with a plot</h2>
+</div>
 <div data-datacamp-exercise data-lang="python" data-height="auto">
     <code data-type="pre-exercise-code"></code>
     <code data-type="sample-code">
@@ -58,6 +62,7 @@ datacamp: true
         example
         in the sample code!</p>
     </div>
+
 </div>
 </div>
 
@@ -133,6 +138,7 @@ datacamp: true
         <code>1</code>.
     </p>
     </div>
+
 </div>
 </div>
 <div class="exercise">
@@ -173,6 +179,7 @@ datacamp: true
         <code>x</code>.
     </p>
     </div>
+
 </div>
 </div>
 <div class="exercise">
@@ -183,7 +190,6 @@ datacamp: true
     <code data-type="pre-exercise-code"># no pec</code>
     <code data-type="sample-code">
     # Assign the value 5 to the variable my_apples
-
 
     # Print out the value of the variable my_apples
     </code>
@@ -212,6 +218,7 @@ datacamp: true
         <code>&lt;-</code> is widely preferred in the R community.
     </p>
     </div>
+
 </div>
 </div>
 <div class="exercise">
@@ -223,7 +230,6 @@ datacamp: true
     <code data-type="sample-code">
     # Assign a value to the variables my_apples and my_oranges
     my_apples &lt;- 5
-
 
     # Add these two variables together
 
@@ -271,6 +277,7 @@ datacamp: true
         <code>my_fruit</code>.
     </p>
     </div>
+
 </div>
 </div>
 <div class="exercise">
@@ -327,6 +334,7 @@ datacamp: true
         <code>&quot;six&quot;</code> is a character.
     </p>
     </div>
+
 </div>
 </div>
 <div class="exercise">
@@ -375,6 +383,7 @@ datacamp: true
         <code>my_numeric</code>.
     </p>
     </div>
+
 </div>
 </div>
 <div class="exercise">
@@ -435,5 +444,6 @@ datacamp: true
         <code>my_logical</code>.
     </p>
     </div>
+
 </div>
 </div>
