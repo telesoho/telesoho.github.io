@@ -70,14 +70,14 @@ jQuery(function ($) {
     $('footer section.bookmarks.my nav').bookmarks({
         user: 'recent',
         count: 5,
-        service: 'http://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
+        service: 'https://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
     });
 
     // top 5 popular of pinboard
     $("footer section.bookmarks.popular nav").bookmarks({
         user: 'popular',
         count: 5,
-        service: 'http://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
+        service: 'https://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
     });
 
     // don't js-justify text in ie... too intensive for time being.  maybe ie9
@@ -111,7 +111,7 @@ jQuery(function ($) {
             user: 'namelessmike',
             count: 5,
             // pinboard service
-            service: 'http://feeds.pinboard.in/json/v1/u:{USERNAME}?count={COUNT}&cb=?'
+            service: 'https://feeds.pinboard.in/json/v1/u:{USERNAME}?count={COUNT}&cb=?'
         }
     });
 })(jQuery);
