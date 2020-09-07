@@ -33,7 +33,7 @@ stylesheets:
  - /assets/themes/default/css/screen.css?52480=52480
  - /assets/themes/default/css/print.css
 scripts:
- - //code.jquery.com/jquery-1.6.1.min.js
+ - //ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js
  - /assets/themes/default/js/site.js?234343
 
 colors:
