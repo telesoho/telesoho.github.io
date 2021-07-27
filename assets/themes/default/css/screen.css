@@ -492,6 +492,7 @@ nav#main_nav {
                 }
         footer section.bookmarks a {
             background-position: 0px -40px;
+            word-wrap: break-word;
             }
             footer section.bookmarks a:hover {
                 background-position: 0px 0px;
