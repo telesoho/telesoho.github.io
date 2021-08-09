@@ -22,7 +22,7 @@ datacamp: false
 
 在开发模式下，每个页面加载成功后，Symfony都会在右下角显示一个Symfony toolbar按钮。
 
-![](/assets/images/2021-08-09-favorite-designs-for-symfony.markdown/2021-08-09-12-13-17.png)
+<img src='/assets/images/2021-08-09-favorite-designs-for-symfony.markdown/2021-08-09-12-13-17.png' width='32'/>
 
 点击这个按钮会显示Symfony的工具条
 
