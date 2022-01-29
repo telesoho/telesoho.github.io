@@ -31,7 +31,7 @@ datacamp: false
 
 过了两年来看，中国已经在14五规划提出了粮食安全问题，提出了生态农业，不再追求GDP指标。
 
-相关视频：
+#### 相关视频：
 
 [![](https://img.youtube.com/vi/Re9cnQESi_g/0.jpg)](https://www.youtube.com/watch?v=Re9cnQESi_g)
 
@@ -40,3 +40,6 @@ datacamp: false
 - 陈平推荐学习以色列和日本的人民公社
 - 招牌引智（比如但是的延安是怎么吸引人才的）
 
+[![](https://img.youtube.com/vi/sEe48b2kJCY/0.jpg)](https://www.youtube.com/watch?v=sEe48b2kJCY)
+
+- 金融战争要占领制高点，就是要制定定价权。
