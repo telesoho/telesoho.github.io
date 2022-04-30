@@ -67,11 +67,11 @@ jQuery(function ($) {
 
     // bookmarks integration
     // see http://pinboard.in/howto/#rss
-    $('footer section.bookmarks.my nav').bookmarks({
-        user: 'recent',
-        count: 5,
-        service: 'https://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
-    });
+    // $('footer section.bookmarks.my nav').bookmarks({
+    //     user: 'recent',
+    //     count: 5,
+    //     service: 'https://feeds.pinboard.in/json/v1/{USERNAME}?count={COUNT}&cb=?'
+    // });
 
     // top 5 popular of pinboard
     $("footer section.bookmarks.popular nav").bookmarks({

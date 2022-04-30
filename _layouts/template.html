@@ -28,14 +28,15 @@
     <link rel="apple-touch-icon" href="/assets/themes/default/images/ios.png"/>    
     <meta name="viewport" content="width=800" />
     {% for stylesheet in site.stylesheets %}
-    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
+        <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
     {% endfor %}
     {% for stylesheet in page.stylesheets %}
-    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
+        <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />
     {% endfor %}
     <!--[if IE]>
     <script src="/assets/themes/default/js/html5.js"></script>
     <![endif]-->
+    {% seo %}
 </head>
 <body class="{{ page.bodyclass }}">
 <div id="wrapper">
@@ -53,7 +54,7 @@
         </nav>
         <div id="content">
         {{ content }}
-        </div>        
+        </div>
     </div>    
     <div id="footer-wrapper">
         <footer>
@@ -76,9 +77,12 @@
                     </ul>                    
                 </nav>
             </section>
-            <section title="Recent top 5" class="bookmarks my">
-                <h1><a href="{{ site.author.pinboard }}" title="Recent top 5 of pinboard">Recent top 5</a></h1>
+            <section title="Tags cloud" class="bookmarks tags">
+                <h1><a href="{{ site.author.pinboard }}" title="tags cloud">Tags</a></h1>
                 <nav>
+                    <div id="tag-cloud">
+                        {{ site | tag_cloud }}
+                    </div>
                 </nav>
             </section>
             <section title="Popular top 5" class="bookmarks popular">

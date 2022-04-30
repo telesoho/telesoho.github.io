@@ -1,0 +1,13 @@
+---
+layout: index
+---
+<article>
+  <header>
+      <h2><a href="{{ page.url }}" rel="bookmark" title="link to this post">{{ page.tag }}</a></h2>
+  </header>
+  <ul>
+    {% for post in page.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags }})</li>
+    {% endfor %}
+  </ul> 
+</article>
