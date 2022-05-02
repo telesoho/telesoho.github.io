@@ -57,6 +57,11 @@ includes_dir: _includes
 collections:
   posts:
     output:   true
+  # my_tags:
+  #   output: true
+  #   permalink: /tag/:name/
+  #   filepath: /tags
+  #   layout: tag_index
 
 # Handling Reading
 safe:                 false
@@ -80,16 +85,12 @@ unpublished: false
 # Plugins
 whitelist: []
 plugins_dir:   []
-# plugins:
-#   - jekyll-feed
-#   - jekyll-seo-tag
-#   - jekyll/tagging
 
 # tag plugin
-tag_page_layout: tag_page
-tag_page_dir: tag
-ignored_tags: []
-tag_permalink_style: pretty
+# tag_page_layout: tag_page
+# tag_page_dir: tag
+# ignored_tags: []
+# tag_permalink_style: pretty
 
 # Conversion
 markdown:    kramdown

@@ -1,0 +1,20 @@
+---
+layout: template
+---
+{% include tags.html %}
+<article>
+    <header>
+        <h1><a href="{{ page.url }}" rel="bookmark" title="link to this post">{{ page.title }}</a></h1>
+    </header>    
+    {% for tag in site.tags %}
+        <h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
+        <ul>
+            {%- for page in tag[1] -%}
+            <li>
+                <a href="{{page.url}}">{{ page.title }}</a>
+                <span></span>
+            </li>
+            {%- endfor -%}
+        </ul>
+    {%- endfor -%}
+</article>
