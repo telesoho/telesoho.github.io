@@ -11,7 +11,7 @@ mathjax: false
 datacamp: false
 ---
 
-收藏一些关于中国未来的思考，等过未来以后再来回看。
+收藏一些关于中国未来的思考，等到未来以后再来回看看。
 
 [![](https://img.youtube.com/vi/c-YjIq7yDk0/0.jpg)](https://www.youtube.com/watch?v=c-YjIq7yDk0)
 
