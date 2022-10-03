@@ -39,6 +39,12 @@ datacamp: false
 
 中美贸易战争的本质是，如果中国人也能达到现在西方的消费水平，得需要 2 个地球，西方从 2010 年开始就已经开始压制中国了。中国早在 2005 年已经重视三农问题，开始工业反哺农业，基建下乡，直接带动人口就业。
 
+2022-10-04:
+
+[![](https://img.youtube.com/vi/qjHNbI3DJOM/0.jpg)](https://www.youtube.com/watch?v=qjHNbI3DJOM)
+
+美国一直在让制造业回流，由于美国的工会、工人的工资高的问题，会导致美国加速衰落。同时如果大国都搞制造业了，谁来消费？那些依赖制造业的小国怎么办？
+
 #### 相关视频：
 
 [![](https://img.youtube.com/vi/Re9cnQESi_g/0.jpg)](https://www.youtube.com/watch?v=Re9cnQESi_g)
