@@ -1,10 +1,10 @@
 ---
 title: odoo再開発日記三
-tags:  [odoo, action, view, odoo再開発]
+tags: [odoo, action, view, odoo再開発]
 layout: post
-description: 
+description:
 comments: true
-published: true
+published: false
 date: 2019-05-27 19:02:01 +0900
 mermaid: true
 mathjax: true
@@ -12,7 +12,7 @@ mathjax: true
 
 [前回の日記二](/2019/05/23/odoo-action-and-view/)
 
-この開発日記は自分でodooを再開発する時に、解決が難しい問題と効率良くやり方とかを記述しております。
+この開発日記は自分で odoo を再開発する時に、解決が難しい問題と効率良くやり方とかを記述しております。
 
 開発環境：
 OS:ubuntu
@@ -32,7 +32,6 @@ OS:ubuntu
 └── odoo12  # ここにodoo 12.0をインストルされました
 ```
 
-
 ### 目標：
 
 - [ ] 既存画面の修正ルール
@@ -41,19 +40,17 @@ OS:ubuntu
 
 ### 既存画面の修正ルール
 
-odooはモデルを継承ではなく、ビューの継承も可能です。odooで既存画面を修正したい場合は、直接に既存ソースを触らず、新モージュルて既存画面のビューを継承して修正することができます。
+odoo はモデルを継承ではなく、ビューの継承も可能です。odoo で既存画面を修正したい場合は、直接に既存ソースを触らず、新モージュルて既存画面のビューを継承して修正することができます。
 
-今回の目標は下記画面でSale Price項目のしたに新しい項目Sku Priceを追加します：
+今回の目標は下記画面で Sale Price 項目のしたに新しい項目 Sku Price を追加します：
 
 ![](/assets/images/2019-05-27-odoo-action-and-view.markdown/2019-05-27-20-02-43.png)
 
-まず、新しいモジュールproduct_sku_priceをmy_addonsに下記のコマンドで追加します
+まず、新しいモジュール product_sku_price を my_addons に下記のコマンドで追加します
 
 ```sh
-$./odoo12/odoo-bin scaffold product_sku_price ./my_addons 
+$./odoo12/odoo-bin scaffold product_sku_price ./my_addons
 ```
-
-
 
 ```python
 # -*- coding: utf-8 -*-
@@ -73,11 +70,11 @@ $./odoo12/odoo-bin scaffold product_sku_price ./my_addons
 }
 ```
 
-上記xmlファイルの意味は、モデルir.actions.act_urlに新しいレコード:
-nameフィルドがHello url action
-urlフィルドがhttp://www.google.com/
-tagetフィルドがnew
-を追加する。モデルir.actions.act_urlはodoo/addons/base/models/ir_actions.pyファイルに定義されます。
+上記 xml ファイルの意味は、モデル ir.actions.act_url に新しいレコード:
+name フィルドが Hello url action
+url フィルドがhttp://www.google.com/
+taget フィルドが new
+を追加する。モデル ir.actions.act_url は odoo/addons/base/models/ir_actions.py ファイルに定義されます。
 
 ```python
 class IrActionsActUrl(models.Model):
@@ -99,10 +96,9 @@ class IrActionsActUrl(models.Model):
 
 <https://www.odoo.com/documentation/12.0/reference/actions.html#url-actions-ir-actions-act-url>
 
+IrActionsActUrl クラスの\_table フィルド、値が'ir_act_url'によると、モデル'ir.actions.act_url'とテーブル'ir_act_url'の対応関係がすぐ分かります。
 
-IrActionsActUrlクラスの_tableフィルド、値が'ir_act_url'によると、モデル'ir.actions.act_url'とテーブル'ir_act_url'の対応関係がすぐ分かります。
-
-そして、helloモジュールの定義ファイル```__manifest__.py```のdata項目にactions.xmlファイルを追加します。
+そして、hello モジュールの定義ファイル`__manifest__.py`の data 項目に actions.xml ファイルを追加します。
 
 ```python
     ...
@@ -113,22 +109,21 @@ IrActionsActUrlクラスの_tableフィルド、値が'ir_act_url'によると�
     ...
 ```
 
-下記のコマンドでhelloモージュルを更新してodooを起動します。
+下記のコマンドで hello モージュルを更新して odoo を起動します。
 
 ```sh
 $./odoo12/odoo-bin -d test_odoo -c test.conf -u hello
 ```
 
-起動成功すればir_act_urlテーブルを確認すると追加されたアクションレコードが見えます。
+起動成功すれば ir_act_url テーブルを確認すると追加されたアクションレコードが見えます。
 
 ![](/assets/images/2019-05-23-odoo-action-and-view.markdown/2019-05-23-19-55-07.png)
-
 
 ### メニュー作成
 
 次は新しいメニュー項目を作成して上記アクションを呼び出します
 
-メニュー作成方法はアクションの作成方法大体同じ、まず、views/menu.xmlファイルを作成して、下記内容を追加します。
+メニュー作成方法はアクションの作成方法大体同じ、まず、views/menu.xml ファイルを作成して、下記内容を追加します。
 
 ```xml
 <odoo>
@@ -138,9 +133,9 @@ $./odoo12/odoo-bin -d test_odoo -c test.conf -u hello
 </odoo>
 ```
 
-上記xmlファイルにactionが"hello.action_hello_msg"と設定されます、つまり、このメーニュをクリックすると、"hello.action_hello_msg"アクションを呼び出すことができます。
+上記 xml ファイルに action が"hello.action_hello_msg"と設定されます、つまり、このメーニュをクリックすると、"hello.action_hello_msg"アクションを呼び出すことができます。
 
-上記xmlファイルを使用のため、helloモジュールの定義ファイル```__manifest__.py```のdata項目にmenu.xmlファイルを追加します。
+上記 xml ファイルを使用のため、hello モジュールの定義ファイル`__manifest__.py`の data 項目に menu.xml ファイルを追加します。
 
 ```python
     ...
@@ -152,40 +147,39 @@ $./odoo12/odoo-bin -d test_odoo -c test.conf -u hello
     ...
 ```
 
-再度コマンドでhelloモジュールを更新して起動します。
+再度コマンドで hello モジュールを更新して起動します。
 
 ```sh
 $./odoo12/odoo-bin -d test_odoo -c test.conf -u hello
 ```
 
-起動成功すれば、odooの画面を開くするとトップメニューにはHelloのメニューを見えます。ただし、アクションがないメニュー項目が表示されないので注意が必要です。
+起動成功すれば、odoo の画面を開くするとトップメニューには Hello のメニューを見えます。ただし、アクションがないメニュー項目が表示されないので注意が必要です。
 
 ![](/assets/images/2019-05-23-odoo-action-and-view.markdown/2019-05-24-11-47-55.png)
 
-Helloメニューをクリックすると、新しいページhttp:://www.google.comが開けます。
-
+Hello メニューをクリックすると、新しいページ http:://www.google.comが開けます。
 
 ### ビィー作成
 
-odooのビューが下記の種類があります：
+odoo のビューが下記の種類があります：
 
-* Lists
-* Forms
-* Graphs
-* Pivots
-* Kanban
-* Calendar
-* Gantt
-* Diagram
-* Dashboard
-* Cohort
-* Activity
-* Search
-* QWeb
+- Lists
+- Forms
+- Graphs
+- Pivots
+- Kanban
+- Calendar
+- Gantt
+- Diagram
+- Dashboard
+- Cohort
+- Activity
+- Search
+- QWeb
 
-QWebが普通のHTMLタッグも使えますから、一番理解安いと思います。では簡単のQWebビューから作りしましょう。
+QWeb が普通の HTML タッグも使えますから、一番理解安いと思います。では簡単の QWeb ビューから作りしましょう。
 
-まず、template.xmlを作成し、下記のコードを入力します。
+まず、template.xml を作成し、下記のコードを入力します。
 
 ```xml
 <odoo>
@@ -197,20 +191,20 @@ QWebが普通のHTMLタッグも使えますから、一番理解安いと思い
 </odoo>
 ```
 
-次は定義ファイル```__manifest__.py```のdata項目に追加します。
+次は定義ファイル`__manifest__.py`の data 項目に追加します。
 
 ```python
     # always loaded
     'data': [
         'views/templates.xml',
         'views/actions.xml',
-        'views/menu.xml',        
+        'views/menu.xml',
     ],
 ```
 
-ここまで、qwebビュー"hello_msg"の定義が完了しました。ただし、このビューにアクセスすることがまたできないので、アクセスルードの定義が必要です。
+ここまで、qweb ビュー"hello_msg"の定義が完了しました。ただし、このビューにアクセスすることがまたできないので、アクセスルードの定義が必要です。
 
-hello/controllers/controllers.pyを編集して、下記のコードを入力します。
+hello/controllers/controllers.py を編集して、下記のコードを入力します。
 
 ```python
 # -*- coding: utf-8 -*-
@@ -222,17 +216,17 @@ class Hello(http.Controller):
         return http.request.render('hello.hello_msg')
 ```
 
-そこまで、/hello/helloルードを定義しました。
+そこまで、/hello/hello ルードを定義しました。
 
 ```sh
 $./odoo12/odoo-bin -d test_odoo -c test.conf -u hello
 ```
 
-上記コマンドでhelloモジュールを更新して再起動します、問題なけれは、```http://localhost:8069/hello/hello/```をブラウザで開くと、下記の画面が見えます。
+上記コマンドで hello モジュールを更新して再起動します、問題なけれは、`http://localhost:8069/hello/hello/`をブラウザで開くと、下記の画面が見えます。
 
 ![](/assets/images/2019-05-23-odoo-action-and-view.markdown/2019-05-24-16-13-37.png)
 
-最後、先ほど作成したURLアクション(/views/actions.xml)を下記のように変更して、再起動すると、Helloメニューから/hello/helloに遷移することが出来るになります。
+最後、先ほど作成した URL アクション(/views/actions.xml)を下記のように変更して、再起動すると、Hello メニューから/hello/hello に遷移することが出来るになります。
 
 ```xml
 <odoo>
@@ -245,4 +239,3 @@ $./odoo12/odoo-bin -d test_odoo -c test.conf -u hello
     </data>
 </odoo>
 ```
-
