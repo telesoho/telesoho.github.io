@@ -45,6 +45,13 @@ datacamp: false
 
 美国一直在让制造业回流，由于美国的工会、工人的工资高的问题，会导致美国加速衰落。同时如果大国都搞制造业了，谁来消费？那些依赖制造业的小国怎么办？
 
+2022-11-14:
+
+[![](https://img.youtube.com/vi/MvLxuJYKXaA/0.jpg)](https://www.youtube.com/watch?v=MvLxuJYKXaA)
+
+- 美国是殖民地思维，以前是，现在也是。
+- 社会主义不是大家都贫穷，社会主义有一个前提，就是资本主义已经建立了社会化大生产，社会主义就是要解决少部分资本拥有者控制着社会，剥削着大部分人问题。
+
 #### 相关视频：
 
 [![](https://img.youtube.com/vi/Re9cnQESi_g/0.jpg)](https://www.youtube.com/watch?v=Re9cnQESi_g)
