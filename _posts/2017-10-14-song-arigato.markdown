@@ -4,7 +4,7 @@ tags:  [ありがとう, Guitar]
 layout: post
 description: 
 comments: true
-published: true
+published: false
 date: 2017-10-14 19:31:01 +0900
 ---
 ```song
