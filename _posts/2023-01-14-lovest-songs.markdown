@@ -66,7 +66,3 @@ datacamp: false
 
 [![](https://img.youtube.com/vi/hzypdAfwN24/0.jpg)](https://www.youtube.com/watch?v=hzypdAfwN24)
 
-
-## 来一把Rap串烧-GAI
-
-[![](https://img.youtube.com/vi/M5HFSsXJaz4/0.jpg)](https://www.youtube.com/watch?v=M5HFSsXJaz4)
