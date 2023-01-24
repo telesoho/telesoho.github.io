@@ -13,7 +13,7 @@ datacamp: false
 
 ## 光亮-周深
 
-超级喜欢周深这个版本的《光亮》，现场听众完全陶醉了。
+超级喜欢周深这个版本的《光亮》，现场听众完全陶醉了，我也一样，经常拿这首歌单曲循环作为背景音乐。
 
 [![](https://img.youtube.com/vi/nb6J3swcobE/0.jpg)](https://www.youtube.com/watch?v=nb6J3swcobE)
 
@@ -36,6 +36,8 @@ datacamp: false
 
 ## 一生所爱-杨子
 
+录音效果不是很好，但是杨子完全把感情带入了这首歌曲。
+
 [![](https://img.youtube.com/vi/xe8GgeQcMcA/0.jpg)](https://www.youtube.com/watch?v=xe8GgeQcMcA)
 
 
@@ -46,6 +48,8 @@ datacamp: false
 
 ## 是什麼讓我遇見這樣的你-白安
 
+感觉像是老外在唱中文歌曲，旋律非常好听。
+
 [![](https://img.youtube.com/vi/aVmZpcrQBU4/0.jpg)](https://www.youtube.com/watch?v=aVmZpcrQBU4)
 
 ## 赤伶-譚晶
@@ -53,6 +57,8 @@ datacamp: false
 [![](https://img.youtube.com/vi/y82zK9F0XGA/0.jpg)](https://www.youtube.com/watch?v=y82zK9F0XGA)
 
 ## 左手指月-萨顶顶
+
+令人上头的配乐。
 
 [![](https://img.youtube.com/vi/ATPulcGQ2SE/0.jpg)](https://www.youtube.com/watch?v=ATPulcGQ2SE)
 
