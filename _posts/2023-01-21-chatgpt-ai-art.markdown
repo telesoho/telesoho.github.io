@@ -23,3 +23,7 @@ datacamp: false
 - 7个用ChatGPT賺錢的方法 如何用OpenAI人工智能赚钱机会
 
 [![](https://img.youtube.com/vi/nYi36vkQ20E/0.jpg)](https://www.youtube.com/watch?v=nYi36vkQ20E)
+
+试用了GPT3，尝试用它来帮助我写一本科幻小说：
+
+[尝试使用GPT3来写科幻小说的聊天记录](https://sharegpt.com/c/HDLhv55)
