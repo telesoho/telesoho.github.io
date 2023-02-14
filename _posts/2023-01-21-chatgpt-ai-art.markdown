@@ -13,6 +13,8 @@ datacamp: false
 
 自从深蓝AI在围棋领域战胜了人类的顶级棋手，我已经感觉到，学会如何与人工智能合作必定是未来发展的趋势。
 
+[![](https://tvax3.sinaimg.cn/crop.0.0.500.500.180/007Zud2Ily1hatk2hu13xj30dw0dw3yz.jpg?KID=imgbed,tva&Expires=1676348934&ssig=q3%2BUytlxLk)](https://weibo.com/u/7321486300)
+
 先看看一个目前应用的例子：
 
 - ChatGPT + Midjourney + Clipchamp AI大軍聯合玩內容創作 (文稿/插圖/配樂/配音/字幕全包)
@@ -34,3 +36,14 @@ datacamp: false
 
     [![](https://img.youtube.com/vi/9DovhoPGyhc/0.jpg)](https://www.youtube.com/watch?v=9DovhoPGyhc)
 
+- ChatGPT是怎么练成的
+  
+    [![](https://img.youtube.com/vi/e0aKI2GGZNg/0.jpg)](https://www.youtube.com/watch?v=e0aKI2GGZNg)
+
+- CHATGPT论文
+  
+    [![](https://img.youtube.com/vi/txjl_Q4jCyQ/0.jpg)](https://www.youtube.com/watch?v=txjl_Q4jCyQ)
+
+    - 第一遍，读标题，导言和结论，然后再看看实验相关的表，基本已经了解了论文的内容，如果感兴趣可以都第二遍。
+    - 第二遍，主要了解实验的方法和过程。
+    - 第三遍，对于太难的文章，可以先从引用的文章开始。
