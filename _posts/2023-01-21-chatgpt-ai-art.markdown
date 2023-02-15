@@ -13,7 +13,6 @@ datacamp: false
 
 自从深蓝AI在围棋领域战胜了人类的顶级棋手，我已经感觉到，学会如何与人工智能合作必定是未来发展的趋势。
 
-[![](https://tvax3.sinaimg.cn/crop.0.0.500.500.180/007Zud2Ily1hatk2hu13xj30dw0dw3yz.jpg?KID=imgbed,tva&Expires=1676348934&ssig=q3%2BUytlxLk)](https://weibo.com/u/7321486300)
 
 先看看一个目前应用的例子：
 
@@ -29,6 +28,13 @@ datacamp: false
 试用了GPT3，尝试用它来帮助我写一本科幻小说：
 
 [尝试使用GPT3来写科幻小说的聊天记录](https://sharegpt.com/c/HDLhv55)
+
+
+还能利用ChatGPT画系统图：
+
+- [使用ChatGPT创建系统图](https://aruva.medium.com/using-chatgpt-to-build-system-diagrams-part-i-69efc7603926)
+
+
 
 ## 关于GPT有价值的讨论
 
@@ -47,3 +53,4 @@ datacamp: false
     - 第一遍，读标题，导言和结论，然后再看看实验相关的表，基本已经了解了论文的内容，如果感兴趣可以都第二遍。
     - 第二遍，主要了解实验的方法和过程。
     - 第三遍，对于太难的文章，可以先从引用的文章开始。
+
