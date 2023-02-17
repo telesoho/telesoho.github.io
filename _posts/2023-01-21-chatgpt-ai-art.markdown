@@ -34,6 +34,9 @@ datacamp: false
 
 - [使用ChatGPT创建系统图](https://aruva.medium.com/using-chatgpt-to-build-system-diagrams-part-i-69efc7603926)
 
+先给ChatGPT预定人设，能让ChatGPT跳出它的回答限制。
+
+[![](https://img.youtube.com/vi/gUE70FFgcUk/0.jpg)](https://www.youtube.com/watch?v=gUE70FFgcUk)
 
 
 ## 关于GPT有价值的讨论
