@@ -47,3 +47,8 @@ datacamp: false
 如果 DNA 是自私的，为了传承，那么如果有人复制了一个自己的意识，并且决定把自己的遗产留给自己的意识，而不是自己的子孙，是不是矛盾？
 
 [![](https://img.youtube.com/vi/SQkcwIOg9dc/0.jpg)](https://www.youtube.com/watch?v=SQkcwIOg9dc)
+
+## 人生
+
+[![](https://img.youtube.com/vi/RsehMAgqDW4/0.jpg)](https://www.youtube.com/watch?v=RsehMAgqDW4)
+
