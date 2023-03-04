@@ -1,6 +1,6 @@
 ---
 title: 人与人工智能
-tags: [人工智能, 艺术, 漫画]
+tags: [人工智能, 艺术, ChatGPT]
 layout: post
 description:
 comments: true
@@ -57,6 +57,7 @@ datacamp: false
     - 第二遍，主要了解实验的方法和过程。
     - 第三遍，对于太难的文章，可以先从引用的文章开始。
 
+## ChatGPT的应用
 
     [![](https://img.youtube.com/vi/CDOdSXEdm2g/0.jpg)](https://www.youtube.com/watch?v=CDOdSXEdm2g)
 
@@ -79,6 +80,7 @@ datacamp: false
     - [22:21](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1341s) runway  
     - [24:20](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1460s) be human
 
-- ChatGPT总结得很有趣
+## ChatGPT总结
 
 [![](https://img.youtube.com/vi/zNRvAMJOfAI/0.jpg)](https://www.youtube.com/watch?v=zNRvAMJOfAI)
+
