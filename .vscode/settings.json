@@ -1,9 +1,17 @@
 {
-  "MarkdownPaste.path": "${workspaceRoot}/assets/images/${fileBasename}/",
+  "MarkdownPaste.path": "${workspaceRoot}/assets/images",
+  "MarkdownPaste.namePrefix": "${fileBasename}_",
+  "MarkdownPaste.nameBase": "${selectedText}",
+  "MarkdownPaste.nameSuffix": "_${datetime|yyyyMMDDHHmmss}",
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "markdownlint.config": {
     "MD033": false,
     "MD002": false,
-    "MD041": false
+    "MD041": false,
+    "MD045": false
   },
   // Controls whether formatting is enabled or disabled
   "liquid.format": true,
