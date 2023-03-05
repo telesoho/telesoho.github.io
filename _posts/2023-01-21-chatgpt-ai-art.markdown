@@ -59,26 +59,26 @@ datacamp: false
 
 ## ChatGPT 的应用
 
-    [![](https://img.youtube.com/vi/CDOdSXEdm2g/0.jpg)](https://www.youtube.com/watch?v=CDOdSXEdm2g)
+[![](https://img.youtube.com/vi/CDOdSXEdm2g/0.jpg)](https://www.youtube.com/watch?v=CDOdSXEdm2g)
 
-    1. Dall-E: https://labs.openai.com/
-    2. Codeformer: https://shangchenzhou.com/projects/Co...
-    3. Playground AI: https://playgroundai.com/
-    4. Clip Drop: https://clipdrop.co/relight
-    5. Astria: https://www.strmr.com/examples
-    6. ChatGPT: https://chat.openai.com/chat
+1. Dall-E: <https://labs.openai.com/>
+2. Codeformer: <https://shangchenzhou.com/projects/Codeformer>
+3. Playground AI: <https://playgroundai.com/>
+4. Clip Drop: <https://clipdrop.co/relight>
+5. Astria: <https://www.strmr.com/examples>
+6. ChatGPT: <https://chat.openai.com/chat>
 
-    [![](https://img.youtube.com/vi/2LzhWyp48FY/0.jpg)](https://www.youtube.com/watch?v=2LzhWyp48FY)
+[![](https://img.youtube.com/vi/2LzhWyp48FY/0.jpg)](https://www.youtube.com/watch?v=2LzhWyp48FY)
 
-    - [1:26](https://www.youtube.com/watch?v=2LzhWyp48FY&t=86s) ChatGPT
-    - [2:08](https://www.youtube.com/watch?v=2LzhWyp48FY&t=128s) Midjourney
-    - [8:05](https://www.youtube.com/watch?v=2LzhWyp48FY&t=485s) tome
-    - [8:55](https://www.youtube.com/watch?v=2LzhWyp48FY&t=535s) notion AI
-    - [11:03](https://www.youtube.com/watch?v=2LzhWyp48FY&t=663s) descript
-    - [14:43](https://www.youtube.com/watch?v=2LzhWyp48FY&t=883s) fliki
-    - [21:12](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1272s) Resemble AI
-    - [22:21](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1341s) runway
-    - [24:20](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1460s) be human
+[1:26](https://www.youtube.com/watch?v=2LzhWyp48FY&t=86s) ChatGPT
+[2:08](https://www.youtube.com/watch?v=2LzhWyp48FY&t=128s) Midjourney
+[8:05](https://www.youtube.com/watch?v=2LzhWyp48FY&t=485s) tome
+[8:55](https://www.youtube.com/watch?v=2LzhWyp48FY&t=535s) notion AI
+[11:03](https://www.youtube.com/watch?v=2LzhWyp48FY&t=663s) descript
+[14:43](https://www.youtube.com/watch?v=2LzhWyp48FY&t=883s) fliki
+[21:12](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1272s) Resemble AI
+[22:21](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1341s) runway
+[24:20](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1460s) be human
 
 ## ChatGPT 总结
 
