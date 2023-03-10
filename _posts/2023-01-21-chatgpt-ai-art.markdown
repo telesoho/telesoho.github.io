@@ -80,6 +80,14 @@ datacamp: false
 [22:21](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1341s) runway
 [24:20](https://www.youtube.com/watch?v=2LzhWyp48FY&t=1460s) be human
 
+## 关于 GPT 微调和提示（值得仔细研究）
+
+[![](https://img.youtube.com/vi/F58vJcGgjt0/0.jpg)](https://www.youtube.com/watch?v=F58vJcGgjt0)
+
+[![](https://img.youtube.com/vi/aZ_jXZvxyVg/0.jpg)](https://www.youtube.com/watch?v=aZ_jXZvxyVg)
+
+[![](https://img.youtube.com/vi/HnzDaEiN_eg/0.jpg)](https://www.youtube.com/watch?v=HnzDaEiN_eg)
+
 ## ChatGPT 总结
 
 [![](https://img.youtube.com/vi/zNRvAMJOfAI/0.jpg)](https://www.youtube.com/watch?v=zNRvAMJOfAI)
