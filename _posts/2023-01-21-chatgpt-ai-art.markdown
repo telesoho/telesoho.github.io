@@ -19,6 +19,10 @@ datacamp: false
 
 [![](https://img.youtube.com/vi/9T8Dn2cY_04/0.jpg)](https://www.youtube.com/watch?v=9T8Dn2cY_04)
 
+- GPT-4 + Midjourney V5 = A New Era of Photography? - WOW!
+
+[![](https://img.youtube.com/vi/Asg1e_IYzR8/0.jpg)](https://www.youtube.com/watch?v=Asg1e_IYzR8)
+
 - 7 个用 ChatGPT 賺錢的方法 如何用 OpenAI 人工智能赚钱机会
 
 [![](https://img.youtube.com/vi/nYi36vkQ20E/0.jpg)](https://www.youtube.com/watch?v=nYi36vkQ20E)
