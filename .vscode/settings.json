@@ -1,8 +1,8 @@
 {
-  "MarkdownPaste.path": "${workspaceRoot}/assets/images",
-  "MarkdownPaste.namePrefix": "${fileBasename}_",
-  "MarkdownPaste.nameBase": "${selectedText}",
-  "MarkdownPaste.nameSuffix": "_${datetime|yyyyMMDDHHmmss}",
+  "MarkdownPaste.path": "${workspaceRoot}/assets/images/${fileBasename}",
+  "MarkdownPaste.namePrefix": "${selectedText}",
+  "MarkdownPaste.nameBase": "${datetime|yyyy-MM-DD-HH-mm-ss}",
+  "MarkdownPaste.nameSuffix": "",
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
