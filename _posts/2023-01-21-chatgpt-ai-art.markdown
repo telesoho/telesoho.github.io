@@ -19,6 +19,8 @@ datacamp: false
 
 [![](https://img.youtube.com/vi/9T8Dn2cY_04/0.jpg)](https://www.youtube.com/watch?v=9T8Dn2cY_04)
 
+[![](https://img.youtube.com/vi/BKYctWA3icc/0.jpg)](https://www.youtube.com/watch?v=BKYctWA3icc)
+
 - 7 个用 ChatGPT 賺錢的方法 如何用 OpenAI 人工智能赚钱机会
 
 [![](https://img.youtube.com/vi/nYi36vkQ20E/0.jpg)](https://www.youtube.com/watch?v=nYi36vkQ20E)
@@ -87,6 +89,10 @@ datacamp: false
 [![](https://img.youtube.com/vi/aZ_jXZvxyVg/0.jpg)](https://www.youtube.com/watch?v=aZ_jXZvxyVg)
 
 [![](https://img.youtube.com/vi/HnzDaEiN_eg/0.jpg)](https://www.youtube.com/watch?v=HnzDaEiN_eg)
+
+## 搭建 CHATGPT
+
+- [fauxpilot/fauxpilot: FauxPilot - an open-source GitHub Copilot server](https://github.com/fauxpilot/fauxpilot)
 
 ## ChatGPT 总结
 
