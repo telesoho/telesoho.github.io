@@ -26,3 +26,5 @@ datacamp: false
 - [tiangolo/typer: Typer, build great CLIs. Easy to code. Based on Python type hints. (github.com)](https://github.com/tiangolo/typer)
 
 - [Textualize/rich: Rich is a Python library for rich text and beautiful formatting in the terminal. (github.com)](https://github.com/Textualize/rich)
+
+[Documentation that simply works](https://github.com/squidfunk/mkdocs-material)
