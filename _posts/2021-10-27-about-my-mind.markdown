@@ -52,3 +52,8 @@ datacamp: false
 
 [![](https://img.youtube.com/vi/RsehMAgqDW4/0.jpg)](https://www.youtube.com/watch?v=RsehMAgqDW4)
 
+## 宗教，科学，你信什么？
+
+[![](https://img.youtube.com/vi/bI_4qlmL2eQ/0.jpg)](https://www.youtube.com/watch?v=bI_4qlmL2eQ)
+
+[![](https://img.youtube.com/vi/RZ3xY62xWDo/0.jpg)](https://www.youtube.com/watch?v=RZ3xY62xWDo)
