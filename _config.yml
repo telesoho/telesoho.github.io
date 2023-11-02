@@ -65,8 +65,7 @@ collections:
 
 # Handling Reading
 safe:                 false
-# include:              [".htaccess",".well-known"]
-include: [".well-known"]
+include:              [".htaccess",".well-known"]
 exclude:
  - Rakefile
  - README.markdown
