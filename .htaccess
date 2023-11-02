@@ -5,13 +5,12 @@ Options -Indexes
 ErrorDocument 404 /notfound/
 ErrorDocument 403 /notfound/
 
-# Redirection of www.* to non-www.*
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.michaelmonteleone.net
-RewriteRule (.*) http://michaelmonteleone.net/ [R=301,L]
+#RewriteCond %{HTTP_HOST} ^www.michaelmonteleone.net
+#RewriteRule (.*) http://michaelmonteleone.net/ [R=301,L]
 
-Header set Served-By "Robert'); DROP TABLE Students;--"
-Header unset X-Powered-By
+#Header set Served-By "Robert'); DROP TABLE Students;--"
+#Header unset X-Powered-By
 
 # Caching 
 # Header unset ETag
@@ -24,7 +23,7 @@ Header unset X-Powered-By
 
 # GZip
 <IfModule mod_deflate.c>
-<FilesMatch "\.(html|js|css|xml)$">
+<FilesMatch "\.(html|js|css|xml|json)$">
 SetOutputFilter DEFLATE
 </FilesMatch>
 </IfModule>
