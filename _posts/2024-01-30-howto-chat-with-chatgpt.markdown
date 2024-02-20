@@ -127,3 +127,18 @@ ChatGPT 还可以扮演某个或者多个角色来对话。这个在利用它做
 ## 参考
 
 [![](https://img.youtube.com/vi/bpWJ-F-PyTk/0.jpg)](https://www.youtube.com/watch?v=bpWJ-F-PyTk)
+
+[![](https://img.youtube.com/vi/sL1BNTU-4PI/0.jpg)](https://www.youtube.com/watch?v=sL1BNTU-4PI)
+
+核心观点：
+
+1. ChatGPT 有 60%来自[Common Crawl](https://commoncrawl.org/)
+
+[![](https://img.youtube.com/vi/E8Uxru9mW-0/0.jpg)](https://www.youtube.com/watch?v=E8Uxru9mW-0)
+
+核心观点：
+
+1. 关于 ChatGPT 的知识库，并没有想象中的那样可以成为定制化 GPT 的有利工具。
+   1. 原因 1：OpenAI 公司为了节省算力，实际上在投机取巧，并没有完全读取知识库中的内容
+   2. 原因 2：OpenAI 公司也并不敢让这些知识库去修改 ChatGPT 的参数，如果这样做了，一旦改变 ChatGPT 不可控，责任担当不起。
+2. 结论：可能开源模型才是定制化 GPT 的出路。
