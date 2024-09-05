@@ -52,7 +52,6 @@ datacamp: false
 - 美国是殖民地思维，以前是，现在也是。
 - 社会主义不是大家都贫穷，社会主义有一个前提，就是资本主义已经建立了社会化大生产，社会主义就是要解决少部分资本拥有者控制着社会，剥削着大部分人问题。
 
-
 2022-12-24：
 
 [![](https://img.youtube.com/vi/GN8V0CvRxNA/0.jpg)](https://www.youtube.com/watch?v=GN8V0CvRxNA)
@@ -62,7 +61,7 @@ datacamp: false
   - 目前全球化阵营中，多数是发展中国家，各国发展不均衡，优势不同，全球化能让参与全球化的各国受益
   - 目前反全球化阵营，多数是发达国家，各国优势重叠，反全球化阵营如果隔绝于全球化国家贸易，发展一定会减速。
   - 反全球化的优势会被放大，虹吸效应会导致反全球化国家反叛，参与到全球化阵营。
-  
+
 #### 相关视频：
 
 [![](https://img.youtube.com/vi/Re9cnQESi_g/0.jpg)](https://www.youtube.com/watch?v=Re9cnQESi_g)
@@ -72,8 +71,10 @@ datacamp: false
 - 陈平推荐学习以色列和日本的人民公社
 - 招牌引智（比如但是的延安是怎么吸引人才的）
 
-
-
 [![](https://img.youtube.com/vi/sEe48b2kJCY/0.jpg)](https://www.youtube.com/watch?v=sEe48b2kJCY)
 
 - 金融战争要占领制高点，就是要制定定价权。
+
+- 新觀點「憤怒經濟學」，分析資本主義百年歷史，提出超越左派右派的解方！
+
+[![](https://img.youtube.com/vi/D-Q4SssM3u4/0.jpg)](https://www.youtube.com/watch?v=D-Q4SssM3u4)
