@@ -78,3 +78,11 @@ datacamp: false
 - 新觀點「憤怒經濟學」，分析資本主義百年歷史，提出超越左派右派的解方！
 
 [![](https://img.youtube.com/vi/D-Q4SssM3u4/0.jpg)](https://www.youtube.com/watch?v=D-Q4SssM3u4)
+
+- 有深度的思考现在西方为什么开始衰落，中国为什么不会灭亡
+
+  [![](https://img.youtube.com/vi/r8NP1_w8g5c/0.jpg)](https://www.youtube.com/watch?v=r8NP1_w8g5c)
+
+  - 美国议员是如何公开要求英特高管承认新疆存在种族奴役的
+
+  [![](https://img.youtube.com/vi/trXX41xnZIk/0.jpg)](https://www.youtube.com/watch?v=trXX41xnZIk)
