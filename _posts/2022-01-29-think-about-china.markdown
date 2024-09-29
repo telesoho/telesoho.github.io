@@ -87,6 +87,6 @@ datacamp: false
 
   [![](https://img.youtube.com/vi/trXX41xnZIk/0.jpg)](https://www.youtube.com/watch?v=trXX41xnZIk)
 
-- 看看沈逸老师如何分析国际关系，受益良多，还有好多有趣的小故事。
+- 看看沈逸老师如何分析国际关系，虽然很长，但是绝对干货，受益良多，还有好多有趣的小故事。
 
-[![](https://img.youtube.com/vi/sTq0z8HypTc/0.jpg)](https://www.youtube.com/watch?v=sTq0z8HypTc)
+[![](https://img.youtube.com/vi/XxqYo184lo0/0.jpg)](https://www.youtube.com/watch?v=XxqYo184lo0)
