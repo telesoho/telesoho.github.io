@@ -90,3 +90,7 @@ datacamp: false
 - 看看沈逸老师如何分析国际关系，虽然很长，但是绝对干货，受益良多，还有好多有趣的小故事。
 
 [![](https://img.youtube.com/vi/XxqYo184lo0/0.jpg)](https://www.youtube.com/watch?v=XxqYo184lo0)
+
+- 关于中国和西方关于言论自由的辩证思考，非常有深度！
+
+[![](https://img.youtube.com/vi/lnzpg0jBxy8/0.jpg)](https://www.youtube.com/watch?v=lnzpg0jBxy8)
