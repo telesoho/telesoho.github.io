@@ -94,3 +94,9 @@ datacamp: false
 - 关于中国和西方关于言论自由的辩证思考，非常有深度！
 
 [![](https://img.youtube.com/vi/lnzpg0jBxy8/0.jpg)](https://www.youtube.com/watch?v=lnzpg0jBxy8)
+
+- 中国公投会发生什么？
+
+  UP 主的思想非常深刻，值得关注！
+
+  [![](https://img.youtube.com/vi/T0RpJb5NoDI/0.jpg)](https://www.youtube.com/watch?v=T0RpJb5NoDI)
