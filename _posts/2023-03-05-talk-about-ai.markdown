@@ -20,3 +20,7 @@ datacamp: false
 - 人工智能及相关哲学
 
 [![](https://img.youtube.com/vi/XZad8QNesoA/0.jpg)](https://www.youtube.com/watch?v=XZad8QNesoA)
+
+- 突破个人能力天花板，和 AI 协作的 12 个范式。
+
+  [![](https://img.youtube.com/vi/1RVwpv0oVxo/0.jpg)](https://www.youtube.com/watch?v=1RVwpv0oVxo)
