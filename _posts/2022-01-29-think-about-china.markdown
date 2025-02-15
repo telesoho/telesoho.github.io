@@ -89,14 +89,20 @@ datacamp: false
 
 - 看看沈逸老师如何分析国际关系，虽然很长，但是绝对干货，受益良多，还有好多有趣的小故事。
 
-[![](https://img.youtube.com/vi/XxqYo184lo0/0.jpg)](https://www.youtube.com/watch?v=XxqYo184lo0)
+  [![](https://img.youtube.com/vi/XxqYo184lo0/0.jpg)](https://www.youtube.com/watch?v=XxqYo184lo0)
 
 - 关于中国和西方关于言论自由的辩证思考，非常有深度！
 
-[![](https://img.youtube.com/vi/lnzpg0jBxy8/0.jpg)](https://www.youtube.com/watch?v=lnzpg0jBxy8)
+  [![](https://img.youtube.com/vi/lnzpg0jBxy8/0.jpg)](https://www.youtube.com/watch?v=lnzpg0jBxy8)
 
 - 中国公投会发生什么？
 
   UP 主的思想非常深刻，值得关注！
 
   [![](https://img.youtube.com/vi/T0RpJb5NoDI/0.jpg)](https://www.youtube.com/watch?v=T0RpJb5NoDI)
+
+- 中共的特务组织`特科`的为什么这么厉害？
+
+  [![](https://img.youtube.com/vi/g9daZcej4d4/0.jpg)](https://www.youtube.com/watch?v=g9daZcej4d4)
+
+  保持道德底线，不许搞绑票、不许诛杀殆尽、不许搞暗杀。
