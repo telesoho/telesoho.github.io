@@ -24,3 +24,9 @@ datacamp: false
 - 突破个人能力天花板，和 AI 协作的 12 个范式。
 
   [![](https://img.youtube.com/vi/1RVwpv0oVxo/0.jpg)](https://www.youtube.com/watch?v=1RVwpv0oVxo)
+
+- AI 失业潮是伪命题？经济学家不敢说的真相！
+
+  非常值得一看的视频。
+
+  [![](https://img.youtube.com/vi/kXeMUg2IKSE/0.jpg)](https://www.youtube.com/watch?v=kXeMUg2IKSE)

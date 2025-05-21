@@ -106,3 +106,7 @@ datacamp: false
   [![](https://img.youtube.com/vi/g9daZcej4d4/0.jpg)](https://www.youtube.com/watch?v=g9daZcej4d4)
 
   保持道德底线，不许搞绑票、不许诛杀殆尽、不许搞暗杀。
+
+- 佩服馬凱碩（一位印度裔星加坡人）能这么有逻辑地淡定地回复带有偏见的问题。十年后再看看他的预言是否正确，中国第一，美国第二。
+
+[![](https://img.youtube.com/vi/67T-RfAZJrI/0.jpg)](https://www.youtube.com/watch?v=67T-RfAZJrI)
