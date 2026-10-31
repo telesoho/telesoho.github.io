@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="520 78 1016 326" width="1016" height="326" preserveAspectRatio="xMaxYMid slice">
+  <defs>
+    <linearGradient id="desk" x2="0" y2="1"><stop stop-color="#b9824c"/><stop offset="1" stop-color="#81532f"/></linearGradient>
+    <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#e6eff0"/><stop offset="1" stop-color="#becfd0"/></linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#362719" flood-opacity=".17"/></filter>
+    <g id="gear" fill="currentColor">
+      <path d="M-8-31h16l3 10 8 3 8-6 11 11-6 8 3 8 10 3v16l-10 3-3 8 6 8-11 11-8-6-8 3-3 10H-8l-3-10-8-3-8 6-11-11 6-8-3-8-10-3V-9l10-3 3-8-6-8 11-11 8 6 8-3z"/>
+      <circle r="15" fill="#f3e5cc"/>
+      <circle r="7" fill="currentColor"/>
+    </g>
+<clipPath id="artClip"><path d="M720 78H1536V404H625Q714 311 703 222Q681 144 720 78Z"/></clipPath>
+  </defs>
+  <g clip-path="url(#artClip)">
+      <rect x="620" y="78" width="916" height="326" fill="#b68b5e"/>
+      <!-- sunlit window -->
+      <rect x="705" y="78" width="440" height="211" fill="#d9d0af"/>
+      <rect x="724" y="88" width="402" height="177" fill="#b8c09a"/>
+      <path d="M724 88H1126V265H724Z" fill="#d8d6b8" opacity=".6"/>
+      <path d="M746 90q90 45 30 176M849 90q-40 75 18 176M1010 90q-65 70-12 175" stroke="#88936f" stroke-width="18" opacity=".34" fill="none"/>
+      <path d="M924 88V267M724 177H1126" stroke="#705c43" stroke-width="8" opacity=".75"/>
+      <path d="M930 88V265M730 181H1123" stroke="#e9dfc9" stroke-width="2" opacity=".8"/>
+      <!-- wall blueprint -->
+      <g transform="translate(680 152)" opacity=".65" fill="none" stroke="#8e714b">
+        <circle r="51" stroke-width="1.2"/><circle r="38" stroke-width=".8"/><circle r="8"/><path d="M-58 0H58M0-58V58M-40-40L40 40M40-40L-40 40" stroke-width=".7"/>
+        <path d="M-22-24h44v48h-44zM-30-31h60M-30 31h60" stroke-width=".7"/>
+      </g>
+      <!-- hanging lamp -->
+      <path d="M930 78L938 117" stroke="#2d3028" stroke-width="8"/>
+      <path d="M938 112Q975 99 1000 125" stroke="#2c3028" stroke-width="8" fill="none"/>
+      <path d="M949 125Q1005 90 1051 131L1080 171Q1020 193 969 164Z" fill="#39372d"/>
+      <path d="M967 157Q1017 173 1073 159L1064 173Q1010 192 976 171Z" fill="#c08c4e"/>
+      <ellipse cx="1020" cy="175" rx="25" ry="7" fill="#ffd98b" opacity=".9"/>
+      <path d="M1000 178Q1020 199 1040 178" fill="#fff0be" opacity=".28"/>
+      <!-- wall guitar -->
+      <g transform="translate(1456 94) rotate(13)">
+        <path d="M-25 0Q-65 0-58 43Q-91 68-56 112Q-39 132-18 109Q11 121 30 97Q49 70 18 45Q26 1-25 0Z" fill="#bd783d" stroke="#634329" stroke-width="4"/>
+        <path d="M-15-10L4-108Q9-125 22-121L40-117L20-8Z" fill="#a76a38" stroke="#634329" stroke-width="4"/>
+        <circle cx="-13" cy="67" r="20" fill="#4a3827" stroke="#e6bc79" stroke-width="4"/>
+        <circle cx="-13" cy="67" r="10" fill="#211d18"/>
+        <path d="M-16-112L-4 115M-11-112L1 115M-6-112L6 115M-1-112L11 115" stroke="#e8d4a4" stroke-width=".8"/>
+        <rect x="-2" y="-134" width="49" height="25" rx="8" fill="#614a31"/>
+        <path d="M8-127h26M8-119h26" stroke="#d8c29d" stroke-width="2"/>
+      </g>
+      <!-- wall shelf and little plant -->
+      <path d="M1124 206H1332" stroke="#62472e" stroke-width="9"/>
+      <path d="M1160 205q-17-41 8-58q11 27 1 53M1177 205q3-49 29-57q-1 39-19 60M1193 204q20-31 40-25q-11 26-35 32" fill="#657b4e" stroke="#42553b" stroke-width="2"/>
+      <path d="M1150 206h66l-6 35h-54z" fill="#bd8854" stroke="#765232" stroke-width="2"/>
+      <!-- back wall shelves / pencil cups -->
+      <path d="M760 234H900" stroke="#765237" stroke-width="8"/>
+      <rect x="792" y="190" width="38" height="42" rx="4" fill="#b9824b"/>
+      <path d="M799 190l-5-55M808 190l4-67M818 190l12-49M826 190l23-58" stroke="#3f493a" stroke-width="4"/>
+      <path d="M800 190l-3-55M810 190l9-64M822 190l17-43" stroke="#c79a5d" stroke-width="2"/>
+      <!-- desk surface -->
+      <path d="M620 300Q986 274 1538 304V423H620Z" fill="url(#desk)"/>
+      <path d="M620 303Q1010 282 1538 306" stroke="#e0b77f" stroke-width="5" opacity=".6" fill="none"/>
+      <path d="M625 326Q1040 308 1536 334M620 365Q1050 344 1536 372" stroke="#5b3b29" stroke-width="2" opacity=".24" fill="none"/>
+      <!-- laptop -->
+      <g filter="url(#softShadow)">
+        <path d="M894 132Q896 123 907 123H1165Q1175 123 1176 134L1182 295H885Z" fill="#25292a" stroke="#13191a" stroke-width="4"/>
+        <rect x="899" y="136" width="263" height="145" rx="4" fill="url(#screen)"/>
+        <rect x="910" y="147" width="241" height="122" rx="2" fill="#f1f3ed"/>
+        <text x="923" y="162" font-family="Georgia,serif" font-size="10" fill="#343d36">C　　 G　　 Am　　 F</text>
+        <g stroke="#333d38" stroke-width="1" fill="none"><path d="M925 180H1136M925 186H1136M925 192H1136M925 198H1136M925 204H1136"/><path d="M936 175v33m18-33v33m18-33v33m18-33v33m18-33v33m18-33v33m18-33v33m18-33v33m18-33v33m18-33v33" stroke-width=".55"/></g>
+        <g fill="#303b35"><ellipse cx="945" cy="187" rx="4" ry="2.5"/><path d="M949 187v-19h2v19z"/><ellipse cx="982" cy="198" rx="4" ry="2.5"/><path d="M986 198v-20h2v20z"/><ellipse cx="1020" cy="183" rx="4" ry="2.5"/><path d="M1024 183v-18h2v18z"/><ellipse cx="1061" cy="194" rx="4" ry="2.5"/><path d="M1065 194v-18h2v18z"/></g>
+        <rect x="918" y="219" width="225" height="39" rx="2" fill="#dce7e8"/>
+        <path d="M923 249l10-10 8 5 11-19 10 18 10-5 11 7 11-25 10 18 13-8 12 6 11-17 10 18 11-5 13 8 10-14 10 6 14-8" fill="none" stroke="#5489ad" stroke-width="2.4"/>
+        <path d="M870 298L1190 298L1221 325Q1225 330 1208 332H847Q833 329 842 323Z" fill="#aab0ad" stroke="#555b5a" stroke-width="3"/>
+        <path d="M891 302H1175L1192 321H874Z" fill="#3a4140"/>
+        <g stroke="#929b98" stroke-width="1" opacity=".9"><path d="M900 306h268m-260 5h251m-240 5h228"/></g>
+        <path d="M1000 310h71l-4 8h-62z" fill="#9ba6a4"/>
+      </g>
+      <!-- mug -->
+      <g transform="translate(790 300)" filter="url(#softShadow)">
+        <path d="M-45-35H31L26 18Q20 35-9 35Q-39 34-41 16Z" fill="#e8ddc5" stroke="#a58a62" stroke-width="2"/>
+        <path d="M31-22Q65-29 58-2Q53 18 28 11" fill="none" stroke="#c5b08d" stroke-width="8"/>
+        <g transform="translate(-4 -3) scale(.43)" style="color:#364633"><use xlink:href="#gear"/></g>
+        <path d="M-12-43q-13-21 3-28M5-43q-10-19 4-29" stroke="#f4ead7" stroke-width="3" fill="none" opacity=".7"/>
+      </g>
+      <!-- notebook and pencil -->
+      <g transform="translate(1278 337) rotate(-7)" filter="url(#softShadow)">
+        <rect x="-112" y="-45" width="227" height="115" rx="5" fill="#e6d4b4" stroke="#795b3c" stroke-width="3"/>
+        <path d="M-95-32H96M-95-17H96M-95-2H96M-95 13H96M-95 28H96M-95 43H96" stroke="#b79c72" stroke-opacity=".6" stroke-width="1"/>
+        <path d="M-75-35l6 12 6-10 7 22 7-9 9 8 7-16 8 11 8-7 8 12 9-15 10 9 12-5" stroke="#4d5845" fill="none" stroke-width="2"/>
+        <text x="-81" y="57" font-family="Georgia,serif" font-size="12" fill="#785c3c">ideas / sketches</text>
+        <path d="M-128 72L104-69" stroke="#38332a" stroke-width="8" stroke-linecap="round"/><path d="M-128 72L-143 81L-138 62Z" fill="#d6b77d"/>
+      </g>
+      <!-- little circuit board -->
+      <g transform="translate(1190 284) rotate(8)"><rect x="-37" y="-20" width="76" height="40" rx="4" fill="#31483a" stroke="#d6bd86" stroke-width="2"/><rect x="-11" y="-8" width="23" height="17" fill="#b7a16f"/><path d="M-31-12h16m35 0h12M-31 11h16m35 0h12" stroke="#cdbb88" stroke-width="2"/><circle cx="-26" cy="0" r="3" fill="#d9bf82"/><circle cx="27" cy="0" r="3" fill="#d9bf82"/></g>
+      <!-- paper plans foreground -->
+      <path d="M644 372l210-42 103 54-219 34z" fill="#eadcc0" stroke="#9f835b" stroke-width="2" opacity=".9"/>
+      <path d="M680 369l143-28m-132 39l151-29m-130 43l91-18" stroke="#a28c68" stroke-width="1" opacity=".65"/>
+      <g transform="translate(684 354)" opacity=".7" stroke="#8b7759" fill="none"><path d="M0 0l40-12 28 11-38 13zM17-3v-22l30-8v22M30-8l22 7M9 4v14l33-9V-2"/><circle cx="46" cy="-26" r="4"/></g>
+  </g>
+      <path d="M610 80Q678 148 642 225Q632 318 570 404" stroke="#c7a77b" stroke-width="1" opacity=".45" fill="none"/>
+      <g stroke="#a98656" fill="none" opacity=".45"><path d="M525 365q40-22 76-8m-59-14q44-28 85-19m-72 48l30-15 27 3"/><circle cx="571" cy="365" r="18"/><path d="M555 349l31 32M587 350l-29 30"/></g>
+</svg>

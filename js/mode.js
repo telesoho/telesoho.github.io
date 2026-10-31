@@ -3,9 +3,10 @@ const MODE_VISITOR = "visitor";
 
 const body = document.body;
 const toggle = document.getElementById("mode-toggle");
-const backBtn = document.getElementById("back-to-visitor");
+const backButtons = document.querySelectorAll("#back-to-visitor, [data-back-to-visitor]");
 const yearEl = document.getElementById("year");
 const shoreline = document.getElementById("shoreline");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
@@ -20,25 +21,52 @@ const ENG_HASHES = new Set([
   "#eng-about",
 ]);
 
+/** Nav targets per mode. Key = data-nav value. */
+const NAV_TARGETS = {
+  [MODE_VISITOR]: { projects: "#projects", lab: "#lab", about: "#about" },
+  [MODE_ENG]: { projects: "#eng-fft", lab: "#eng-reorder", about: "#eng-about" },
+};
+
+/** Which nav item a section belongs to (for the green "current" pill). */
+const SECTION_TO_NAV = {
+  top: "projects",
+  projects: "projects",
+  lab: "lab",
+  about: "about",
+  "eng-intro": "projects",
+  "eng-fft": "projects",
+  "eng-reorder": "lab",
+  "eng-open": "lab",
+  "eng-about": "about",
+};
+
 function modeFromHash() {
   return ENG_HASHES.has(location.hash) ? MODE_ENG : MODE_VISITOR;
 }
 
-function syncNav(isEng) {
-  const projects = document.querySelector('[data-nav="projects"]');
-  const about = document.querySelector('[data-nav="about"]');
-  if (projects) projects.setAttribute("href", isEng ? "#eng-fft" : "#projects");
-  if (about) about.setAttribute("href", isEng ? "#eng-about" : "#about");
+function syncNav(mode) {
+  const targets = NAV_TARGETS[mode];
+  document.querySelectorAll("[data-nav]").forEach((a) => {
+    const key = a.getAttribute("data-nav");
+    if (targets[key]) a.setAttribute("href", targets[key]);
+  });
 }
 
-function applyMode(mode, { updateHash = true } = {}) {
+function setCurrent(key) {
+  document.querySelectorAll("[data-nav]").forEach((a) => {
+    if (a.getAttribute("data-nav") === key) a.setAttribute("aria-current", "true");
+    else a.removeAttribute("aria-current");
+  });
+}
+
+function applyMode(mode, { updateHash = true, scroll = false } = {}) {
   body.dataset.mode = mode;
   const isEng = mode === MODE_ENG;
   if (toggle) {
     toggle.setAttribute("aria-pressed", String(isEng));
-    toggle.title = isEng ? "回到访客模式" : "切换工程模式";
+    toggle.title = isEng ? "回到工坊（访客模式）" : "切换到工程笔记模式";
   }
-  syncNav(isEng);
+  syncNav(mode);
   if (updateHash) {
     if (isEng) {
       if (!ENG_HASHES.has(location.hash)) {
@@ -48,21 +76,30 @@ function applyMode(mode, { updateHash = true } = {}) {
       history.replaceState(null, "", location.pathname + location.search);
     }
   }
+  if (scroll) {
+    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? "auto" : "smooth" });
+  }
   drawShoreline();
+  updateSpy();
 }
 
 function toggleMode() {
   const next = body.dataset.mode === MODE_ENG ? MODE_VISITOR : MODE_ENG;
-  applyMode(next);
+  applyMode(next, { scroll: true });
+  // Keep keyboard users oriented: move focus to the new hero heading.
+  document.getElementById("hero-title")?.focus({ preventScroll: true });
 }
 
 toggle?.addEventListener("click", toggleMode);
-backBtn?.addEventListener("click", () => applyMode(MODE_VISITOR));
+backButtons.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    applyMode(MODE_VISITOR, { scroll: true });
+    document.getElementById("hero-title")?.focus({ preventScroll: true });
+  })
+);
 
 window.addEventListener("hashchange", () => {
   const fromHash = modeFromHash();
-  // Enter engineering via eng anchors; leave only when hash is no longer an eng section
-  // and the user is not mid-navigation within engineering (handled by toggle clearing hash).
   if (fromHash === MODE_ENG) {
     applyMode(MODE_ENG, { updateHash: false });
   } else if (body.dataset.mode === MODE_ENG && !ENG_HASHES.has(location.hash)) {
@@ -70,13 +107,34 @@ window.addEventListener("hashchange", () => {
   }
 });
 
-applyMode(modeFromHash(), { updateHash: false });
+/** Scroll spy: highlight the nav item for the section under the header. */
+let spyFrame = 0;
+function updateSpy() {
+  cancelAnimationFrame(spyFrame);
+  spyFrame = requestAnimationFrame(() => {
+    const probe = window.innerHeight * 0.35;
+    let currentId = "top";
+    document.querySelectorAll("main > section").forEach((sec) => {
+      if (!sec.offsetParent && sec.id !== "top") return; // hidden in this mode
+      const r = sec.getBoundingClientRect();
+      if (r.top <= probe && r.height > 0) currentId = sec.id;
+    });
+    // At the very bottom, the last visible section wins.
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      const visible = [...document.querySelectorAll("main > section")].filter((s) => s.offsetParent);
+      if (visible.length) currentId = visible[visible.length - 1].id;
+    }
+    setCurrent(SECTION_TO_NAV[currentId] || "projects");
+  });
+}
+window.addEventListener("scroll", updateSpy, { passive: true });
 
-/** Signature: lake shore in visitor mode, sampled waveform in engineering mode. */
+/** Signature waveform shown under the engineering hero. */
 function drawShoreline() {
   if (!shoreline) return;
   const ctx = shoreline.getContext("2d");
   if (!ctx) return;
+  if (body.dataset.mode !== MODE_ENG) return; // canvas is hidden in visitor mode
 
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
   const cssW = shoreline.clientWidth || 1200;
@@ -86,55 +144,42 @@ function drawShoreline() {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   ctx.clearRect(0, 0, cssW, cssH);
 
-  const eng = body.dataset.mode === MODE_ENG;
-  const ink = eng ? "rgba(196, 165, 116, 0.95)" : "rgba(30, 77, 92, 0.85)";
-  const mist = eng ? "rgba(61, 138, 158, 0.25)" : "rgba(30, 77, 92, 0.18)";
+  const wave = (t) =>
+    cssH * 0.5 +
+    Math.sin(t * Math.PI * 8) * cssH * 0.12 +
+    Math.sin(t * Math.PI * 18 + 0.4) * cssH * 0.05 +
+    Math.cos(t * Math.PI * 3) * cssH * 0.04;
 
   ctx.beginPath();
-  ctx.moveTo(0, cssH * 0.72);
-  for (let x = 0; x <= cssW; x += 2) {
-    const t = x / cssW;
-    const y = eng
-      ? cssH * 0.5 +
-        Math.sin(t * Math.PI * 8) * cssH * 0.12 +
-        Math.sin(t * Math.PI * 18 + 0.4) * cssH * 0.05 +
-        Math.cos(t * Math.PI * 3) * cssH * 0.04
-      : cssH * (0.55 + Math.sin(t * Math.PI) * 0.08 + Math.sin(t * Math.PI * 2.2) * 0.03);
-    ctx.lineTo(x, y);
-  }
+  ctx.moveTo(0, cssH);
+  for (let x = 0; x <= cssW; x += 2) ctx.lineTo(x, wave(x / cssW));
   ctx.lineTo(cssW, cssH);
-  ctx.lineTo(0, cssH);
   ctx.closePath();
-  ctx.fillStyle = mist;
+  ctx.fillStyle = "rgba(212, 195, 158, 0.12)";
   ctx.fill();
 
   ctx.beginPath();
   for (let x = 0; x <= cssW; x += 1) {
-    const t = x / cssW;
-    const y = eng
-      ? cssH * 0.5 +
-        Math.sin(t * Math.PI * 8) * cssH * 0.12 +
-        Math.sin(t * Math.PI * 18 + 0.4) * cssH * 0.05 +
-        Math.cos(t * Math.PI * 3) * cssH * 0.04
-      : cssH * (0.55 + Math.sin(t * Math.PI) * 0.08 + Math.sin(t * Math.PI * 2.2) * 0.03);
+    const y = wave(x / cssW);
     if (x === 0) ctx.moveTo(x, y);
     else ctx.lineTo(x, y);
   }
-  ctx.strokeStyle = ink;
-  ctx.lineWidth = eng ? 1.5 : 2;
+  ctx.strokeStyle = "rgba(229, 177, 91, 0.95)";
+  ctx.lineWidth = 1.5;
   ctx.stroke();
 
-  if (eng) {
-    const marks = [0, 50 / 128, 75 / 128];
-    ctx.fillStyle = "rgba(196, 165, 116, 0.9)";
-    marks.forEach((m) => {
-      const x = m * cssW;
-      ctx.fillRect(x, cssH * 0.18, 1, cssH * 0.64);
-    });
-  }
+  const marks = [0, 50 / 128, 75 / 128];
+  ctx.fillStyle = "rgba(244, 232, 210, 0.7)";
+  marks.forEach((m) => {
+    ctx.fillRect(Math.max(m * cssW, 0.5), cssH * 0.18, 1, cssH * 0.64);
+  });
 }
 
-window.addEventListener("resize", drawShoreline);
-drawShoreline();
+window.addEventListener("resize", () => {
+  drawShoreline();
+  updateSpy();
+});
+
+applyMode(modeFromHash(), { updateHash: false });
 
 export { applyMode, MODE_ENG, MODE_VISITOR };

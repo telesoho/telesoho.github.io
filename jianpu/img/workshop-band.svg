@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="245" viewBox="600 0 936 245" preserveAspectRatio="xMaxYMid slice">
+  <!-- Ambient workshop scene behind the masthead, lifted from telesoho_jianpu_workbench.svg (#heroClip group). -->
+  <defs><filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter></defs>
+  <g opacity=".68">
+    <rect x="670" y="-15" width="505" height="260" fill="#b7bd9a" opacity=".54"/>
+    <path d="M696 0q100 70 40 238M825 0q-31 94 22 238M1030 0q-60 85 6 238" fill="none" stroke="#75815d" stroke-width="38" opacity=".22"/>
+    <path d="M925 0V245M670 117H1175" stroke="#78664a" stroke-width="11" opacity=".35"/>
+    <path d="M932 0V245M676 120H1170" stroke="#f5e7cc" stroke-width="2" opacity=".65"/>
+    <g filter="url(#blur)" opacity=".5" fill="#526b47"><ellipse cx="1268" cy="97" rx="42" ry="80" transform="rotate(-28 1268 97)"/><ellipse cx="1320" cy="133" rx="27" ry="83" transform="rotate(23 1320 133)"/><ellipse cx="1220" cy="153" rx="24" ry="69" transform="rotate(-54 1220 153)"/></g>
+    <path d="M776 0L808 56" stroke="#36372e" stroke-width="8"/><path d="M807 48Q852 20 898 61" fill="none" stroke="#36372e" stroke-width="7"/>
+    <path d="M812 63Q855 31 913 72L941 107Q875 126 829 96Z" fill="#4e4535"/>
+    <path d="M830 93Q876 112 933 95L923 111Q875 131 839 108Z" fill="#c28e51"/>
+    <ellipse cx="880" cy="114" rx="25" ry="7" fill="#ffe0a0" opacity=".85"/>
+    <g transform="translate(1480 18) rotate(13)" opacity=".8">
+      <path d="M-26 24Q-69 15-65 62Q-94 87-59 131Q-40 151-15 127Q14 139 33 111Q49 82 20 57Q26 12-26 24Z" fill="#b9783d" stroke="#6c4a2d" stroke-width="4"/>
+      <path d="M-13 18L7-97Q10-114 24-110L42-106L20 28Z" fill="#9c6639" stroke="#65472e" stroke-width="4"/>
+      <circle cx="-13" cy="87" r="20" fill="#493629" stroke="#e5be82" stroke-width="4"/>
+      <path d="M-8-105L-4 130M-2-105L2 130M4-105L8 130M10-105L14 130" stroke="#ead8b6" stroke-width="1"/>
+    </g>
+    <g transform="translate(690 126)" stroke="#9d8258" fill="none" opacity=".4"><circle r="62"/><circle r="46"/><circle r="8"/><path d="M-72 0H72M0-72V72M-52-52L52 52M52-52L-52 52" stroke-width=".8"/><path d="M-28-28h56v56h-56z" stroke-dasharray="3 4"/></g>
+    <g transform="translate(1290 133)" opacity=".4" stroke="#705b40" fill="none" stroke-width="3"><path d="M-22 66L-3-56Q0-66 8-56L30 66Z"/><path d="M-14 46H23M-3-23L19-6M8-43L4 28"/><circle cx="5" cy="29" r="4" fill="#705b40"/></g>
+  </g>
+</svg>

@@ -88,6 +88,8 @@ function render() {
     const li = document.createElement("li");
     li.className = "reorder-item";
     li.draggable = true;
+    li.tabIndex = 0;
+    li.setAttribute("aria-label", `第 ${index + 1} 段，共 ${durable.length} 段。按上下方向键移动。`);
     li.dataset.id = id;
     li.dataset.index = String(index);
     li.innerHTML = `
@@ -99,6 +101,7 @@ function render() {
     li.addEventListener("dragover", onDragOver);
     li.addEventListener("dragleave", onDragLeave);
     li.addEventListener("drop", onDrop);
+    li.addEventListener("keydown", onKeyDown);
     listEl.appendChild(li);
   });
 
@@ -150,6 +153,23 @@ function onDrop(e) {
   }
   durable = next;
   render();
+}
+
+/** Keyboard path: ArrowUp / ArrowDown issue the same move command as a drag. */
+function onKeyDown(e) {
+  if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+  e.preventDefault();
+  const id = e.currentTarget.dataset.id;
+  const from = durable.indexOf(id);
+  const to = e.key === "ArrowUp" ? from - 1 : from + 1;
+  const next = reduce(durable, { type: "move", from, to });
+  if (next === durable) {
+    setStatus("无效移动 · 保持上一状态", "");
+    return;
+  }
+  durable = next;
+  render();
+  listEl?.querySelector(`[data-id="${id}"]`)?.focus();
 }
 
 shuffleBtn?.addEventListener("click", () => {

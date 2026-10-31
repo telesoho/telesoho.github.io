@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="72" viewBox="-2 -12 272 72">
+  <!-- Decorative wavy staff from the library panel of telesoho_jianpu_workbench.svg. -->
+  <defs><g id="n" fill="none" stroke="#b58a4e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"><path d="M0 0v24q0 6-7 8q-8 2-8-4q0-5 10-8V0l22-5v21q0 6-7 8q-8 2-8-4q0-5 10-8V-5"/><path d="M0 2l22-5"/></g></defs>
+  <g opacity=".28" fill="none" stroke="#b58a4e"><path d="M0 25Q65-6 125 8T270-1M0 37Q65 6 125 20T270 11M0 49Q65 18 125 32T270 23M0 61Q65 30 125 44T270 35" stroke-width="1.5"/>
+  <use href="#n" x="30" y="24"/><use href="#n" x="132" y="14"/><use href="#n" x="223" y="1"/></g>
+</svg>

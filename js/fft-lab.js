@@ -64,7 +64,7 @@ function draw(f2, f3) {
   const specH = cssH * 0.38;
 
   // Time domain
-  ctx.strokeStyle = "rgba(232, 238, 240, 0.2)";
+  ctx.strokeStyle = "rgba(244, 232, 210, 0.18)";
   ctx.beginPath();
   ctx.moveTo(pad, midY);
   ctx.lineTo(cssW - pad, midY);
@@ -85,11 +85,11 @@ function draw(f2, f3) {
     if (i === 0) ctx.moveTo(x, y);
     else ctx.lineTo(x, y);
   }
-  ctx.strokeStyle = "rgba(196, 165, 116, 0.95)";
+  ctx.strokeStyle = "rgba(229, 177, 91, 0.95)";
   ctx.lineWidth = 1.5;
   ctx.stroke();
 
-  ctx.fillStyle = "rgba(232, 238, 240, 0.55)";
+  ctx.fillStyle = "rgba(244, 232, 210, 0.7)";
   ctx.font = "12px IBM Plex Mono, monospace";
   ctx.fillText("时域 s[n]", pad, 18);
 
@@ -104,11 +104,11 @@ function draw(f2, f3) {
     const x = pad + k * barW;
     const y = specTop + specH - h;
     const isPeak = k === 0 || k === Math.round(f2) || k === Math.round(f3);
-    ctx.fillStyle = isPeak ? "rgba(196, 165, 116, 0.95)" : "rgba(61, 138, 158, 0.55)";
+    ctx.fillStyle = isPeak ? "rgba(229, 177, 91, 0.95)" : "rgba(160, 186, 150, 0.55)";
     ctx.fillRect(x, y, Math.max(barW * 0.85, 1), h);
   }
 
-  ctx.fillStyle = "rgba(232, 238, 240, 0.55)";
+  ctx.fillStyle = "rgba(244, 232, 210, 0.7)";
   ctx.fillText("|X[k]| / N", pad, specTop - 8);
   ctx.fillText("0 Hz", pad, cssH - 6);
   ctx.fillText(`${FS / 2} Hz`, cssW - pad - 40, cssH - 6);

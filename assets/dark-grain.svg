@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
+  <!-- From the design's #darkGrain pattern (green workshop strip). -->
+  <path d="M5 8l8-2m17 15l5-1M9 39l11-2m19 7l5-2" stroke="#d4c39c" stroke-opacity=".1" stroke-width="1" fill="none"/>
+  <circle cx="28" cy="7" r=".7" fill="#d8c9a9" opacity=".14"/>
+</svg>
