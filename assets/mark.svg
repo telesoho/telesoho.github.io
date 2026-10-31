@@ -1,16 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <path
-    stroke="#1e4d5c"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    d="M8 11.5 V8 h16 v16 H8 v-3.5"
-  />
-  <path
-    stroke="#c4a574"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    d="M2 16 C5 16 6 12 9 12 S13 20 16 20 S20 12 23 12 S27 16 30 16"
-  />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" width="64" height="64">
+  <title>索合工坊</title>
+  <defs>
+    <g id="gear" fill="currentColor">
+      <path d="M-8-31h16l3 10 8 3 8-6 11 11-6 8 3 8 10 3v16l-10 3-3 8 6 8-11 11-8-6-8 3-3 10H-8l-3-10-8-3-8 6-11-11 6-8-3-8-10-3V-9l10-3 3-8-6-8 11-11 8 6 8-3z"/>
+      <circle r="15" fill="#f6ead4"/>
+      <circle r="7" fill="currentColor"/>
+    </g>
+  </defs>
+  <g transform="translate(32 32) scale(.78)" style="color:#334332"><use xlink:href="#gear"/><path d="M-12 0q12-16 24 0q-12 16-24 0" fill="none" stroke="#334332" stroke-width="2"/><path d="M-2-8v16M5-5v10" stroke="#334332" stroke-width="2"/></g>
 </svg>

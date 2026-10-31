@@ -6,17 +6,14 @@
     <title>Telesoho Studio — 索合工坊</title>
     <meta
       name="description"
-      content="索合工坊。实用的小工具，和值得拆开看的实现。"
+      content="索合工坊 · 独立创作者工坊。把想法，做成能用的东西：YuE2 Studio、吉他兔、爬来兔、vscode-markdown-paste-image。"
     />
+    <meta name="theme-color" content="#344735" />
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -25,221 +22,246 @@
     <a class="skip-link" href="#main">跳到正文</a>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Telesoho Studio（索合工坊）首页">
-        <svg class="brand__mark" viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-          <path
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8 11.5 V8 h16 v16 H8 v-3.5"
-          />
-          <path
-            stroke="#c4a574"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M2 16 C5 16 6 12 9 12 S13 20 16 20 S20 12 23 12 S27 16 30 16"
-          />
-        </svg>
-        <span class="brand__text">
-          <span class="brand__name">Telesoho</span>
-          <span class="brand__studio">Studio</span>
-          <span class="brand__cn">索合工坊</span>
-        </span>
-      </a>
-      <nav class="nav" aria-label="主导航">
-        <a href="#projects" data-nav="projects">项目</a>
-        <a href="jianpu/">曲库</a>
-        <a href="#about" data-nav="about">关于</a>
-        <a class="external" href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer"
-          >博客 <span aria-hidden="true">↗</span></a
-        >
-        <button
-          type="button"
-          class="mode-toggle"
-          id="mode-toggle"
-          aria-pressed="false"
-          title="切换工程模式"
-        >
-          <span class="mode-toggle__code" aria-hidden="true">&lt;/&gt;</span>
-          <span class="mode-toggle__label">工程模式</span>
-        </button>
-      </nav>
+      <div class="site-header__inner">
+        <a class="brand" href="#top" aria-label="Telesoho Studio（索合工坊）首页">
+          <svg class="brand__mark" viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" focusable="false">
+            <g transform="translate(32 32) scale(.78)">
+              <path fill="currentColor" d="M-8-31h16l3 10 8 3 8-6 11 11-6 8 3 8 10 3v16l-10 3-3 8 6 8-11 11-8-6-8 3-3 10H-8l-3-10-8-3-8 6-11-11 6-8-3-8-10-3V-9l10-3 3-8-6-8 11-11 8 6 8-3z" />
+              <circle r="15" class="brand__mark-hole" />
+              <circle r="7" fill="currentColor" />
+              <path d="M-12 0q12-16 24 0q-12 16-24 0" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M-2-8v16M5-5v10" stroke="currentColor" stroke-width="2" />
+            </g>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Telesoho Studio</span>
+            <span class="brand__cn">索合工坊</span>
+          </span>
+          <span class="brand__tagline" aria-hidden="true">Independent Maker Studio · Since 2006</span>
+        </a>
+        <nav class="nav" aria-label="主导航">
+          <a href="#projects" data-nav="projects" aria-current="true">工坊作品</a>
+          <a href="#lab" data-nav="lab">实验台</a>
+          <a href="#about" data-nav="about">关于</a>
+          <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer">博客</a>
+          <button
+            type="button"
+            class="mode-toggle"
+            id="mode-toggle"
+            aria-pressed="false"
+            title="切换到工程笔记模式"
+          >
+            <span class="mode-toggle__label visitor-only">工程笔记 <span aria-hidden="true">↗</span></span>
+            <span class="mode-toggle__label engineering-only"><span aria-hidden="true">←</span> 回到工坊</span>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
+      <!-- ============ Hero ============ -->
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <p class="eyebrow visitor-only">个人站点</p>
-        <p class="eyebrow engineering-only">工程模式 · 现场笔记</p>
-        <h1 id="hero-title">
-          <span class="visitor-only">为日常所写。<br />也为值得拆开的东西。</span>
-          <span class="engineering-only">美在<br /><em>实现</em>里。</span>
-        </h1>
-        <p class="lede visitor-only">
-          好的软件在最好的时候不被注意到——只有出问题时，才看见它的魔法。
-        </p>
-        <p class="lede engineering-only">
-          同一批作品，另一条入口。跟着方程和状态转移往下看：模型是什么、假设在哪、边界停在何处。
-        </p>
-        <p class="hero-actions">
-          <a class="text-link visitor-only" href="#projects">往下看作品 <span aria-hidden="true">↓</span></a>
-          <a class="text-link engineering-only" href="#eng-fft">看表面之下 <span aria-hidden="true">↓</span></a>
-        </p>
-
-        <div class="signature" aria-hidden="true">
+        <img
+          class="hero__art visitor-only"
+          src="assets/hero-workbench.svg"
+          width="1016"
+          height="326"
+          alt="一张洒满阳光的工作台：笔记本电脑上显示着 C、G、Am、F 和弦的五线谱与波形，旁边有印着齿轮的马克杯、笔筒、绿植、电路板、写着 ideas / sketches 的笔记本，墙上挂着一把吉他。"
+        />
+        <div class="hero__copy">
+          <p class="eyebrow engineering-only">工程笔记 · 现场记录</p>
+          <h1 id="hero-title" tabindex="-1">
+            <span class="visitor-only"><span class="nobr">把想法，</span><span class="nobr">做成能用的东西。</span></span>
+            <span class="engineering-only">美在<em>实现</em>里。</span>
+          </h1>
+          <svg class="hero__underline visitor-only" viewBox="0 0 160 18" width="160" height="18" aria-hidden="true">
+            <path d="M2 4Q76 18 158 3" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <p class="lede visitor-only">写软件，也拆解问题。让音乐、工具与好奇心，在同一张工作台上发生。</p>
+          <p class="lede engineering-only">
+            同一批作品，另一条入口。跟着方程和状态转移往下看：模型是什么、假设在哪、边界停在何处。
+          </p>
+          <p class="hero-actions">
+            <a class="btn btn--solid visitor-only" href="#projects">看看工坊作品 <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost visitor-only" href="#about">认识索合工坊 <span aria-hidden="true">→</span></a>
+            <a class="btn btn--solid engineering-only" href="#eng-fft">看表面之下 <span aria-hidden="true">↓</span></a>
+            <button type="button" class="btn btn--ghost engineering-only" data-back-to-visitor>回到工坊 <span aria-hidden="true">←</span></button>
+          </p>
+        </div>
+        <div class="signature engineering-only" aria-hidden="true">
           <canvas id="shoreline" width="1200" height="120"></canvas>
-          <div class="signature__caption">
-            <span class="visitor-only">湖岸</span>
-            <span class="engineering-only">采样波形 · 256 点 · Fs = 256 Hz</span>
+          <div class="signature__caption">采样波形 · 256 点 · Fs = 256 Hz</div>
+        </div>
+      </section>
+
+      <!-- ============ Projects ============ -->
+      <section class="section projects visitor-panel" id="projects" aria-labelledby="projects-title">
+        <header class="section-head section-head--inline">
+          <h2 id="projects-title"><span class="rule" aria-hidden="true"></span>工作台上的作品</h2>
+          <p class="section-lead">不同的练习，同一种认真。</p>
+        </header>
+
+        <ul class="cards" role="list">
+          <li class="card" id="yue2-studio">
+            <div class="card__body">
+              <span class="card__num">01</span>
+              <h3 class="card__title" lang="en">YuE2 Studio</h3>
+              <p class="card__line">AI 写歌与音乐创作</p>
+              <div class="card__actions">
+                <a href="https://github.com/telesoho/YuE2-Studio" target="_blank" rel="noopener noreferrer"
+                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：YuE2 Studio（GitHub，新窗口）</span></a
+                >
+                <details class="card__more">
+                  <summary>下载 v3.7.1</summary>
+                  <div class="card__panel">
+                    <p class="card__panel-title">YuE2 Studio Telesoho</p>
+                    <p>
+                      基于 YuE2 Studio 的独立发行版：与原版并行安装，模型、曲库与设置各用各的文件夹；自动更新来自本仓库，签名密钥也是独立的。
+                    </p>
+                    <p class="card__meta">Windows x64 · v3.7.1 · 安装包 / 便携版 · 自动更新</p>
+                    <ul class="card__links" role="list">
+                      <li><a href="https://github.com/telesoho/YuE2-Studio/releases/download/v3.7.1/YuE2.Studio.Telesoho_3.7.1_x64-setup.exe" target="_blank" rel="noopener noreferrer">下载安装包 <span aria-hidden="true">↗</span></a></li>
+                      <li><a href="https://github.com/telesoho/YuE2-Studio/releases/download/v3.7.1/YuE2-Studio-3.7.1-portable-windows-x64.zip" target="_blank" rel="noopener noreferrer">便携版 ZIP <span aria-hidden="true">↗</span></a></li>
+                      <li><a href="https://github.com/telesoho/YuE2-Studio/releases/tag/v3.7.1" target="_blank" rel="noopener noreferrer">Release 页 <span aria-hidden="true">↗</span></a></li>
+                      <li><a href="https://github.com/telesoho/YuE2-Studio" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <img class="card__art" src="assets/card-yue2.svg" width="145" height="143" alt="插画：一位黑发的歌手，背景是淡紫与浅蓝的色块。" loading="lazy" />
+          </li>
+
+          <li class="card" id="guitartool">
+            <div class="card__body">
+              <span class="card__num">02</span>
+              <h3 class="card__title">吉他兔</h3>
+              <p class="card__line">跟着原曲练，手不用离开琴弦</p>
+              <div class="card__actions">
+                <a href="http://blog.telesoho.com/guitartools/?#/5" target="_blank" rel="noopener noreferrer"
+                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：吉他兔（新窗口）</span></a
+                >
+                <details class="card__more">
+                  <summary>详情</summary>
+                  <div class="card__panel">
+                    <p>
+                      普通播放器不支持精细的段落循环，翻谱又要腾出手。吉他兔按进度跳转曲谱，并让重复区间一设就用。
+                    </p>
+                    <p class="card__meta">浏览器 demo · 一首示范曲</p>
+                    <ul class="card__links" role="list">
+                      <li><a href="http://blog.telesoho.com/guitartools/?#/5" target="_blank" rel="noopener noreferrer">打开吉他兔 <span aria-hidden="true">↗</span></a></li>
+                      <li><a href="jianpu/">曲库（简谱）</a></li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <img class="card__art" src="assets/card-guitar.svg" width="153" height="143" alt="插画：一只白兔抱着木吉他，背景是浅绿色。" loading="lazy" />
+          </li>
+
+          <li class="card" id="paratool">
+            <div class="card__body">
+              <span class="card__num">03</span>
+              <h3 class="card__title">爬来兔</h3>
+              <p class="card__line">把文章打乱，再亲手排回去</p>
+              <div class="card__actions">
+                <a href="http://blog.telesoho.com/paratool" target="_blank" rel="noopener noreferrer"
+                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：爬来兔（新窗口）</span></a
+                >
+                <details class="card__more">
+                  <summary>详情</summary>
+                  <div class="card__panel">
+                    <p>
+                      富兰克林练结构感的方法：打乱段落，凭逻辑复原。看书时把值得学的章节贴进来，打乱，再排——练语感，也看清作者的思路。
+                    </p>
+                    <p class="card__meta">浏览器工具</p>
+                    <ul class="card__links" role="list">
+                      <li><a href="http://blog.telesoho.com/paratool" target="_blank" rel="noopener noreferrer">打开爬来兔 <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <img class="card__art" src="assets/card-paratool.svg" width="153" height="143" alt="插画：一只白兔趴在一叠打乱的纸页后面。" loading="lazy" />
+          </li>
+
+          <li class="card" id="paste-image">
+            <div class="card__body">
+              <span class="card__num">04</span>
+              <h3 class="card__title card__title--code" lang="en">vscode-markdown-<wbr />paste-image</h3>
+              <p class="card__line">粘贴截图，图片进指定文件夹</p>
+              <div class="card__actions">
+                <a href="https://github.com/telesoho/vscode-markdown-paste-image" target="_blank" rel="noopener noreferrer"
+                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：vscode-markdown-paste-image（GitHub，新窗口）</span></a
+                >
+                <details class="card__more">
+                  <summary>详情</summary>
+                  <div class="card__panel">
+                    <p>
+                      写 Markdown 时插截图总绕路。这个 VS Code 扩展让粘贴直达约定目录，本站文章大多也靠它写完。
+                    </p>
+                    <p class="card__meta">VS Code 扩展 · 开源</p>
+                    <ul class="card__links" role="list">
+                      <li><a href="https://github.com/telesoho/vscode-markdown-paste-image" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+                      <li><a href="https://marketplace.visualstudio.com/items?itemName=telesoho.vscode-markdown-paste-image" target="_blank" rel="noopener noreferrer">Marketplace <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <img class="card__art" src="assets/card-paste-image.svg" width="164" height="143" alt="插画：蓝色的 VS Code 图标，前面叠着一张图片卡片。" loading="lazy" />
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ Lab strip ============ -->
+      <section class="lab-strip visitor-panel" id="lab" aria-labelledby="lab-title">
+        <div class="lab-strip__inner">
+          <header class="lab-strip__head">
+            <span class="rule rule--light" aria-hidden="true"></span>
+            <h2 id="lab-title">实验台 <span class="lab-strip__en" lang="en">Work in progress</span></h2>
+            <p>更多有趣的想法，正在路上……</p>
+          </header>
+          <article class="wip">
+            <img class="wip__art" src="assets/lab-chords.svg" width="190" height="100" alt="" loading="lazy" />
+            <div>
+              <p class="wip__tag">研究中</p>
+              <h3>歌曲和弦自动识别</h3>
+              <p>让 AI 帮你识别歌曲的和弦与谱面</p>
+            </div>
+          </article>
+          <article class="wip">
+            <img class="wip__art wip__art--phone" src="assets/lab-phone.svg" width="115" height="115" alt="" loading="lazy" />
+            <div>
+              <p class="wip__tag">研究中</p>
+              <h3><span lang="en">Down</span> — 把手机扣下，把注意力收回来</h3>
+              <p>专注，从放下手机开始<span class="wip__en" lang="en">Down your phone. Up your focus.</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ About ============ -->
+      <section class="section about visitor-panel" id="about" aria-labelledby="about-title">
+        <div class="about__text">
+          <p class="about__kicker"><span class="rule" aria-hidden="true"></span>关于工坊</p>
+          <div class="about__row">
+            <h2 id="about-title">一人。没有单一方向。</h2>
+            <div class="about__body">
+              <p>写过书，教过书，现在继续做工具、做实验，也帮自己打工。</p>
+              <p class="about__quote">「活到老，学到老，传递知识」</p>
+              <p class="about__links">
+                <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer">去博客读更长的话 <span aria-hidden="true">↗</span></a>
+                <a href="mailto:telesoho@gmail.com">写信 <span aria-hidden="true">✉</span></a>
+                <a href="jianpu/">曲库</a>
+              </p>
+            </div>
           </div>
         </div>
+        <img class="about__art" src="assets/about-landscape.svg" width="700" height="115" alt="" loading="lazy" />
       </section>
 
-      <!-- Visitor: projects -->
-      <section class="section visitor-panel" id="projects" aria-labelledby="projects-title">
-        <header class="section-head">
-          <p class="eyebrow">作品</p>
-          <h2 id="projects-title">不同的练习。<br />同一种认真。</h2>
-          <p class="section-lead">从谱面到段落，从编辑器到还没做完的想法。</p>
-        </header>
-
-        <article class="project" id="yue2-studio">
-          <p class="project__index">04 / AI 写歌</p>
-          <h3>YuE2 Studio Telesoho</h3>
-          <p class="project__tagline">自己的名字。<br />自己的更新。</p>
-          <p>
-            基于 YuE2 Studio 的独立发行版：与原版并行安装，模型、曲库与设置各用各的文件夹；自动更新来自本仓库，签名密钥也是独立的。
-          </p>
-          <p class="project__meta">Windows x64 · v3.7.1 · 安装包 / 便携版 · 自动更新</p>
-          <p class="project__links">
-            <a
-              href="https://github.com/telesoho/YuE2-Studio/releases/download/v3.7.1/YuE2.Studio.Telesoho_3.7.1_x64-setup.exe"
-              target="_blank"
-              rel="noopener noreferrer"
-              >下载安装包 <span aria-hidden="true">↗</span></a
-            >
-            <a
-              href="https://github.com/telesoho/YuE2-Studio/releases/download/v3.7.1/YuE2-Studio-3.7.1-portable-windows-x64.zip"
-              target="_blank"
-              rel="noopener noreferrer"
-              >便携版 ZIP <span aria-hidden="true">↗</span></a
-            >
-            <a
-              href="https://github.com/telesoho/YuE2-Studio/releases/tag/v3.7.1"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Release 页 <span aria-hidden="true">↗</span></a
-            >
-            <a href="https://github.com/telesoho/YuE2-Studio" target="_blank" rel="noopener noreferrer"
-              >GitHub <span aria-hidden="true">↗</span></a
-            >
-          </p>
-        </article>
-
-        <article class="project" id="guitartool">
-          <p class="project__index">03 / 谱面跟着走</p>
-          <h3>吉他兔</h3>
-          <p class="project__tagline">跟着原曲练。<br />手不用离开琴颈。</p>
-          <p>
-            普通播放器不支持精细的段落循环，翻谱又要腾出手。吉他兔按进度跳转曲谱，并让重复区间一设就用。
-          </p>
-          <p class="project__meta">浏览器 demo · 一首示范曲</p>
-          <p class="project__links">
-            <a href="http://blog.telesoho.com/guitartools/?#/5" target="_blank" rel="noopener noreferrer"
-              >打开吉他兔 <span aria-hidden="true">↗</span></a
-            >
-          </p>
-        </article>
-
-        <article class="project" id="paratool">
-          <p class="project__index">02 / 段落归位</p>
-          <h3>爬来兔</h3>
-          <p class="project__tagline">把好文章打乱。<br />再亲手排回去。</p>
-          <p>
-            富兰克林练结构感的方法：打乱段落，凭逻辑复原。看书时把值得学的章节贴进来，打乱，再排——练语感，也看清作者的思路。
-          </p>
-          <p class="project__meta">浏览器工具</p>
-          <p class="project__links">
-            <a href="http://blog.telesoho.com/paratool" target="_blank" rel="noopener noreferrer"
-              >打开爬来兔 <span aria-hidden="true">↗</span></a
-            >
-          </p>
-        </article>
-
-        <article class="project" id="paste-image">
-          <p class="project__index">01 / 截图落盘</p>
-          <h3>vscode-markdown-paste-image</h3>
-          <p class="project__tagline">粘贴截图。<br />图片进你指定的文件夹。</p>
-          <p>
-            写 Markdown 时插截图总绕路。这个 VS Code 扩展让粘贴直达约定目录，本站文章大多也靠它写完。
-          </p>
-          <p class="project__meta">VS Code 扩展 · 开源</p>
-          <p class="project__links">
-            <a
-              href="https://github.com/telesoho/vscode-markdown-paste-image"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub <span aria-hidden="true">↗</span></a
-            >
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=telesoho.vscode-markdown-paste-image"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Marketplace <span aria-hidden="true">↗</span></a
-            >
-          </p>
-        </article>
-      </section>
-
-      <section class="section visitor-panel" id="ideas" aria-labelledby="ideas-title">
-        <header class="section-head">
-          <p class="eyebrow">还在想的</p>
-          <h2 id="ideas-title">几件还没落地的事。</h2>
-        </header>
-        <ol class="ideas">
-          <li>
-            <span class="ideas__num">01</span>
-            <div>
-              <h3>歌曲和弦自动识别</h3>
-              <p>从音频里抽出进行，再落成可改的谱。频谱只是入口，不是全部。</p>
-              <p class="chip">想法 · 信号 / 机器学习</p>
-            </div>
-          </li>
-          <li>
-            <span class="ideas__num">02</span>
-            <div>
-              <h3>Down</h3>
-              <p>Down your phone. Up your focus. 把手机扣下，把注意力收回来——还在设计里。</p>
-              <p class="chip">想法 · 注意力</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="section visitor-panel" id="about" aria-labelledby="about-title">
-        <header class="section-head">
-          <p class="eyebrow">关于</p>
-          <h2 id="about-title">一个人。<br />没有单一方向。</h2>
-        </header>
-        <div class="about-grid">
-          <p>
-            写过书，教过书，现在要帮自己打工。
-          </p>
-          <blockquote>
-            <p>「活到老，学到老，传递知识」</p>
-            <footer>Telesoho Studio · 索合工坊</footer>
-          </blockquote>
-        </div>
-        <p class="project__links">
-          <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer"
-            >去博客读更长的话 <span aria-hidden="true">↗</span></a
-          >
-          <a href="mailto:telesoho@gmail.com">写信 <span aria-hidden="true">↗</span></a>
-        </p>
-      </section>
-
-      <!-- Engineering panels -->
+      <!-- ============ Engineering notes ============ -->
       <section class="section engineering-panel" id="eng-intro" aria-labelledby="eng-intro-title">
         <header class="section-head">
           <p class="eyebrow">FIG. 00 / 读法</p>
@@ -291,7 +313,7 @@
               <dd>实值 DFT 幅度 · 无窗 · 非实时音频管线</dd>
             </div>
           </dl>
-          <pre class="code" tabindex="0"><code>// 示意：离散傅里叶变换幅度
+          <pre class="code" tabindex="0" aria-label="DFT 伪代码"><code>// 示意：离散傅里叶变换幅度
 for k in 0..N/2:
   X[k] = Σₙ s[n] · exp(-2πi kn / N)
   mag[k] = |X[k]| / N
@@ -304,7 +326,7 @@ for k in 0..N/2:
           <p class="eyebrow">02 / 爬来兔 · 状态转移</p>
           <h2 id="eng-reorder-title">一次拖动。<br />一条命令。</h2>
           <p class="section-lead">
-            打乱段落再排回去，是对有序列表的状态转移，不是全文编辑器。拖动提出候选；若序列非法则保持上一状态。下面三段请拖回正确顺序。
+            打乱段落再排回去，是对有序列表的状态转移，不是全文编辑器。拖动提出候选；若序列非法则保持上一状态。下面三段请拖回正确顺序（键盘：聚焦段落后按 ↑ / ↓ 移动）。
           </p>
         </header>
 
@@ -316,7 +338,7 @@ for k in 0..N/2:
             <button type="button" class="btn-quiet" id="reorder-reset">显示答案顺序</button>
           </div>
           <p class="lab__formula">(S<sub>t+1</sub>, E<sub>t</sub>) = reduce(S<sub>t</sub>, C<sub>t</sub>)</p>
-          <pre class="code" tabindex="0"><code>candidate = applyMove(durable, command)
+          <pre class="code" tabindex="0" aria-label="状态转移伪代码"><code>candidate = applyMove(durable, command)
 if validPermutation(candidate):
   durable = candidate
   publish(effects)
@@ -351,26 +373,29 @@ else:
       <section class="section engineering-panel" id="eng-about" aria-labelledby="eng-about-title">
         <header class="section-head">
           <p class="eyebrow">立场</p>
-          <h2 id="eng-about-title">把模型<br /><em>写清楚</em>。</h2>
+          <h2 id="eng-about-title">把模型<em>写清楚</em>。</h2>
           <p class="section-lead">
             状态是什么？哪些量该不变？写入失败、帧卡住、模型到头时，会发生什么？这个模式邀请你检查那些决定。
           </p>
         </header>
-        <p class="project__links">
+        <p class="eng-links">
           <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer"
             >对照博客里的长文 <span aria-hidden="true">↗</span></a
           >
-          <button type="button" class="text-link as-button" id="back-to-visitor">回到日常读法</button>
+          <button type="button" class="btn btn--ghost" id="back-to-visitor">回到工坊 <span aria-hidden="true">←</span></button>
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Telesoho Studio · 索合工坊</p>
-      <p>
+      <p class="site-footer__brand"><span>Telesoho Studio · 索合工坊</span></p>
+      <p class="site-footer__meta">
+        © <span id="year">2026</span> ·
         <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer">blog.telesoho.com</a>
         ·
         <a href="mailto:telesoho@gmail.com">telesoho@gmail.com</a>
+        ·
+        <a href="jianpu/">曲库</a>
       </p>
     </footer>
 
