@@ -68,12 +68,31 @@ async function run() {
     if (over > 1) throw new Error(`overflow=${over}px`);
   });
 
-  await check("lab strip: only Down is left", async () => {
+  await check("lab strip: Down, 器灵 and 识局", async () => {
     const live = await page.locator(".lab-strip .wip--live").count();
     if (live !== 0) throw new Error(`live lab entries=${live}`);
+    const titles = await page.locator("#lab .lab-list > .wip h3").allTextContents();
+    if (titles.length !== 3) throw new Error(`lab entries=${titles.length} [${titles.join(" | ")}]`);
+    if (!titles[0].includes("Down")) throw new Error(`first entry=${titles[0]}`);
+    if (!/器灵[\s\S]*qiling/.test(titles[1])) throw new Error(`second entry=${titles[1]}`);
+    if (!/识局[\s\S]*siju/.test(titles[2])) throw new Error(`third entry=${titles[2]}`);
     const text = await page.locator("#lab .lab-strip__inner").textContent();
-    if (!text.includes("Down")) throw new Error("Down entry missing");
     if (text.includes("曲库")) throw new Error("曲库 still in lab strip");
+  });
+
+  await check("lab strip: art decodes", async () => {
+    for (const sel of [".wip--qiling .wip__pet", ".wip--siju .wip__art--board"]) {
+      const ok = await page.evaluate(async (s) => {
+        const el = document.querySelector(s);
+        if (!el) return `${s} missing`;
+        const url = getComputedStyle(el).backgroundImage.match(/url\("?(.+?)"?\)/)?.[1];
+        if (!url) return el.tagName === "IMG" ? el.complete && el.naturalWidth > 0 || `${el.src} did not load` : `${s} has no background image`;
+        return (await fetch(url)).ok || `${url} 404`;
+      }, sel);
+      if (ok !== true) throw new Error(String(ok));
+    }
+    const board = await page.locator(".wip--siju .wip__art--board").evaluate((el) => el.complete && el.naturalWidth);
+    if (!board) throw new Error("siju board did not decode");
   });
 
   await check("toggle engineering", async () => {

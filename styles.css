@@ -585,10 +585,10 @@ main {
 .lab-strip__inner {
   max-width: var(--wide);
   margin: 0 auto;
-  padding: 1.05rem var(--gutter) 1.15rem;
+  padding: 1.3rem var(--gutter) 1.5rem;
   display: grid;
-  grid-template-columns: minmax(250px, 0.9fr) 1.7fr;
-  align-items: center;
+  grid-template-columns: minmax(230px, 0.66fr) 2.7fr;
+  align-items: start;
 }
 
 .lab-strip__inner > * {
@@ -596,7 +596,7 @@ main {
 }
 .lab-strip__inner > * + * {
   border-left: 1.4px solid rgba(209, 193, 157, 0.75);
-  padding-left: clamp(1.25rem, 2.4vw, 2.6rem);
+  padding-left: clamp(1.1rem, 2vw, 2.1rem);
 }
 
 .lab-strip__head .rule {
@@ -664,6 +664,72 @@ main {
 }
 .wip__art--book {
   width: clamp(76px, 6.6vw, 104px);
+}
+
+/* Lab strip: three entries across — Down (researching) + 器灵 / 识局 (in-house trials). */
+.lab-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.12fr) minmax(0, 1.12fr);
+}
+.wip {
+  align-content: start;
+  gap: clamp(0.7rem, 1.6vw, 1.5rem);
+  padding: 0.35rem clamp(0.95rem, 1.7vw, 1.8rem) 0.35rem 0;
+}
+.lab-list > .wip:not(:first-child) {
+  border-left: 1px dashed rgba(212, 195, 158, 0.3);
+  padding-left: clamp(0.95rem, 1.7vw, 1.8rem);
+}
+.wip > div:last-child {
+  min-width: 0;
+}
+.wip__tag + h3,
+.wip h3 {
+  margin: 0;
+  text-wrap: balance;
+}
+.wip h3 + p {
+  line-height: 1.62;
+}
+.wip__alt {
+  font-family: var(--font-latin);
+  font-size: 0.84em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--gold-on-dark);
+}
+.wip__facts {
+  margin: 0.55rem 0 0;
+  display: grid;
+  gap: 0.24rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.wip__facts > div {
+  display: grid;
+  grid-template-columns: 2.9em minmax(0, 1fr);
+  gap: 0.6rem;
+}
+.wip__facts dt {
+  margin: 0;
+  padding-top: 0.1em;
+  color: var(--gold-on-dark);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.wip__facts dd {
+  margin: 0;
+  color: var(--on-dark-3);
+}
+
+.wip__art--board {
+  justify-self: center;
+  width: clamp(88px, 7.4vw, 116px);
+  height: auto;
+  filter: drop-shadow(0 5px 9px rgba(8, 14, 10, 0.4));
 }
 a.wip {
   color: inherit;
@@ -1157,11 +1223,41 @@ body[data-mode="engineering"] .site-footer__meta {
     grid-template-columns: minmax(0, 1fr) 153px;
   }
   .lab-strip__inner {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 1.2rem;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
   }
-  .lab-strip__head {
-    grid-column: 1 / -1;
+  .lab-strip__inner > * + * {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--on-dark-line);
+    padding-top: 1.2rem;
+  }
+  .lab-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lab-list > .wip {
+    padding: 1rem 0;
+  }
+  .lab-list > .wip:not(:first-child) {
+    border-left: 0;
+    border-top: 1px dashed rgba(212, 195, 158, 0.3);
+    padding-left: 0;
+    padding-top: 1.2rem;
+  }
+  .wip--qiling,
+  .wip--siju {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .wip--qiling {
+    grid-template-columns: 92px minmax(0, 1fr);
+  }
+  .wip__pet {
+    align-self: center;
+    width: 84px;
+  }
+  .wip__art--board {
+    align-self: center;
+    width: 100px;
   }
 }
 
@@ -1210,13 +1306,17 @@ body[data-mode="engineering"] .site-footer__meta {
     padding: 0 0.8rem;
   }
   .lab-strip__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .lab-strip__inner > * + * {
     border-left: 0;
     padding-left: 0;
     border-top: 1px solid var(--on-dark-line);
     padding-top: 1.2rem;
+  }
+  .wip--qiling,
+  .wip--siju {
+    grid-template-columns: auto minmax(0, 1fr);
   }
   .about__text {
     padding-bottom: 0;
@@ -1236,13 +1336,19 @@ body[data-mode="engineering"] .site-footer__meta {
     grid-template-columns: minmax(0, 1fr) 128px;
   }
   .lab-strip__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .lab-strip__inner > * + * {
     border-left: 0;
     padding-left: 0;
     border-top: 1px solid var(--on-dark-line);
     padding-top: 1.2rem;
+  }
+  .lab-strip__head {
+    padding-bottom: 0.2rem;
+  }
+  .wip__facts {
+    font-size: 0.9rem;
   }
   .wip__art {
     width: 96px;
