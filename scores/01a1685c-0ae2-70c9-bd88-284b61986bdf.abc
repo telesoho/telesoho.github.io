@@ -1,0 +1,146 @@
+X:1
+T:
+M:4/4
+L:1/16
+Q:1/4=69
+V: Vocal clef=treble name="Vocal Melody" snm="Vocal"
+V: Ins clef=treble name="Ins Melody" snm="Inst."
+K:C
+% intro
+V: Vocal
+"Fmaj7"z16|"G"z16|"Em7"z16|"Am7"z16|
+V: Ins
+z8z2c'6|b12z2c'2|g'8z2g'3a'3|e'12d'c'b2|
+% verse
+V: Vocal
+"Fmaj7"z4AAAAe2cc2c2B-|"G"B2z12z2|"Em7"z4BBBBB2Bd3cc-|"Am7"c3z12z|
+w: 让 爱 曾 是 唯 一 的 信 仰 - 招 呼 你 我 让 对 方 过 忙 -
+V: Ins
+a4z12|Z3|
+V: Vocal
+"Fmaj7"z4AAAAe2cc2cBB-|"G"B2z12z2|"Em7"z4BBBBB2Bd3cc-|"Am7"c3z8z3AA|
+w: 在 那 时 候 简 单 的 好 * 伤 - 却 有 空 情 绝 和 快 * 乐 - 直 到
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"e2e2z6zee2cd-|"G"dB3z8z2GG|"Em7"d3d8zd2cc-|"Am7"c3z8z3AA|
+w: 现 实 狠 狠 退 一 - 把 跌 倒 魂 山 是 伤 疤 - 你 在
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"e2e2z8e2cd-|"G"dB3z8z2GG|"Em7"d3d6z3e2cA-|"Am7"AAA4z8z2|
+w: 欲 望 面 前 逃 - 向 我 在 想 动 后 面 成 - * 长
+V: Ins
+Z4|
+V: Vocal
+"A7"z16|
+V: Ins
+Z|
+% chorus
+V: Vocal
+"Fmaj7"z4aaaaa2cc2cBB-|
+w: 终 于 知 道 爱 都 有 翅 * 膀
+V: Ins
+Z|
+V: Vocal
+M:3/4
+"G"B3z8z|
+V: Ins
+M:3/4
+Z|
+V: Vocal
+M:4/4
+"Em7"z4ggggg2ggg2ae|"Am7"e8z8|"Fmaj7"z4aaaaa2ae'3d'2|"G"d'12z4|
+w: 怎 么 拥 抱 他 终 究 要 飞 * 翔 请 一 恭 喜 也 想 被 释 放
+V: Ins
+M:4/4
+Z4|
+V: Vocal
+"Em7"z4ggggg2gb3a2|"Am7"a16|"Am7"z16|
+w: 奈 何 思 念 变 遗 憾 更 万
+V: Ins
+Z3|
+% verse
+V: Vocal
+"Fmaj7"z4AAAAe2cc2cBB|"G"B4z12|"Em7"z4BBBBB2Bd3cc-|"Am7"c3z12z|
+w: 丈 有 个 怀 抱 般 的 像 张 * 床 有 份 善 良 微 笑 躲 我 晴 -
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"z4cccce2cc2cBB-|"G"B3z12z|"Em7"z4BBBBB2Bd3cc-|
+w: 朗 有 一 种 就 美 丽 又 疯 狂 - 为 爱 谁 心 都 空 荡 * 荡
+V: Ins
+Z3|
+V: Vocal
+M:3/4
+"Am7"c6-cz3AA|
+w: * * 当 我
+V: Ins
+M:3/4
+Z|
+V: Vocal
+M:4/4
+"Fmaj7"e2e2z6zee2cd-|"G"dB3z8z2GG|"Em7"d3d6z3d2cc-|"Am7"c2z12AA|
+w: 听 说 你 与 他 散 - 场 狼 狈 回 家 带 着 伤 - 朋 友
+V: Ins
+M:4/4
+Z4|
+V: Vocal
+"Fmaj7"e2e2z8e2cd-|"G"dB3z8z2GG|"Em7"d3d8ze2cB-|
+w: 都 说 那 是 惩 - 罚 我 的 心 觉 多 么 痛
+V: Ins
+Z3|
+V: Vocal
+M:3/4
+"Am7"BA6z4z|
+w: * 啊
+V: Ins
+M:3/4
+Z|
+V: Vocal
+M:4/4
+"A"z16|
+V: Ins
+M:4/4
+Z|
+% chorus
+V: Vocal
+"Fmaj7"z4aaaaa2cc2cBB-|"G"B3z12z|"Em7"z4ggggg2gg2a2e|"Am7"e12z4|
+w: 虽 然 知道 * 爱 都 要 去 * 吧 - 因为 在 - 爱 所以 * 会 原 * 谅
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"z4aaaaa2ae'3d'2|"G"d'8z8|"Em7"z4ggggg2gb3a2|"Am7"a4b4c'6z2|
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"e'2c'2e'2c'e'2c'2e'e'2c'd'|"G"d'4z12|"Em7"d'2c'2d'2c'd'3c'e'3ac'|"Am7"c'z12z3|
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"e'2c'2e'2c'e'2c'2e'e'2c'd'|"G"d'6z8z2|"Em7"d'2c'2d'2c'd'3c'e'3c'a-|"Am7"a8-a3z4z|
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"z4aaaaa2cc2c2B|"G"B4z12|"Em7"z4ggggg2ga3bc'-|"Am7"c'2ba3ee8z|
+w: 不 想 知 道 爱 都 有 翅 * 膀 还 是 愿 意 让 你 倾 靠 在 - 我 肩 * 膀
+V: Ins
+Z4|
+V: Vocal
+"Fmaj7"z4aaaaa2ae'3d'2|"G"d'12z4|"Em7"z4ggggg2gb3aa|"Am7"az12z3|
+w: 你 也 不 用 把 * * * 我 把 我 当 成 一 棵 树 吧 * *
+V: Ins
+Z4|
+% outro
+V: Vocal
+"Fmaj7"a12az3|"G"gz12z3|"Em7"z16|"Am7"z16|
+V: Ins
+Z2|g8z4a4|e8zega2ga2|
+V: Vocal
+"Fmaj7"z16|"G"z16|"Em7"z16|"Fmaj7"z16|
+V: Ins
+a4z2aa4z2e'3|d'6zd'4z4z|z4g6z2b4|a16|
+V: Vocal
+"G"z16|"Em7"z16|"Am7"z16|"Am7"z6zz8z|
+V: Ins
+Z4|
