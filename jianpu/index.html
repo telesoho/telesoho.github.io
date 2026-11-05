@@ -19,6 +19,13 @@
   <body class="jp-page" data-mode="visitor">
     <a class="skip-link" href="#paper">跳到曲谱</a>
 
+    <header class="jp-immersive" id="immersive-bar" hidden>
+      <p class="jp-immersive__title" id="immersive-title">—</p>
+      <button type="button" class="jp-immersive__exit" id="immersive-exit" aria-label="退出沉浸练习（Esc）" title="退出沉浸练习（Esc）">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" /></svg><span>退出</span>
+      </button>
+    </header>
+
     <div class="jp-masthead">
       <img class="jp-masthead__art" src="img/workshop-band.svg" width="936" height="245" alt="" aria-hidden="true" />
 
@@ -27,7 +34,7 @@
           <ol>
             <li><a href="../" aria-label="首页"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 7.5 8 2.5l6 5M3.8 6.3V13.5h8.4V6.3M6.6 13.5V9.6h2.8v3.9" /></svg></a></li>
             <li><a href="../">索合工坊</a></li>
-            <li><a href="../#guitartool">音乐工具</a></li>
+            <li><a href="../#jianpu">曲库</a></li>
             <li><span aria-current="page">简谱</span></li>
           </ol>
         </nav>
@@ -91,6 +98,9 @@
             </button>
             <button type="button" class="jp-pill" id="print" aria-label="打印" title="打印谱面">
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7h12v7H4zM6 7V3h8v4M6 12h8v5H6z" /></svg><span>打印</span>
+            </button>
+            <button type="button" class="jp-pill" id="immersive" aria-pressed="false" aria-keyshortcuts="F" aria-label="沉浸练习（快捷键 F）" title="沉浸练习（F）">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 7.5V4h3.5M14 4h3.5v3.5M17.5 12.5V16H14M6 16H2.5v-3.5" /></svg><span>沉浸练习</span>
             </button>
             <button type="button" class="jp-pill jp-drawer-btn" id="open-settings" aria-label="演奏设置" aria-controls="settings" aria-expanded="false">
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5l6.5 3.75v7.5L10 17.5l-6.5-3.75v-7.5z" /><circle cx="10" cy="10" r="2.5" /></svg><span>设置</span>
@@ -157,6 +167,7 @@
 
     <!-- ===== Wooden playback console ===== -->
     <div class="jp-dock" id="dock">
+      <div class="jp-dock__grip" aria-hidden="true"><span></span>播放条<span></span></div>
       <div class="jp-console" role="toolbar" aria-label="播放控制">
         <div class="jp-console__group jp-console__transport">
           <button type="button" class="jp-play" id="play" aria-label="播放" title="播放（空格）">

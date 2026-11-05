@@ -1,4 +1,4 @@
-/* 简谱工作台 · Telesoho Studio
+﻿/* 简谱工作台 · Telesoho Studio
    Playback, rendering and follow-highlight logic is the original jianpu/player.js,
    kept as-is; this file adds the workbench chrome around it (library tabs, favourites,
    recents, tempo, volume, loop, zoom, print, bar counter, drawers). Vendor code untouched. */
@@ -49,6 +49,10 @@
   const zoomFitBtn = $("zoom-fit");
   const zoomLevel = $("zoom-level");
   const printBtn = $("print");
+  const immersiveBtn = $("immersive");
+  const immersiveBar = $("immersive-bar");
+  const immersiveTitle = $("immersive-title");
+  const immersiveExit = $("immersive-exit");
   const tabs = Array.prototype.slice.call(document.querySelectorAll('.jp-tabs [role="tab"]'));
   const PLAY_ICON = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6l8-4.8z"/></svg>';
   const PAUSE_ICON = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 3h2.6v10H4zm5.4 0H12v10H9.4z"/></svg>';
@@ -110,6 +114,10 @@
   let tempoBpm = 0;
   let loopOn = readRaw("jianpu-loop") === "1";
   let followOn = readRaw("jianpu-follow") !== "0";
+  // Immersive practice is a session state: a reload goes back to the full bench.
+  let immersive = false;
+  let immersiveScroll = 0;
+  let immersiveReturn = null;
   // On phones the full-width page would shrink digits to ~6px; start readable instead.
   let zoom = window.matchMedia("(max-width: 600px)").matches ? 0.72 : "fit";
   let tab = "all";
@@ -902,6 +910,97 @@
     return notation === "lead" ? paper.querySelector("iframe") : null;
   }
 
+  // In immersive practice the fit keeps IM_MARGIN_ROWS (at least 4) whole score
+  // rows on screen and never goes above 100%: a practice page wants the whole
+  // row, not a close-up. The two side panels are gone, so the width they used
+  // turns into height here.
+  const IM_MARGIN_ROWS = 4;
+  const IM_ROW_RATIO = 0.9;
+
+  function rowBox(el) {
+    let box;
+    try { box = el.getBBox(); } catch (err) { return null; }
+    return box && box.width && box.height ? box : null;
+  }
+
+  // Visible score lines: what is left of the svg once spans that only run in
+  // negative x (anchored content such as diagram frames) are discounted.
+  function rowHeightOf(svg) {
+    let top = Infinity;
+    let bottom = -Infinity;
+    for (const el of svg.querySelectorAll("path, rect, text, use, circle, ellipse")) {
+      const box = rowBox(el);
+      if (!box || box.x + box.width <= 0 || box.x >= viewBoxOf(svg).w) continue;
+      top = Math.min(top, box.y);
+      bottom = Math.max(bottom, box.y + box.height);
+    }
+    return bottom > top ? bottom - top : 0;
+  }
+
+  // Rows to keep whole, measured in viewBox units: the clef/key header block
+  // counts as a row (it costs slightly less, hence fullH), every score line as
+  // its actual visible height.
+  function immersiveBudget(svgs, rows) {
+    const firstBox = rowBox(svgs[0].firstElementChild) || { y: 0, height: 0 };
+    let pitch = 0;
+    if (svgs.length > 1) {
+      const nextBox = rowBox(svgs[1].firstElementChild);
+      if (nextBox) pitch = Math.max(0, nextBox.y - firstBox.y);
+    }
+    if (!pitch) pitch = viewBoxOf(svgs[0]).h;
+    const rowH = Math.min.apply(null, svgs.slice(1).map(rowHeightOf).filter(Boolean)) || pitch * IM_ROW_RATIO;
+    return firstBox.height + (rows - 1) * rowH;
+  }
+
+  function applyImmersiveFit(svgs) {
+    const available = paper.clientHeight;
+    if (available < 80) return null;
+    const style = getComputedStyle(paper);
+    const availW = Math.max(120, paper.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight));
+    const widest = svgs.reduce((max, svg) => Math.max(max, viewBoxOf(svg).w), 1);
+    return Math.min(1, availW / widest, available / immersiveBudget(svgs, IM_MARGIN_ROWS));
+  }
+
+  // Set the immersive scale once, then read it back: an svg as wide as the paper
+  // leaves no room for a 17px scrollbar, and that shrink would re-trigger the
+  // fit and flip the layout back and forth.
+  function alignImmersiveFit(svgs) {
+    const aim = applyImmersiveFit(svgs);
+    if (aim == null) return;
+    const widest = svgs.reduce((max, svg) => Math.max(max, viewBoxOf(svg).w), 1);
+    const style = getComputedStyle(paper);
+    const set = (scale) => {
+      for (const svg of svgs) {
+        const vb = viewBoxOf(svg);
+        svg.style.width = (vb.w * scale).toFixed(2) + "px";
+        svg.style.height = (vb.h * scale).toFixed(2) + "px";
+      }
+    };
+    set(aim);
+    const fit = (paper.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 2) / widest;
+    if (widest * aim >= paper.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 0.5) set(fit);
+  }
+
+  // Set the immersive scale once and read it back: an svg width at or above the
+  // paper width leaves no room for a 17px scrollbar, which would shrink the
+  // paper and trigger a re-fit that flips the layout back and forth.
+  function alignImmersiveFit(svgs) {
+    const aim = applyImmersiveFit(svgs);
+    if (aim == null) return;
+    const widest = svgs.reduce((max, svg) => Math.max(max, viewBoxOf(svg).w), 1);
+    const style = getComputedStyle(paper);
+    const avail = paper.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+    const set = (scale) => {
+      for (const svg of svgs) {
+        const vb = viewBoxOf(svg);
+        svg.style.width = (vb.w * scale).toFixed(2) + "px";
+        svg.style.height = (vb.h * scale).toFixed(2) + "px";
+      }
+    };
+    set(aim);
+    if (widest * aim >= avail - 0.5) set(Math.min(aim, (paper.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 2) / widest));
+  }
+
   function applyZoom() {
     const frame = leadFrame();
     zoomFitBtn.setAttribute("aria-pressed", zoom === "fit" ? "true" : "false");
@@ -921,8 +1020,9 @@
     const style = getComputedStyle(paper);
     const avail = Math.max(120, paper.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight));
     const widest = svgs.reduce((max, svg) => Math.max(max, viewBoxOf(svg).w), 1);
-    const fit = avail / widest;
-    const scale = zoom === "fit" ? fit : zoom;
+    // Positioning only; the immersive scale itself is set in fitZoom (needs the
+    // paper height, and the paper height follows the svg heights).
+    const scale = zoom === "fit" ? (parseFloat(svgs[0].style.width) || 0) / viewBoxOf(svgs[0]).w || avail / widest : zoom;
     for (const svg of svgs) {
       const vb = viewBoxOf(svg);
       svg.style.width = (vb.w * scale).toFixed(1) + "px";
@@ -940,10 +1040,40 @@
     return (parseFloat(svg.style.width) || viewBoxOf(svg).w) / viewBoxOf(svg).w;
   }
 
+  // Fit pass. Immersive re-measures the paper (its height follows the rows we
+  // are about to size) and settles in a few passes; the plain bench keeps the
+  // original width-only fit.
+  function fitZoom() {
+    if (zoom !== "fit") { applyZoom(); return; }
+    if (!immersive) { applyZoom(); return; }
+    const svgs = Array.prototype.slice.call(paper.querySelectorAll(":scope > svg"));
+    if (!svgs.length) { applyZoom(); return; }
+    let last = "";
+    for (let pass = 0; pass < 3; pass++) {
+      alignImmersiveFit(svgs);
+      const start = parseFloat(svgs[0].style.width) / viewBoxOf(svgs[0]).w;
+      applyZoom();
+      const key = Math.round(start * 1000) + ":" + paper.clientHeight;
+      if (key === last) break;
+      last = key;
+    }
+    applyZoom();
+  }
+
   function syncZoomButtons(scale) {
     zoomOutBtn.disabled = scale <= 0.41;
     zoomInBtn.disabled = scale >= 2.49;
   }
+
+  window.addEventListener("resize", () => {
+    if (!immersive) return;
+    // New viewport, new paper height: re-measure first, then refit. The
+    // ResizeObserver also wakes up on this, so wait two frames to stay out of it.
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      frameSheet();
+      fitZoom();
+    }));
+  });
 
   function stepZoom(dir) {
     const now = currentScale();
@@ -1232,6 +1362,61 @@
     else paint(offset);
   }
 
+  // Immersive practice leaves the page a little taller than the paper; framing
+  // adapts to it, so the sheet is sized against the real viewport, not a guess.
+  function viewportFrame() {
+    return immersiveBar && !immersiveBar.hidden ? immersiveBar.getBoundingClientRect().bottom : 0;
+  }
+
+  function frameSheet() {
+    const sheet = paper.closest(".jp-sheet");
+    if (!sheet) return;
+    let top = viewportFrame() + 8;
+    for (let el = sheet.parentElement; el && el !== document.body; el = el.parentElement) {
+      const pos = getComputedStyle(el).position;
+      if (pos !== "static") { top = Math.max(top, el.getBoundingClientRect().top); break; }
+    }
+    const avail = window.innerHeight - top - 8;
+    if (avail > 0) sheet.style.setProperty("--jp-sheet-h", avail + "px");
+  }
+
+  // Immersive practice: keep the paper, drop the chrome (masthead, both panels),
+  // leave a thin title bar on top and a pull-up playback dock at the bottom.
+  // A dedicated mode on purpose — no stylesheet state of its own, so the paper
+  // is re-measured and re-fitted by this same pass every time.
+  function setImmersive(on) {
+    const next = !!on;
+    if (next === immersive) return;
+    immersive = next;
+    if (next) zoom = "fit"; // a manual zoom carried over could leave a row clipped.
+    if (next) {
+      closeDrawers();
+      immersiveScroll = window.scrollY || 0;
+      immersiveReturn = document.activeElement;
+    }
+    document.body.classList.toggle("is-immersive", next);
+    immersiveBar.hidden = !next;
+    immersiveBtn.setAttribute("aria-pressed", next ? "true" : "false");
+    if (next) {
+      if (immersiveExit) immersiveExit.focus({ preventScroll: true });
+    } else {
+      window.scrollTo(0, immersiveScroll);
+      const back = immersiveReturn && immersiveReturn.isConnected && immersiveReturn.offsetParent !== null
+        ? immersiveReturn
+        : immersiveBtn;
+      if (back && back.focus) back.focus({ preventScroll: true });
+      immersiveReturn = null;
+    }
+    // The bench is swapped out but the paper is never re-created. Setting the
+    // sizes synchronously (no requestAnimationFrame) keeps the fit stable: the
+    // paper's ResizeObserver then sees a matched width and performs no-op.
+    frameSheet();
+    fitZoom();
+    drawWave(editor.timeline(timingSrc()));
+    wavePlayed = -1;
+    paint(playing ? nowPlaying() : offset);
+  }
+
   async function openPiece(entry, autoplay) {
     haltAudio();
     offset = 0;
@@ -1239,6 +1424,7 @@
     setPlayLabel(false);
     current = entry;
     titleEl.textContent = entry.title;
+    immersiveTitle.textContent = entry.title || "简谱";
     document.title = (entry.title || "简谱") + " · 简谱工作台 · Telesoho Studio";
     history.replaceState(null, "", "#" + encodeURIComponent(entry.id));
     recent = [entry.id].concat(recent.filter((id) => id !== entry.id)).slice(0, 12);
@@ -1457,14 +1643,19 @@
 
   zoomInBtn.addEventListener("click", () => stepZoom(1));
   zoomOutBtn.addEventListener("click", () => stepZoom(-1));
-  zoomFitBtn.addEventListener("click", () => { zoom = "fit"; applyZoom(); });
+  zoomFitBtn.addEventListener("click", () => { zoom = "fit"; fitZoom(); });
   if (window.ResizeObserver) {
     let last = 0;
+    let raf = 0;
     new ResizeObserver(() => {
       const w = paper.clientWidth;
       if (Math.abs(w - last) < 1) return;
       last = w;
-      if (zoom === "fit") applyZoom();
+      // Immersive rows can re-enter the observer; settle the fit out of band.
+      if (immersive) {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => { if (immersive && zoom === "fit") fitZoom(); });
+      } else if (zoom === "fit") applyZoom();
       drawWave(editor.timeline(timingSrc()));
       wavePlayed = -1;
       paint(playing ? nowPlaying() : offset);
@@ -1477,6 +1668,8 @@
     }
     window.print();
   });
+  immersiveBtn.addEventListener("click", () => setImmersive(!immersive));
+  immersiveExit.addEventListener("click", () => setImmersive(false));
 
   let libraryOpen = readRaw("jianpu-library") !== "0";
   setLibrary(libraryOpen);
@@ -1500,6 +1693,19 @@
     if (event.key === "Escape" && drawerOpen) {
       event.preventDefault();
       closeDrawers();
+      return;
+    }
+    if (event.key === "Escape" && immersive) {
+      event.preventDefault();
+      setImmersive(false);
+      return;
+    }
+    if ((event.key === "f" || event.key === "F") && !event.altKey && !event.ctrlKey && !event.metaKey) {
+      const t = event.target;
+      if (t && t.closest && t.closest("input, select, textarea, [contenteditable='true']")) return;
+      if (event.repeat) return;
+      event.preventDefault();
+      setImmersive(!immersive);
       return;
     }
     if (event.key === "Tab" && drawerOpen) {

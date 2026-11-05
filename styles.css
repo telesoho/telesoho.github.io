@@ -405,7 +405,7 @@ main {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -567,6 +567,13 @@ main {
   border-radius: 14px;
 }
 
+/* Line-art cover for the 曲库 card: a paper tray instead of a color block. */
+.card__art--flat {
+  object-fit: contain;
+  padding: 10px;
+  background: linear-gradient(160deg, #eef0dc, #dfe4c6);
+}
+
 /* ---------- Lab strip (dark) ---------- */
 .lab-strip {
   position: relative;
@@ -580,7 +587,7 @@ main {
   margin: 0 auto;
   padding: 1.05rem var(--gutter) 1.15rem;
   display: grid;
-  grid-template-columns: minmax(250px, 0.9fr) 1.1fr 1.7fr;
+  grid-template-columns: minmax(250px, 0.9fr) 1.7fr;
   align-items: center;
 }
 
@@ -1156,10 +1163,6 @@ body[data-mode="engineering"] .site-footer__meta {
   .lab-strip__head {
     grid-column: 1 / -1;
   }
-  .lab-strip__inner > .wip:nth-child(2) {
-    border-left: 0;
-    padding-left: 0;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -1209,8 +1212,7 @@ body[data-mode="engineering"] .site-footer__meta {
   .lab-strip__inner {
     grid-template-columns: 1fr;
   }
-  .lab-strip__inner > * + *,
-  .lab-strip__inner > .wip:nth-child(2) {
+  .lab-strip__inner > * + * {
     border-left: 0;
     padding-left: 0;
     border-top: 1px solid var(--on-dark-line);
@@ -1241,9 +1243,6 @@ body[data-mode="engineering"] .site-footer__meta {
     padding-left: 0;
     border-top: 1px solid var(--on-dark-line);
     padding-top: 1.2rem;
-  }
-  .lab-strip__inner > .wip:nth-child(2) {
-    border-top: 1px solid var(--on-dark-line);
   }
   .wip__art {
     width: 96px;

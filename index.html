@@ -6,7 +6,7 @@
     <title>Telesoho Studio — 索合工坊</title>
     <meta
       name="description"
-      content="索合工坊 · 独立创作者工坊。把想法，做成能用的东西：YuE2 Studio、吉他兔、爬来兔、vscode-markdown-paste-image。"
+      content="索合工坊 · 独立创作者工坊。把想法，做成能用的东西：YuE2 Studio、曲库（简谱工作台）、vscode-markdown-paste-image。"
     />
     <meta name="theme-color" content="#344735" />
     <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
@@ -130,62 +130,35 @@
             <img class="card__art" src="assets/card-yue2.svg" width="145" height="143" alt="插画：一位黑发的歌手，背景是淡紫与浅蓝的色块。" loading="lazy" />
           </li>
 
-          <li class="card" id="guitartool">
+          <li class="card" id="jianpu">
             <div class="card__body">
               <span class="card__num">02</span>
-              <h3 class="card__title">吉他兔</h3>
-              <p class="card__line">跟着原曲练，手不用离开琴弦</p>
+              <h3 class="card__title">曲库</h3>
+              <p class="card__line">读简谱、五线谱与弹唱谱，选调变速跟着练</p>
               <div class="card__actions">
-                <a href="https://www.telesoho.com/guitartools/?#/5" target="_blank" rel="noopener noreferrer"
-                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：吉他兔（新窗口）</span></a
+                <a href="jianpu/"
+                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：曲库（简谱工作台）</span></a
                 >
                 <details class="card__more">
                   <summary>详情</summary>
                   <div class="card__panel">
                     <p>
-                      普通播放器不支持精细的段落循环，翻谱又要腾出手。吉他兔按进度跳转曲谱，并让重复区间一设就用。
+                      浏览器里的简谱工作台：点音符就从那里播放，可切五线谱与弹唱谱、临时选调、改速度与倍速，谱面跟随高亮滚动。
                     </p>
-                    <p class="card__meta">浏览器 demo · 一首示范曲</p>
+                    <p class="card__meta">浏览器工具 · 在线可用 · 收录多首练习曲</p>
                     <ul class="card__links" role="list">
-                      <li><a href="https://www.telesoho.com/guitartools/?#/5" target="_blank" rel="noopener noreferrer">打开吉他兔 <span aria-hidden="true">↗</span></a></li>
-                      <li><a href="jianpu/">曲库（简谱）</a></li>
+                      <li><a href="jianpu/">打开曲库 <span aria-hidden="true">↗</span></a></li>
                     </ul>
                   </div>
                 </details>
               </div>
             </div>
-            <img class="card__art" src="assets/card-guitar.svg" width="153" height="143" alt="插画：一只白兔抱着木吉他，背景是浅绿色。" loading="lazy" />
-          </li>
-
-          <li class="card" id="paratool">
-            <div class="card__body">
-              <span class="card__num">03</span>
-              <h3 class="card__title">爬来兔</h3>
-              <p class="card__line">把文章打乱，再亲手排回去</p>
-              <div class="card__actions">
-                <a href="https://www.telesoho.com/paratool/" target="_blank" rel="noopener noreferrer"
-                  >查看项目 <span aria-hidden="true">↗</span><span class="sr-only">：爬来兔（新窗口）</span></a
-                >
-                <details class="card__more">
-                  <summary>详情</summary>
-                  <div class="card__panel">
-                    <p>
-                      富兰克林练结构感的方法：打乱段落，凭逻辑复原。看书时把值得学的章节贴进来，打乱，再排——练语感，也看清作者的思路。
-                    </p>
-                    <p class="card__meta">浏览器工具</p>
-                    <ul class="card__links" role="list">
-                      <li><a href="https://www.telesoho.com/paratool/" target="_blank" rel="noopener noreferrer">打开爬来兔 <span aria-hidden="true">↗</span></a></li>
-                    </ul>
-                  </div>
-                </details>
-              </div>
-            </div>
-            <img class="card__art" src="assets/card-paratool.svg" width="153" height="143" alt="插画：一只白兔趴在一叠打乱的纸页后面。" loading="lazy" />
+            <img class="card__art card__art--flat" src="assets/card-jianpu.svg" width="145" height="143" alt="插画：摊开的简谱册，淡绿色的纸页上印着数字音符。" loading="lazy" />
           </li>
 
           <li class="card" id="paste-image">
             <div class="card__body">
-              <span class="card__num">04</span>
+              <span class="card__num">03</span>
               <h3 class="card__title card__title--code" lang="en">vscode-markdown-<wbr />paste-image</h3>
               <p class="card__line">粘贴截图，图片进指定文件夹</p>
               <div class="card__actions">
@@ -220,14 +193,6 @@
             <h2 id="lab-title">实验台 <span class="lab-strip__en" lang="en">Work in progress</span></h2>
             <p>更多有趣的想法，正在路上……</p>
           </header>
-          <a class="wip wip--live" href="jianpu/">
-            <img class="wip__art wip__art--book" src="assets/lab-jianpu.svg" width="140" height="100" alt="" loading="lazy" />
-            <div>
-              <p class="wip__tag wip__tag--live">已上线</p>
-              <h3>曲库 <span class="wip__go" aria-hidden="true">→</span></h3>
-              <p>读简谱，选调变速跟着练</p>
-            </div>
-          </a>
           <article class="wip">
             <img class="wip__art wip__art--phone" src="assets/lab-phone.svg" width="115" height="115" alt="" loading="lazy" />
             <div>
@@ -245,14 +210,6 @@
           <p class="about__kicker"><span class="rule" aria-hidden="true"></span>关于工坊</p>
           <div class="about__row">
             <h2 id="about-title">人，没有单一方向。</h2>
-            <div class="about__body">
-              <p>出过书，教过书，IT界搬过砖，现在帮自己打工。</p>
-              <p class="about__quote">「活到老，学到老，传递知识」</p>
-              <p class="about__links">
-                <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer">去博客读更长的话 <span aria-hidden="true">↗</span></a>
-                <a href="mailto:telesoho@gmail.com">写信 <span aria-hidden="true">✉</span></a>
-              </p>
-            </div>
           </div>
         </div>
         <img class="about__art" src="assets/about-landscape.svg" width="700" height="115" alt="" loading="lazy" />
@@ -388,11 +345,7 @@ else:
       <p class="site-footer__brand"><span>Telesoho Studio · 索合工坊</span></p>
       <p class="site-footer__meta">
         © <span id="year">2026</span> ·
-        <a href="https://blog.telesoho.com" target="_blank" rel="noopener noreferrer">blog.telesoho.com</a>
-        ·
         <a href="mailto:telesoho@gmail.com">telesoho@gmail.com</a>
-        ·
-        <a href="jianpu/">曲库</a>
       </p>
     </footer>
 

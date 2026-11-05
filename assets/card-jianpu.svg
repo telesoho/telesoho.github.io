@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 143" width="145" height="143">
+  <!-- 曲库 card: the jianpu songbook from the lab strip, re-inked for the light card. -->
+  <rect width="145" height="143" fill="#e6e7bb"/>
+  <path d="M0 60q40-34 96-18q34 11 49 44v57H0z" fill="#d1d9a5"/>
+  <g fill="none" stroke="#6f7d55" stroke-width="1.4" stroke-linecap="round" opacity=".45">
+    <path d="M12 118q26-10 52 2M86 120q22-8 47 0"/>
+  </g>
+  <path d="M72.5 44q-21-10-58-6v70q37-4 58 6q21-10 58-6V38q-37-4-58 6z" fill="#fffaf0" stroke="#796449" stroke-width="2"/>
+  <path d="M72.5 44v70" fill="none" stroke="#796449" stroke-width="1.6"/>
+  <g fill="none" stroke="#cbb794" stroke-width="1.1" stroke-linecap="round">
+    <path d="M23 56q20-3 40 2M23 79q20-3 40 2M23 100q20-3 40 2M83 58q20-5 38-2M83 81q20-5 38-2M83 102q20-5 38-2"/>
+  </g>
+  <g fill="#3d3528" font-family="'IBM Plex Mono', monospace" font-size="13" font-weight="500" text-anchor="middle">
+    <text x="29" y="73">1</text><text x="43" y="73">2</text><text x="57" y="74">3</text>
+    <text x="29" y="94">5</text><text x="43" y="94">-</text><text x="57" y="95">6</text>
+    <text x="88" y="73">3</text><text x="102" y="72">2</text><text x="116" y="73">1</text>
+    <text x="88" y="94">5</text><text x="102" y="93">5</text><text x="116" y="94">-</text>
+  </g>
+  <g fill="#3d3528">
+    <circle cx="43" cy="78" r="1.4"/><circle cx="102" cy="98" r="1.4"/>
+    <circle cx="29" cy="50" r="1.2"/><circle cx="102" cy="50" r="1.2"/>
+  </g>
+</svg>

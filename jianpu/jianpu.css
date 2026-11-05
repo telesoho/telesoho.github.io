@@ -1139,6 +1139,152 @@ body.is-playing .jp-follow[aria-checked="true"] .jp-follow__dot {
   display: none;
 }
 
+/* ---------- Immersive practice (F / 沉浸练习 button) ---------- */
+.jp-immersive {
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 40px;
+  padding: 0 12px;
+  background: var(--jp-head);
+  color: #fff2d9;
+  border-bottom: 1px solid #263627;
+  box-shadow: 0 2px 5px rgba(30, 40, 30, 0.22);
+}
+.jp-immersive[hidden] {
+  display: none;
+}
+.jp-immersive__title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.jp-immersive__exit {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: none;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 242, 217, 0.45);
+  border-radius: 14px;
+  background: transparent;
+  color: #fff2d9;
+  font-size: 13px;
+}
+.jp-immersive__exit:hover {
+  background: rgba(255, 242, 217, 0.14);
+}
+.jp-immersive__exit svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+.jp-immersive__exit:focus-visible,
+.jp-page button:focus-visible {
+  outline-color: #ffe2a8;
+}
+
+/* Drop the masthead (crumbs + slogan) and both side panels; the paper takes it all. */
+.jp-page.is-immersive .jp-masthead {
+  display: none;
+}
+.jp-page.is-immersive .jp-bench,
+.jp-page.is-immersive .jp-bench.is-library-off {
+  display: block;
+  height: auto;
+  min-height: 0;
+  padding: 8px 8px 0;
+}
+.jp-page.is-immersive .jp-library,
+.jp-page.is-immersive .jp-settings,
+.jp-page.is-immersive .jp-scrim {
+  display: none !important;
+}
+/* In this mode the paper only ever scrolls down, so a wheel that tries to go
+   sideways goes to the next row instead of stalling. */
+.jp-page.is-immersive .jp-paper {
+  overscroll-behavior-x: none;
+}
+/* Drawer openers would only re-show a panel this mode hides. */
+@media (max-width: 1100px) {
+  .jp-page.is-immersive .jp-drawer-btn {
+    display: none !important;
+  }
+}
+.jp-page.is-immersive .jp-sheet {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  /* --jp-sheet-h is measured by player.js (viewport minus bar and padding);
+     the fallback keeps the plain arithmetic if the script has not run yet. */
+  height: var(--jp-sheet-h, calc(100vh - 48px));
+  height: var(--jp-sheet-h, calc(100dvh - 48px));
+  min-height: 320px;
+  padding: 14px 14px 56px 20px;
+}
+.jp-page.is-immersive .jp-sheet__head {
+  padding-bottom: 8px;
+}
+/* Fit never scrolls sideways: --jp-paper vw notches absorb the rounding slack. */
+.jp-page.is-immersive .jp-paper {
+  margin-top: 8px;
+  padding-bottom: 56px;
+}
+
+/* Dock: fixed to the bottom, collapsed to a thin pull tab until hovered or focused. */
+.jp-dock__grip {
+  display: none;
+}
+.jp-page.is-immersive .jp-dock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  padding: 0 8px;
+  background: linear-gradient(180deg, rgba(247, 234, 212, 0), #f3e3c8 14px);
+  transform: translateY(calc(100% - 18px));
+  transition: transform 0.22s ease;
+}
+.jp-page.is-immersive .jp-dock__grip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 18px;
+  font-size: 11.5px;
+  color: #6b5e4a;
+  cursor: default;
+  user-select: none;
+}
+.jp-page.is-immersive .jp-dock__grip span {
+  width: 28px;
+  height: 2px;
+  border-radius: 1px;
+  background: #b9a073;
+}
+.jp-page.is-immersive .jp-dock:hover,
+.jp-page.is-immersive .jp-dock:focus-within,
+.jp-page.is-immersive .jp-dock.is-peek {
+  transform: none;
+}
+
 /* =========================================================
    Responsive
    ========================================================= */
@@ -1433,6 +1579,24 @@ body.is-playing .jp-follow[aria-checked="true"] .jp-follow__dot {
     margin-top: 6px;
     flex-wrap: wrap;
   }
+  .jp-immersive {
+    height: 36px;
+  }
+  .jp-immersive__title {
+    font-size: 15px;
+  }
+  .jp-page.is-immersive .jp-sheet {
+    height: var(--jp-sheet-h, calc(100vh - 36px));
+    height: var(--jp-sheet-h, calc(100dvh - 36px));
+    padding: 12px 10px 56px 12px;
+  }
+  .jp-page.is-immersive .jp-dock {
+    transform: translateY(calc(100% - 14px));
+  }
+  .jp-page.is-immersive .jp-dock__grip {
+    height: 14px;
+    font-size: 10.5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1520,5 +1684,20 @@ body.is-playing .jp-follow[aria-checked="true"] .jp-follow__dot {
   .jp-paper .is-on {
     fill: currentColor !important;
     animation: none !important;
+  }
+  .jp-immersive {
+    display: none !important;
+  }
+  .jp-page.is-immersive .jp-dock {
+    position: static;
+    transform: none;
+    padding: 0;
+    background: none;
+  }
+  .jp-page.is-immersive .jp-dock__grip {
+    display: none;
+  }
+  .jp-page.is-immersive .jp-paper {
+    padding-bottom: 0;
   }
 }
