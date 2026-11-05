@@ -1,0 +1,109 @@
+X:1
+T:
+M:4/4
+L:1/16
+Q:1/4=61
+V: Vocal clef=treble name="Vocal Melody" snm="Vocal"
+V: Ins clef=treble name="Ins Melody" snm="Inst."
+K:Bbm
+% intro
+V: Vocal
+z16 | "Bbm"z16 | "Ab"z16 | "Ebm/Gb"z8 "Ab"z8|
+V: Ins
+z16 | z12 f2 c2 | f8 c8 | z4 e2 B2 e6 c2|
+V: Vocal
+"Bbm"z12 z2 F F|
+w: 和 你
+V: Ins
+F8 z8|
+% verse
+V: Vocal
+"Bbm"E2 F2 z8 z E F2 | "Ab"E2 C2 z8 z D E D- | "Ebm/Gb"D B,2 z2 B, B, C- "Ab"C A,2 z2 A, F, C- | "Bbm"C B,3 z8 z2 F F|
+w: 有 关 观 后 无 感 若 是 真 - 的 敢 问 作 - 者 何 来 罪 - 恶 劝 人
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"Bbm"E2 F4 z6 z F B2 | "Ab"A E E z8 z2 E3 | "Ebm7/Gb"D2 B, G,2 D2 C- "Ab"C2 A, F,2 C B, B,- | "Bbm"B,2 z8 z3 d c d|
+w: 离 散 有 多 为 难 - 若 美 丽 的 故 事 来 - 得 太 晚 - - 所 以 -
+V: Ins
+z16 | z16 | z16 | z16|
+% pre-chorus
+V: Vocal
+"Gbmaj7"G2 d c2 d2 A- "Ab"A2 c c2 d2 B- | "Bbm7"B3 z4 z "Ebm7"z4 "F7sus4"z d c d | "Gbmaj7"G2 d c2 d2 A- "Ab"A2 d e2 f2 B- | "Bbm7"B3 z8 z2 d c d|
+w: 到 哪 里 都 像 快 乐 被 - 燃 起 就 好 - 像 你 曾 在 我 隔 壁 的 班 - 级 人 们 把
+V: Ins
+z16 | z16 | z16 | z8 e f a f e z3|
+V: Vocal
+"Gbmaj7"G2 d c2 d2 d "Ab"A2 c c2 d2 B- | "Bbm7"B3 z4 z "Ebm7"z4 "F7sus4"z d c d | "Gbmaj7"G2 d c2 d2 d "Ab"A2 d e2 f2 B- | "Bbm7"B3 z12 z|
+w: 难 言 的 爱 都 埋 入 土 壤 里 - 袖 手 旁 观 着 别 人 尽 力 撇 清 自 己 -
+V: Ins
+z16 | z16 | z16 | z16|
+% chorus
+V: Vocal
+"Gbmaj7"z3 B b2 a f- "Ab"f2 e d2 a f f- | "Bbm"f6- f z8 z | "Gbmaj7"z3 B B2 c d "Ab"c2 A2 A2 F B- | "Bbm"B B B4 z8 z2|
+w: 我 听 见 了 你 的 - 声 音 - - - 也 藏 着 颗 不 敢 见 的 心 - - -
+V: Ins
+z16 | z16 | z16 | z6 c2 f F A B d c B F|
+V: Vocal
+"Gbmaj7"z3 B b2 a f- "Ab"f2 e d2 a2 f- | "Bbm"f4- f z8 z3 | "Gbmaj7"z3 B B2 c d "Ab"c2 A F2 c2 B- | "Bbm"B4- B z8 z3|
+w: 我 躲 进 挑 剔 的 人 - 群 - - 夜 一 深 就 找 那 颗 星 星
+V: Ins
+G3 z12 z | z4 z b c' b f6 z2 | z16 | z4 z B c2 f8|
+% interlude
+V: Vocal
+"Bbm"z16 | "Ab"z16 | "Ebm7/Gb"z8 "Ab"z8 | "Bbm"z16|
+V: Ins
+z2 e2 B2 e2 f6 z2 | c6 z2 A8 | z2 e2 B2 e2 c4 z2 A2 | F8 z8|
+V: Vocal
+"Bbm"z16 | "Ab"z16 | "Gbmaj7"z8 "Ab"z8 | "Bbm"z12 z d c d|
+w: 我 以 为
+V: Ins
+f B e f2 B e f2 B e f3 e2 | c F A c2 F A c2 F A c e d c2 | f B e f2 B e f e B e f2 B c f | B F A c2 F A c2 F A c f z3|
+% pre-chorus
+V: Vocal
+"Gbmaj7"G2 d c2 d3 "Ab"A2 c c2 d2 B- | "Bbm"B3 z4 z "Eb7sus4"z4 "F7sus4"z d c d | "Gbmaj7"G2 d c2 d2 z "Ab"A2 d e2 f2 B- | "Bbm"B3 z8 z2 d c d|
+w: 旅 人 将 我 热 情 都 燃 尽 - 你 却 像 一 张 情 书 感 觉 很 初 级 - 人 们 把
+V: Ins
+z16 | z4 B2 e2 c2 d2 f z3 | z16 | z8 e f a f e z3|
+V: Vocal
+"Gbmaj7"G2 d c2 d2 d "Ab"A2 d c2 d2 B- | "Bbm"B3 z4 z "Eb7sus4"z4 "F7sus4"z d c d | "Gbmaj7"G2 d c2 d2 d "Ab"A2 d e2 f2 B- | "Bbm"B4- B z8 z3|
+w: 晚 来 的 爱 都 锁 在 密 码 里 - 字 正 腔 圆 的 演 说 撇 清 所 有 关 系 - -
+V: Ins
+z16 | z4 B2 e2 c2 d2 f z3 | z16 | z16|
+% chorus
+V: Vocal
+"Gbmaj7"z3 B b2 a f- "Ab"f2 e d2 a f f- | "Bbm"f4- f z8 z3 | "Gbmaj7"z3 B B2 c d "Ab"c2 A2 A2 F2 | "Bbm"B c B4 z8 z2|
+w: 我 听 见 了 你 - 的 声 音 - - - 也 藏 着 颗 不 敢 见 的 心 - -
+V: Ins
+z16 | z4 z B c z F z6 z | z16 | z16|
+V: Vocal
+"Gbmaj7"z3 B b2 a f- "Ab"f2 e d2 a3 | "Bbm"f z f8 z6 | "Gbmaj7"z3 B B2 c d "Ab"c2 A F2 c3- | "Bbm"c B4 z8 z3|
+w: 我 躲 进 挑 剔 的 人 - 群 - 夜 一 深 就 找 那 颗 星 星
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"Gbmaj7"z3 B b2 a f- "Ab"f2 e d2 a2 f- | "Bbm"f6- f z8 z | "Gbmaj7"z3 B B2 c d "Ab"c2 A F2 c2 B- | "Bbm"B3 z12 z|
+w: 你 听 不 到 我 的 声 - 音 - - 怕 脱 口 而 出 是 你 姓 名 -
+V: Ins
+z16 | z16 | z16 | z4 c B c z2 F A B d c B F|
+V: Vocal
+"Gbmaj7"z3 B b2 a f- "Ab"f2 e d2 a2 f- | "Bbm"f6- f z8 z | "Gbmaj7"z3 B B2 c d "Ab"c2 A F2 c2 B- | "Bbm"B3 z12 z|
+w: 像 确 定 我 要 遇 见 - 你 - - 就 像 曾 经 交 换 过 眼 睛 -
+V: Ins
+G3 z12 z | z16 | z16 | z4 c B c B c z3 f c c z|
+V: Vocal
+"Gbmaj7"z2 B B2 G2 d- "Ab"d2 c d2 c B B- | "Bbm"B3 z12 z | "Gbmaj7"z2 B B2 G2 d- "Ab"d2 c d2 e2 B- | "Bbsus2"B3 z12 z|
+w: 我 好 像 在 哪 见 过 - 你 - - 我 好 像 在 哪 见 过 - 你
+V: Ins
+z16 | z4 c' b c' b f F A B d c B F | G2 z12 z2 | z4 c B c z2 F A B d c B F|
+V: Vocal
+"Gbmaj7"z2 B B2 G2 d- "Ab"d2 c d2 c B B- | "Bbsus2"B6- B z8 z | "Gbmaj7"z2 B B2 F2 d- "Ab"d3 z4 z|
+w: 我 好 像 在 哪 见 - 过 你 - - - 我 在 劝 我 -
+V: Ins
+G2 z12 z2 | z8 z F A B d c B F | G z12 z3|
+% outro
+V: Vocal
+"Ab"c2 d2 c2 B2 "Bbm"B8 | "Bbm"z16 | "Bbm"z16|
+w: 该 忘 了 你
+V: Ins
+z16 | z16 | z16|
