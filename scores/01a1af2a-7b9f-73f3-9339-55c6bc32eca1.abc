@@ -1,0 +1,169 @@
+X:1
+T:
+M:4/4
+L:1/32
+Q:1/4=93
+V: Vocal clef=treble name="Vocal Melody" snm="Vocal"
+V: Ins clef=treble name="Ins Melody" snm="Inst."
+K:Ab
+% intro
+V: Vocal
+"Db"z32|
+V: Ins
+z32|
+% verse
+V: Vocal
+"Db"c4 e4 e4 c4 e8 c4 e4 | "Db"e8 z8 e8 A4 c4 | "Fm"c2 z24 z6 | "Fm"z32|
+w: 看 着 飞 舞 的 尘 埃 - 掉 下 来 -
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Db"c4 e4 e4 c4 e8 A4 e4- | "Db"e4 z4 e4 c4 e8 f4 c4- | "Fm"c2 B2 A8 z16 z4 | "Fm"z12 A4 a4 g4 f4 e4|
+w: 没 人 发 现 它 存 在 - 多 自 由 自 在 - - - 可 世 界 都 爱
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Db"f8 f4 e4 f8 f4 e4 | "Db"f4 f4 z4 e4 f8 f4 f4 | "Ab"e4 e16 z4 c4 B4- | "Eb/G"B8 z8 e4 e4 d4 d4-|
+w: 热 热 闹 闹 容 不 下 - 我 百 无 聊 赖 - - - - 不 应 该 -
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Db"d8 z8 c4 c4 B2 z2 B4- | "Eb"B4 z16 B4 A8- | "Fm"A4 z24 z4 | "Eb"z8 f8 "Eb"g8 a8|
+w: - 一 个 人 - - 发 呆 - 只 有 我
+V: Ins
+z32 | z32 | z32 | z32|
+% chorus
+V: Vocal
+"Fm7"a4 a4 a4 a4 b4 g4 a8- | "Db"a8 z4 a4 a4 g4 f4 e4- | "Ab"e8 c'4 c'8 b4 a4 b4- | "Eb"b8 z8 f4 g4 "Eb"a8|
+w: 守 着 安 静 的 沙 漠 - 等 待 着 花 开 呜 - - - - - - 只 有 我
+V: Ins
+z32 | z32 | z32 | z8 z8 z8 z8|
+V: Vocal
+"Fm7"a4 a4 a4 a4 b4 g4 a8- | "Db"a8 z4 a4 a4 g4 f4 e4- | "Ab"e8 c'4 c'8 b4 a4 b4- | "Eb"b12 z8 c'4 b4 a4-|
+w: 看 着 别 人 的 快 乐 - 竟 然 会 感 慨 呜 - - - - - - 就 让 我
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm7"a4 a4 a4 a4 a4 b4 b4 a4- | "Db"a8 z4 a4 a4 g4 f4 e4- | "Ab"e8 c'4 c'8 b4 a4 b4- | "Eb"b12 z4 B4 c4 d8-|
+w: - 听 着 天 大 的 道 理 - 不 愿 意 明 白 呜 - - - - - - 有 什 么
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Db"d8 z8 c4 c4 "Eb"B4 B4- | "Eb"B4 z12 B4 c12 | "Fm7"A8 z24 | "Fm7"z32|
+w: - 是 应 该 - - 不 应 该
+V: Ins
+z32 | z32 | z32 | z32|
+% interlude
+V: Vocal
+"Fm7"z24 "Dbmaj7"z8 | "Dbmaj7"z24 "Ab"z8 | "Ab"z24 "Eb"z8 | "Eb"z24 "Fm7"z8|
+V: Ins
+a8 z4 g8 e4 z8 | z16 e'8 c'8 | z4 d'8 b4 a4 b12 | z4 g4 d'4 a4 c'8 a8|
+V: Vocal
+"Fm7"z24 "Dbmaj7"z8 | "Dbmaj7"z24 "Ab"z8 | "Ab"z24 "Eb"z8 | "Eb"z24 "Dbmaj7"c4 e4|
+w: 我 的
+V: Ins
+z4 g8 e4 b4 f4 e8 | z16 e'4 c'2 z2 c'2 z6 | z4 d'4 c'2 z2 b4 a4 b12- | b16- b4 z12|
+% verse
+V: Vocal
+"Dbmaj7"e4 c4 e4 e4 e4 c4 e8 | "Dbmaj7"e4 c4 e6 A2- "Fm"A4 c4 z8 | "Fm"z32 | "Fm"z24 "Dbmaj7"c4 e4|
+w: 心 里 住 着 一 个 - 苍 老 的 小 孩 - 如 果
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Dbmaj7"e4 c4 e4 e4 f4 f4 c8 | "Dbmaj7"c4 d4 c4 B4 A4 A4- "Fm"A4 z4 | "Fm"z32 | "Fm"a4 g4 f4 e4 "Dbmaj7"f8 f4 e4|
+w: 世 界 听 不 明 - 白 对 影 子 表 白 - - 是 不 是 只 有 我 还
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Dbmaj7"f8 f4 e4 e4 f8 e4 | "Dbmaj7"f8 f4 f4 "Ab"e16 | "Ab"z4 c4 B8- "Eb"B8 z8 | "Eb"e4 e4 d4 d4- "Dbmaj7"d12 z4|
+w: 在 问 为 什 么 明 天 更 精 彩 - - - 烟 火 里 - -
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Dbmaj7"c4 c4 c4 B4 "Eb"B4 z4 B4 A4 | "Eb"c6 A6 A4 "Fm"F8 z8 | "Fm"z32|
+w: 找 不 到 童 真 的 残 骸 只 - 有
+V: Ins
+z32 | z32 | z32|
+% chorus
+V: Vocal
+"Fm7"a4 a4 a4 a4 b4 g4 a8- | "Dbmaj7"a4 z4 a4 a4 g4 f4 e8- | "Ab"e4 c'4 c'8 b4 a4 b8- | "Eb"b8 z12 f4 g4 a4-|
+w: 我 守 着 安 静 的 沙 漠 等 待 着 花 开 只 有 我 看 着 - 别 人 的 快
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm7"a4 a4 a4 a4 a4 a4 b4 g4 | "Dbmaj7"a12 a4 a4 g4 a4 f4 | "Dbmaj7"g4 f4 e8- "Ab"e4 c'4 c'8|
+w: - 乐 竟 然 会 感 慨 就 让 我 听 着 天 大 的 道 理 不 愿 -
+V: Ins
+z32 | z32 | z32|
+V: Vocal
+"Ab"b4 a4 b8- "Eb"b8 z8 | "Eb"c'4 b4 a8 "Fm7"a4 a4 a4 a4 | "Fm7"a4 b4 b4 a4- "Dbmaj7"a8 a4 a4-|
+w: 意 明 白 只 有 - 我 就 是 我 好 - 奇 怪 还 在 感 慨
+V: Ins
+z32 | z32 | z32|
+V: Vocal
+"Ab"a8 a4 a4 g4 f4 e8- | "Ab"e4 c'4 c'8 b4 a4 b8- | "Eb"b8 f4 g4 "Dbmaj7"a16 | "Dbmaj7"f4 g4 "Eb"a12 f6 g6|
+w: 风 阵 阵 吹 过 来 为 何 不 回 来 风 一 - 去 不 回 来 悲 - 不
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm7"a16 b4 a8 b2 z2 | "Eb"b2 z12 z2 b4 b4 b4 b4 | "Fm7"c'4 c'4 a4 a12 b4 c'4- | "Dbmaj7"c'8 b8 a4 a4- "Ab"a4 z4|
+w: 悲 哀 麻 木 得 那 么 快 应 不 - 应 该 - 能 不 能 慢 下 -
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Ab"c'4 c'4 c'4 c'4 b4 a4 b4 b4- | "Eb"b12 z4 b4 b4 b4 b4 | "Fm7"c'4 a4 a12 z4 b4 c'4- | "Dbmaj7"c'8 b8 a4 a4- "Ab"a4 z4|
+w: 来 笑 得 开 怀 哭 得 坦 率 为 何 表 情 要 让 这 世 界 安 排 我 就 是
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Ab"c'4 c'4 c'4 c'4 b4 a4 b4 b4 | "Eb"b16 b4 b4 b4 b4 | "Fm7"a16 z4 b4 b4 a4- | "Dbmaj7"a12 z12 e8|
+w: 我 我 就 是 我 - 只 是 一 - 场 烟 火 散 落 的 尘 埃 -
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Ab"c'4 c'4 c'4 c'4 b4 a4 b4 b4 | "Eb"b16 b4 b4 b4 b4 | "Fm7"a16 z8 b4 b4 | "Dbmaj7"a24 e8|
+w: 风 阵 阵 吹 过 来 风 一 去 - 不 回 来 - * * * *
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Ab"c'4 c'4 c'4 c'4 b4 a4 b4 b4 | "Eb"b2 z12 z2 a8 a8|
+V: Ins
+z32 | z32|
+% bridge
+V: Vocal
+"Dbmaj7"z8 f'4 f'4 e'4 a4 g4 g4- | "Eb"g4 z4 e'4 f'4 g8 a8 | "Fm"e'4 f'4 e'4 a4 "Eb"g4 g4 g4 e4|
+V: Ins
+z32 | z32 | z32|
+V: Vocal
+"Dbmaj7"a4 z4 f'4 f'4 e'4 a4 g4 g4 | "Dbmaj7"z8 f'4 f'4 e'4 a4 g4 g4- | "Eb"g4 z4 g'4 g'4 e'4 g8 a4|
+V: Ins
+z32 | z32 | z32|
+V: Vocal
+"Fm"a4 f4 a4 b4 a4 c'4 "Eb"c'2 z2 b4 | "Eb"b4 a4 a4 b4 b4 b4 b4 c'4 | "Dbmaj7"c'24 z4 e'4 | "Eb"e'2 z24 z2 b'4|
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Eb"b'2 z24 z6|
+V: Ins
+z32|
+% outro
+V: Vocal
+"Fm"a'24 b'8 | "Dbmaj7"e'16 z8 e'8 | "Ab"c'4 c'4 c'4 c'4 c'4 b4 a4 b4- | "Eb"b12 z4 d'8 c'8|
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm"a24 b8 | "Dbmaj7"e16 z8 e'8 | "Ab"c'4 c'4 c'4 c'4 b4 b4- "Eb"b8- | "Eb"b4 z8 d'8 c'8 a4-|
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm"a16- a4 z4 b8 | "Dbmaj7"z16 g'2 z12 z2 | "Ab"e'16 z4 d'4 c'4 d'4- | "Eb"d'8 f'8 e'8 "Fm"c'8-|
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm"c'16 z8 d'8 | "Dbmaj7"c'16 z8 g'8 | "Ab"e'16 d'4 c'4 "Eb"d'2 z6 | "Eb"z32|
+V: Ins
+z32 | z32 | z32 | z32|
+V: Vocal
+"Fm7"z32 | "Fm7"z32 | "Fm7"z32 | "Fm7"z6 z24 z2|
+V: Ins
+z32 | z32 | z32 | z32|
