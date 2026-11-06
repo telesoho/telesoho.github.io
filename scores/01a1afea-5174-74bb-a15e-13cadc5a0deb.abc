@@ -1,0 +1,139 @@
+X:1
+T:
+M:4/4
+L:1/16
+Q:1/4=75
+V: Vocal clef=treble name="Vocal Melody" snm="Vocal"
+V: Ins clef=treble name="Ins Melody" snm="Inst."
+K:D
+% verse
+V: Vocal
+"D"A2 A A A2 A2 B3 A A3 B | "D"d2 d z4 z f2 f z4 z | "G6"e2 e2 e2 e d f3 d d3 B|
+w: 你 是 * 我 最 苦 * 涩 的 等 - 待 - 让 我 欢 喜 又 害 * 怕 未
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"A"B2 A2 A4 z8 | "G6"B2 B2 B3 A B2 d d z3 b | "Bm7"b2 a4 b2 f2 z2 f f2 d|
+w: - * 来 你 最 爱 说 你 是 - 一 个 尘 埃 * 偶 尔 会
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"G6"e B B B B2 d2 d4 z2 B2 | "A"e8 z4 f2 e2 | "D"d6 a2 a4 z2 d e | "Bm"f6 b2 b2 z2 f2 f2|
+w: 合 作 剧 的 飘 进 我 眼 里 宁 愿 我 哭 泣 不 让 我 爱 你 你 就
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"G6"e2 d d d2 B2 "Asus4"e3 d d2 B2 | "D"d12 z4 | "D"z16 | "D"A2 A2 A2 A2 B2 A A3 B2|
+w: 真 的 像 尘 埃 消 失 在 风 里 你 是 我 最 痛 苦 的 抉
+V: Ins
+z16 | z12 f2 A2 | D2 A2 d2 A2 e2 A2 f2 A2 | z16|
+V: Vocal
+"Bm"d8 f4 z4 | "G6"e2 e e e2 d2 f2 d d3 B2 | "A"A A A A4 z8 z | "G6"B2 B2 B2 A2 B2 d2 z2 b2-|
+w: - 择 为 何 你 从 不 放 弃 漂 泊 - - - - 爱 对 你 是 那 么 难
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"F#m7"b2 a4 b2 "Bm"f2 z2 f f2 d | "G6"e B B B B2 d2 d4 z2 B2 | "A"e8 z4 f2 e d|
+w: 分 难 舍 - 你 总 是 带 回 满 口 袋 的 沙 给 我 难 得 -
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"D"d6 a2 a4 z2 d e | "Bm"f6 b2 b2 z2 f2 f2 | "G6"e2 d d d2 B2 "Asus4"e2 z d d2 B2 | "D"d8 z8|
+w: 来 看 我 却 又 离 开 我 让 那 手 中 泄 落 的 沙 像 泪 水 流
+V: Ins
+z16 | z16 | z16 | z16|
+% chorus
+V: Vocal
+"D"f2 A2 d2 f2 "A"e4 a2 e2 | "Bm"d2 F2 B2 d2 "F#m"c2 c4 z2 | "G"B2 d2 d2 b2 "Asus4"a2 z2 a b z2|
+w: 风 吹 来 的 沙 落 在 悲 伤 的 眼 里 - 谁 都 看 出 我 在 等
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"D"d2 f8 z6 | "D"f2 A2 d2 f2 "A"e2 z2 a2 a2 | "Bm"b6 f e "A"e4 z2 f2|
+w: 你 - 风 吹 来 的 沙 堆 积 在 心 里 - 是
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"G6"e2 e e e2 e2 "E/G#"f2 e2 z2 d2 | "Asus4"e8- "A"e4 z4 | "D"f2 A2 d2 f2 "A"e4 a2 e2|
+w: 谁 也 擦 不 去 的 - 痕 迹 - 风 吹 来 的 沙 穿 过
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"Bm"d2 F2 B2 d2 "F#m"c2 c4 z2 | "G"B2 d2 d2 b2 "Asus4"a4 b4 | "D"d2 f8 z6|
+w: 所 有 的 记 忆 - 谁 都 知 道 我 在 想 你
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"D"f2 A2 d2 f2 "A"e2 z2 a2 a2 | "Bm"b6 f2 f4 z2 f2 | "A"e2 z2 e2 e2 "G"f2 d2 d2 B2 | "D"d12 z4|
+w: 风 吹 来 的 沙 明 明 在 哭 泣 难 道 早 就 预 言 了 分 离
+V: Ins
+z16 | z16 | z16 | z12 a4|
+% interlude
+V: Vocal
+"D"z16 | "Bm"z16 | "G6"z16 | "A"z16|
+V: Ins
+a z6 z b2 a4 b2 | d'6 z2 f'6 z2 | e'2 e'4 d'2 f'2 d'4 b2 | a12 z4|
+V: Vocal
+"D"z16 | "Bm"z16 | "A"z8 "G6"z8 | "D"z16|
+V: Ins
+a2 z a z2 a2 b2 a4 b2 | d'6 z2 f'6 z2 | e'2 e'4 d'2 f'2 d'4 b2 | d'16|
+% verse
+V: Vocal
+"D"A3 A A2 A2 B3 A3 B2 | "Bm"d8 f4 z4 | "G6"e2 e e2 e d2 f3 d3 B2 | "A"A2 A6 z8|
+w: 你 是 我 最 痛 苦 的 抉 择 为 何 你 从 - 不 放 弃 漂 泊
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"G6"B2 B2 B2 A2 B2 d2 z2 b2- | "F#m7"b2 a4 b2 "Bm"f2 z2 f f2 d | "G6"e B B B B2 d2 d4 z2 B2|
+w: 还 对 你 是 那 么 难 - 分 难 舍 你 总 是 带 回 满 口 袋 的 沙 给
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"A"e8 z4 f2 e d | "D"d6 a2 a4 z2 d e | "Bm"f6 b2 b2 z2 f2 f2|
+w: 我 难 得 来 看 我 却 又 离 开 我 - 让 那
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"G6"e2 d d d2 B2 "A7sus4"e2 z d d2 B2 | "D"d12 z4|
+w: 手 中 陷 落 的 沙 像 泪 水 流
+V: Ins
+z16 | z16|
+% chorus
+V: Vocal
+"D"f2 A2 d2 f2 "A"e4 a2 e2 | "Bm"d2 F2 B2 d2 "F#m"c2 c4 z2 | "G"B2 d2 d2 b2 "Asus4"a4 b4 | "D"d2 f8 z6|
+w: 风 吹 来 的 沙 落 在 悲 伤 的 眼 里 - 谁 都 看 出 我 在 等 你
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"D"f2 A2 d2 f2 "A"e2 z2 a2 a2 | "Bm"b6 f e "A"e4 z2 f2 | "G6"e2 e e e2 e2 "E/G#"f2 e e3 d2|
+w: 风 吹 来 的 沙 堆 积 在 心 里 - 是 谁 也 擦 不 去 的 痕 迹 -
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"Asus4"e8 "A"z4 z4|
+V: Ins
+z12 z4|
+V: Vocal
+"D"f2 A2 d2 f2 "A"e2 z2 a2 e2 | "Bm"d2 F2 B2 d2 "F#m"c2 c4 z2 | "G"B2 d2 d2 b2 "Asus4"a4 b4|
+w: 风 吹 来 的 沙 穿 过 所 有 的 记 忆 - 谁 都 知 道 我 在
+V: Ins
+z16 | z16 | z16|
+V: Vocal
+"D"d2 f8 z6 | "D"f2 A2 d2 f2 "A"e2 z2 a2 a2 | "Bm"b6 f2 f4 z2 f2 | "A"e2 z2 e2 e2 "G"f2 d2 d2 B2|
+w: 想 你 风 吹 来 的 沙 冥 冥 在 哭 泣 难 道 早 就 预 言 了 分
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"D"d12 z4 | "D"f2 A2 d2 f2 "A"e2 z2 a2 a2 | "Bm"b6 f2 f4 z2 f2 | "A"e2 z2 e2 e2 "G"f2 d2 d2 B B-|
+w: 离 风 吹 来 的 沙 冥 冥 在 哭 泣 难 道 早 就 预 言 了 分 离
+V: Ins
+z16 | z16 | z16 | z16|
+V: Vocal
+"D"B2 d12- d2- | "D"d2 z12 z2|
+V: Ins
+z16 | z2 A z d2 A z e2 A z f2 A z|
+% outro
+V: Vocal
+"D"z16 | "D"z16 | "D"z12 z3 z|
+V: Ins
+z4 d2 A z e2 A z f2 A z | z16 | z16|
